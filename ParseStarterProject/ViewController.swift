@@ -16,7 +16,7 @@ class ViewController: UIViewController{
     var signupActive = true
     
     @IBOutlet var username: UITextField!
-    
+    //test
     
     @IBOutlet var password: UITextField!
     
