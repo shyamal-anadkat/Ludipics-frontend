@@ -28,7 +28,7 @@ class ViewController: UIViewController{
     
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
-    
+    //test
     
     
     func displayAlert(title: String, message: String) {
