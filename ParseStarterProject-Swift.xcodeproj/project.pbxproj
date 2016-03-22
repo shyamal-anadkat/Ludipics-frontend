@@ -19,6 +19,7 @@
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
 		B26EA7631CA0742B00EE25F1 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B26EA7621CA0742B00EE25F1 /* logo.png */; };
 		B26EA7651CA0877F00EE25F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EA7641CA0877F00EE25F1 /* TableViewController.swift */; };
+		B26EA7671CA0E98400EE25F1 /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EA7661CA0E98400EE25F1 /* PostImageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
 		B26EA7621CA0742B00EE25F1 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../Desktop/logo.png; sourceTree = "<group>"; };
 		B26EA7641CA0877F00EE25F1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		B26EA7661CA0E98400EE25F1 /* PostImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
 				B26EA7621CA0742B00EE25F1 /* logo.png */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
+				B26EA7661CA0E98400EE25F1 /* PostImageViewController.swift */,
 				B26EA7641CA0877F00EE25F1 /* TableViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
 			);
@@ -190,6 +193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B26EA7671CA0E98400EE25F1 /* PostImageViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				B26EA7651CA0877F00EE25F1 /* TableViewController.swift in Sources */,
 				81BA814B1A49DA1800E65899 /* AppDelegate.swift in Sources */,

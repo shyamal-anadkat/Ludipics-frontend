@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="6cB-hf-qCb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jXh-dS-sQR">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -137,11 +138,92 @@
                             <outlet property="delegate" destination="NmF-hd-gdT" id="TOy-K4-d7Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="User List" id="SjZ-RQ-ZR9"/>
+                    <navigationItem key="navigationItem" title="User List" id="SjZ-RQ-ZR9">
+                        <barButtonItem key="rightBarButtonItem" title="Post " id="2Mn-QD-7Zc">
+                            <connections>
+                                <segue destination="jXh-dS-sQR" kind="show" id="q5F-Sq-rSN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1s-mh-HCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1391.5" y="344.5"/>
+            <point key="canvasLocation" x="1175.5" y="344.5"/>
+        </scene>
+        <!--ImageUI-->
+        <scene sceneID="3uI-WR-hoo">
+            <objects>
+                <viewController title="ImageUI" id="jXh-dS-sQR" customClass="PostImageViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wJA-lf-zSe"/>
+                        <viewControllerLayoutGuide type="bottom" id="7pS-9y-S9Z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jg3-83-cDU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="t0y-2H-TRR">
+                                <rect key="frame" x="51" y="72" width="265" height="232"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="232" id="tBH-w5-eRc"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lt-M5-zmE">
+                                <rect key="frame" x="122" y="323" width="123" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="123" id="4Ge-3v-aMJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Pick An Image">
+                                    <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="chooseImage:" destination="jXh-dS-sQR" eventType="touchUpInside" id="1yw-6o-Nif"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="type it in..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lxi-4e-jhc">
+                                <rect key="frame" x="20" y="369" width="335" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9I-Mg-5hW">
+                                <rect key="frame" x="137" y="423" width="100" height="30"/>
+                                <color key="backgroundColor" red="0.61568627450980395" green="0.066666666666666666" blue="0.14509803921568629" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="mZO-D6-HzN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Post Image">
+                                    <color key="titleColor" red="0.96355837651587206" green="1" blue="0.94953922835882154" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="postImage:" destination="jXh-dS-sQR" eventType="touchUpInside" id="VZO-TF-NDP"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="t0y-2H-TRR" firstAttribute="centerX" secondItem="Jg3-83-cDU" secondAttribute="centerX" id="14l-jg-Bmn"/>
+                            <constraint firstItem="N9I-Mg-5hW" firstAttribute="centerX" secondItem="Jg3-83-cDU" secondAttribute="centerX" id="7aX-wY-R2m"/>
+                            <constraint firstItem="N9I-Mg-5hW" firstAttribute="top" secondItem="Lxi-4e-jhc" secondAttribute="bottom" constant="24" id="ISC-Ky-HAU"/>
+                            <constraint firstItem="N9I-Mg-5hW" firstAttribute="centerX" secondItem="Jg3-83-cDU" secondAttribute="centerX" id="OBE-PC-AYU"/>
+                            <constraint firstItem="7Lt-M5-zmE" firstAttribute="centerX" secondItem="Jg3-83-cDU" secondAttribute="centerX" id="Yrv-4z-kk2"/>
+                            <constraint firstItem="Lxi-4e-jhc" firstAttribute="trailing" secondItem="Jg3-83-cDU" secondAttribute="trailingMargin" id="bgh-XR-Yxl"/>
+                            <constraint firstItem="Lxi-4e-jhc" firstAttribute="leading" secondItem="Jg3-83-cDU" secondAttribute="leadingMargin" id="c0S-vQ-CFB"/>
+                            <constraint firstItem="N9I-Mg-5hW" firstAttribute="centerX" secondItem="Jg3-83-cDU" secondAttribute="centerX" id="jmE-W0-dfE"/>
+                            <constraint firstItem="Lxi-4e-jhc" firstAttribute="top" secondItem="7Lt-M5-zmE" secondAttribute="bottom" constant="8" id="lpa-yH-6Pu"/>
+                            <constraint firstItem="7Lt-M5-zmE" firstAttribute="top" secondItem="t0y-2H-TRR" secondAttribute="bottom" constant="19" id="sTg-ZO-LPu"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="chatImage" destination="Lxi-4e-jhc" id="Znr-gi-5c5"/>
+                        <outlet property="ludiImage" destination="t0y-2H-TRR" id="1qx-0s-OUy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vsa-re-fTB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1649.5" y="344.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XiR-23-nRK">
@@ -157,7 +239,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htn-DO-dwq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="865.5" y="344.5"/>
+            <point key="canvasLocation" x="767.5" y="344.5"/>
         </scene>
     </scenes>
     <resources>
