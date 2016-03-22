@@ -17,7 +17,7 @@ class ViewController: UIViewController{
     
     @IBOutlet var username: UITextField!
     
-
+    
     @IBOutlet var password: UITextField!
     
     @IBOutlet var signupButton: UIButton!
@@ -39,14 +39,14 @@ class ViewController: UIViewController{
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
-   
+    
     @IBAction func signUp(sender: AnyObject) {
         
         if username.text ==  ""  || password.text == "" {
             // Setting up error and spinner before we login and signup process
-          
+            
             displayAlert("Error in form", message: "Please enter a username and password")
-           } else {
+        } else {
             
             activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
             
@@ -56,35 +56,35 @@ class ViewController: UIViewController{
             view.addSubview(activityIndicator)
             activityIndicator.startAnimating()
             UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-         
+            
             var errorMessage = "Please try again later"
             
             if signupActive == true {
-            
-            
-            var user = PFUser()
-            user.username = username.text
-            user.password = password.text
-            
-           
-            
-            user.signUpInBackgroundWithBlock({ (success, error) -> Void in
-                self.activityIndicator.stopAnimating()
-                UIApplication.sharedApplication().endIgnoringInteractionEvents()
                 
-                if error == nil {
-                    //signup success!
                 
-                self.performSegueWithIdentifier("login", sender: self)
+                var user = PFUser()
+                user.username = username.text
+                user.password = password.text
+                
+                
+                
+                user.signUpInBackgroundWithBlock({ (success, error) -> Void in
+                    self.activityIndicator.stopAnimating()
+                    UIApplication.sharedApplication().endIgnoringInteractionEvents()
                     
-                  
-                } else {
-                    if let errorString = error!.userInfo["error"] as? String {
-                        errorMessage = errorString
+                    if error == nil {
+                        //signup success!
+                        
+                        self.performSegueWithIdentifier("login", sender: self)
+                        
+                        
+                    } else {
+                        if let errorString = error!.userInfo["error"] as? String {
+                            errorMessage = errorString
+                        }
+                        self.displayAlert("Failed Signup", message: errorMessage)
                     }
-                    self.displayAlert("Failed Signup", message: errorMessage)
-                }
-            })
+                })
             } else {
                 
                 PFUser.logInWithUsernameInBackground(username.text!, password: password.text!, block: { (user, error) -> Void in
@@ -96,10 +96,10 @@ class ViewController: UIViewController{
                         
                         //logged in
                         
-                    self.performSegueWithIdentifier("login", sender: self)
+                        self.performSegueWithIdentifier("login", sender: self)
                         
                     } else {
-                        
+                        print("user is nil")
                         if let errorString = error!.userInfo["error"] as? String {
                             errorMessage = errorString
                         }
@@ -113,7 +113,7 @@ class ViewController: UIViewController{
             
         }
     }
-
+    
     @IBAction func login(sender: AnyObject) {
         
         //switch to login or sign up views
@@ -121,7 +121,7 @@ class ViewController: UIViewController{
         if signupActive == true {
             
             signupButton.setTitle("Log In", forState: UIControlState.Normal)
-        
+            
             registeredText.text = "        Sign me Up"
             
             loginButton.setTitle("Sign Up", forState: UIControlState.Normal)
@@ -136,27 +136,23 @@ class ViewController: UIViewController{
             loginButton.setTitle("Login", forState: UIControlState.Normal)
             
             signupActive = true
-            
         }
         
-        
     }
-    
-   
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-         }
+    }
     
     //segue if user already logged in
     override func viewDidAppear(animated: Bool) {
         
+        
+        
         if PFUser.currentUser() != nil {
             self.performSegueWithIdentifier("login", sender: self)
         }
+        print("hello")
     }
     
     override func didReceiveMemoryWarning() {

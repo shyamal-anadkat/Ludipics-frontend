@@ -14,9 +14,18 @@ class TableViewController: UITableViewController {
     //arrays to store users and userIDs
     var usernames = [""]
     var userids = [""]
+    var isFollowing = ["":false]
+    
+    var refresher:UIRefreshControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        //pull to refresh 
+        
+        
+        
         
         //loading users in the table view -> query for PF user
         
@@ -29,6 +38,7 @@ class TableViewController: UITableViewController {
                 //remove added and stored ones so u dont get same users again
                 self.usernames.removeAll(keepCapacity: true)
                 self.userids.removeAll(keepCapacity: true)
+                self.isFollowing.removeAll(keepCapacity: true)
                 
                 //update arrays 
                 
@@ -37,19 +47,53 @@ class TableViewController: UITableViewController {
                     if let user = object as? PFUser {
                         //we have PFUser now casted
                         
-                        //append user info - confident that these exist
-                        self.usernames.append(user.username!)
-                        self.userids.append(user.objectId!)
+                        //current user should not appear on the list
+                        if user.objectId != PFUser.currentUser()?.objectId{
+                            
+                            //append user info - confident that these exist
+                            self.usernames.append(user.username!)
+                            self.userids.append(user.objectId!)
+                            
+                            //print(PFUser.currentUser()?.objectId)
+                            //print(PFUser.currentUser())
+                            //to generate follow checks on next app run
+                            var query = PFQuery(className: "Followers")
+                            
+                            
+                            query.whereKey("follower", equalTo: PFUser.currentUser()!.objectId!)
+                            query.whereKey("following", equalTo: user.objectId!)
+                            
+                            query.findObjectsInBackgroundWithBlock({ (objects, error ) -> Void in
+                                
+                                //user must be following another user
+                                if let objects = objects {
+                                    //store info in array
+                                    
+                                    if objects.count > 0 {   //can only be 0 or 1
+                                    
+                                    self.isFollowing[user.objectId!] = true
+                                    
+                                } else {
+                                    self.isFollowing[user.objectId!] = false
+                                }
+                                }
+                                //check if update when same number of usernames as isFollowings
+                                if self.isFollowing.count == self.usernames.count {
+                                
+                                self.tableView.reloadData()
+                                }
+                                
+                            })
+                        }
+                        
+                        
                         
                     }
                 }
                 
             }
+         
             
-            print(self.usernames)
-            print(self.userids)
-            
-            self.tableView.reloadData()
         })
 
         // Uncomment the following line to preserve selection between presentations
@@ -83,54 +127,73 @@ class TableViewController: UITableViewController {
         // Configure the cell...
         //populate users in the table
         cell.textLabel?.text = usernames[indexPath.row]
+        let followedObjectId = userids[indexPath.row]
+        
+        //user id check with followed
+        if isFollowing[followedObjectId] == true {
+            
+        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        }
 
         return cell
     }
+ 
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    //user list click interface
+    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+       // print (indexPath.row)
+        
+        
+        var cell:UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        
+        let followedObjectId = userids[indexPath.row]
+        //if user not following them
+        if isFollowing[followedObjectId] == false {
+        
+        isFollowing[followedObjectId] = true
+        
+        
+        
+        cell.accessoryType = UITableViewCellAccessoryType.Checkmark
+        
+        var following = PFObject(className: "Followers")
+        //get followers - interaction when tapped user in list
+        following["following"] = userids[indexPath.row]
+        following["follower"] = PFUser.currentUser()?.objectId
+        
+        //dont need to do anything
+        following.saveInBackground()
+        } else {
+            
+            isFollowing[followedObjectId] = false
+            cell.accessoryType = UITableViewCellAccessoryType.None
+            
+            
+            var query = PFQuery(className: "Followers")
+            
+            
+            query.whereKey("follower", equalTo: PFUser.currentUser()!.objectId!)
+            query.whereKey("following", equalTo: userids[indexPath.row])
+            
+            query.findObjectsInBackgroundWithBlock({ (objects, error ) -> Void in
+                
+                //user must be following another user
+                if let objects = objects {
+                    //store info in array
+                    
+                    for object in objects {
+                        object.deleteInBackground()
+                    }
+                }
+                //check if update when same number of usernames as isFollowings
+                //if self.isFollowing.count == self.usernames.count {
+                    
+                //    self.tableView.reloadData()
+                //}
+                
+            })
+            
+        }
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
