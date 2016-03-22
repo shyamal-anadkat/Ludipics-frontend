@@ -11,6 +11,7 @@ import Parse
 
 class TableViewController: UITableViewController {
     
+    
     //arrays to store users and userIDs
     var usernames = [""]
     var userids = [""]
@@ -56,7 +57,7 @@ class TableViewController: UITableViewController {
                             //to generate follow checks on next app run
                             var query = PFQuery(className: "Followers")
                             
-                            
+                            print(PFUser.currentUser()?.objectId)
                             query.whereKey("follower", equalTo: PFUser.currentUser()!.objectId!)
                             query.whereKey("following", equalTo: user.objectId!)
                             
@@ -138,7 +139,7 @@ class TableViewController: UITableViewController {
                             self.usernames.append(user.username!)
                             self.userids.append(user.objectId!)
                             
-                            //print(PFUser.currentUser()?.objectId)
+                            print(PFUser.currentUser()?.objectId)
                             //print(PFUser.currentUser())
                             //to generate follow checks on next app run
                             var query = PFQuery(className: "Followers")

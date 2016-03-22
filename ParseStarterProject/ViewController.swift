@@ -74,13 +74,14 @@ class ViewController: UIViewController{
                     
                     if error == nil {
                         //signup success!
-                        
+                        print("done signup")
                         self.performSegueWithIdentifier("login", sender: self)
                         
                         
                     } else {
                         if let errorString = error!.userInfo["error"] as? String {
                             errorMessage = errorString
+                            print("signup error")
                         }
                         self.displayAlert("Failed Signup", message: errorMessage)
                     }
@@ -147,11 +148,16 @@ class ViewController: UIViewController{
     //segue if user already logged in
     override func viewDidAppear(animated: Bool) {
         
-        
-        
-        if PFUser.currentUser() != nil {
-            self.performSegueWithIdentifier("login", sender: self)
+        //PFUser.currentUser()?.objectId = "6k4ltpQj83"
+        if let navController = self.navigationController {
+            navController.navigationBarHidden = true
+            self.navigationController?.toolbarHidden = true
         }
+        
+        
+        if PFUser.currentUser() != nil && PFUser.currentUser()?.objectId != nil {
+            self.performSegueWithIdentifier("login", sender: self)
+        } 
         print("hello")
     }
     
