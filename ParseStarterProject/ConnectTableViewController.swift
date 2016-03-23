@@ -43,25 +43,16 @@ class ConnectTableViewController: UITableViewController {
                         //user we are interested 
                         
                         self.users[user.objectId!] = user.username!
-                        
-                        
                     }
-                    
-                    
-                    
                 }
             }
-            
-
         
-        
-        
-        
-        
+        //search query for getting followers
         var getFollowedUsersQuery = PFQuery(className: "Followers")
         
         //want same id as follower and user
         getFollowedUsersQuery.whereKey("follower", equalTo: PFUser.currentUser()!.objectId!)
+            
         getFollowedUsersQuery.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
             
             if let objects = objects {
@@ -75,7 +66,7 @@ class ConnectTableViewController: UITableViewController {
                     
                     var query = PFQuery(className: "Post")
                     
-                    query.whereKey("_id", equalTo: followedUser)
+                    query.whereKey("userId", equalTo: followedUser)
                     query.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
                         
                         if let objects = objects {
@@ -90,13 +81,14 @@ class ConnectTableViewController: UITableViewController {
                                 
                                 //get username for userid 
                                 
-                                self.usernames.append(self.users[object["_id"] as! String]!)
+                                self.usernames.append(self.users[object["userId"] as! String]!)
                                 
                                 self.tableView.reloadData()
                                 
                             }
                             
-                            
+                            print(self.users)
+                            print(self.messages)
                             
                         }
                         
@@ -106,7 +98,7 @@ class ConnectTableViewController: UITableViewController {
                 
             }
          }
-    })
+        })
     
     }
 
@@ -124,7 +116,7 @@ class ConnectTableViewController: UITableViewController {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return usernames.count
     }
 
     
@@ -133,11 +125,23 @@ class ConnectTableViewController: UITableViewController {
         //change type to the cell we defined
         // Configure the cell...
         
+        imageFiles[indexPath.row].getDataInBackgroundWithBlock { (data, error) -> Void in
+            
+            if let downloadedImage = UIImage(data: data!) {
+                
+                myCell.postedImage.image = downloadedImage
+                
+                
+            }
+            
+            
+        }
         //creates 3 cells
-        //var image = UIImage(named: "logo.png")
-        //myCell.postedImage = UIImageView(image: image)
-        myCell.username.text = "Shyamal"
-        myCell.message.text = "Sample Message"
+       
+        
+        myCell.username.text = usernames[indexPath.row]
+        
+        myCell.message.text = messages[indexPath.row]
         return myCell
     }
 
