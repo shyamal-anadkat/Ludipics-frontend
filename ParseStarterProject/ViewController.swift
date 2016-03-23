@@ -148,8 +148,10 @@ class ViewController: UIViewController{
     //segue if user already logged in
     override func viewDidAppear(animated: Bool) {
         
-        //PFUser.currentUser()?.objectId = "6k4ltpQj83"
+        
+       
         if let navController = self.navigationController {
+            
             navController.navigationBarHidden = true
             self.navigationController?.toolbarHidden = true
         }
@@ -158,7 +160,7 @@ class ViewController: UIViewController{
         if PFUser.currentUser() != nil && PFUser.currentUser()?.objectId != nil {
             self.performSegueWithIdentifier("login", sender: self)
         } 
-        print("hello")
+    
     }
     
     override func didReceiveMemoryWarning() {

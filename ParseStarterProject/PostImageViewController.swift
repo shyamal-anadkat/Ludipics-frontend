@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-class PostImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class PostImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
     
     func displayAlert(title: String, message: String) {
@@ -102,13 +102,12 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
                  self.displayAlert("LudaMaster says", message: "Please try again. Couldn't post image.")
             }
         }
-        
-        
     }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        self.chatImage.delegate = self;
     }
 
     override func didReceiveMemoryWarning() {
@@ -116,6 +115,11 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
         // Dispose of any resources that can be recreated.
     }
     
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+        
+    }
 
     /*
     // MARK: - Navigation

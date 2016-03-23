@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXb-9m-rbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="365.5" y="386.5"/>
+            <point key="canvasLocation" x="351.5" y="344.5"/>
         </scene>
         <!--User List-->
         <scene sceneID="wGM-tI-9YC">
@@ -146,13 +146,28 @@
                     </tableView>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="9i6-CF-BEv"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="lE3-AM-Oh4"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3ds-2t-WIg"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="r7o-6d-hrf"/>
+                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ovP-KJ-JHs"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iD5-Ip-unJ"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="myH-vs-iAV"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7Bz-9Q-F2b"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="User List" id="SjZ-RQ-ZR9">
-                        <barButtonItem key="leftBarButtonItem" title="Connect" id="phY-AP-vLp">
-                            <connections>
-                                <segue destination="53j-8U-mkg" kind="show" id="9Wl-lm-jSp"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Connect" id="phY-AP-vLp">
+                                <connections>
+                                    <segue destination="53j-8U-mkg" kind="show" id="9Wl-lm-jSp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="Logout" id="nUy-ER-xBu">
+                                <connections>
+                                    <action selector="logOut:" destination="NmF-hd-gdT" id="fTU-Zg-GHO"/>
+                                    <segue destination="6cB-hf-qCb" kind="show" id="8bS-eS-vgA"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem title="Post " id="2Mn-QD-7Zc">
                                 <connections>
@@ -258,6 +273,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="9Ke-Gg-9o0">
+                            <rect key="frame" x="0.0" y="362" width="375" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <items/>
+                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="270" id="qkI-lM-Zuu" customClass="cell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="270"/>
@@ -312,6 +332,7 @@
                             <outlet property="delegate" destination="53j-8U-mkg" id="f9f-X3-Mv2"/>
                         </connections>
                     </tableView>
+                    <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDs-Rd-izw" userLabel="First Responder" sceneMemberID="firstResponder"/>
