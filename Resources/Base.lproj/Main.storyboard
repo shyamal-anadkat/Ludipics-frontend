@@ -11,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="QyY-cc-daf">
             <objects>
-                <viewController id="6cB-hf-qCb" customClass="ViewController" customModule="ParseStarterProject_Swift" sceneMemberID="viewController">
+                <viewController id="6cB-hf-qCb" customClass="ViewController" customModule="Ludipics" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="uHj-ZV-JqE"/>
                         <viewControllerLayoutGuide type="bottom" id="HGh-gY-m8a"/>
@@ -28,7 +28,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-mA-q8C">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ve-mA-q8C">
                                 <rect key="frame" x="76" y="201" width="222" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="222" id="liK-oE-YqG"/>
@@ -112,7 +112,7 @@
         <!--User List-->
         <scene sceneID="wGM-tI-9YC">
             <objects>
-                <tableViewController id="NmF-hd-gdT" customClass="TableViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="NmF-hd-gdT" customClass="TableViewController" customModule="Ludipics" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ylF-Sd-zmi">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -172,7 +172,7 @@
         <!--ImageUI-->
         <scene sceneID="3uI-WR-hoo">
             <objects>
-                <viewController title="ImageUI" id="jXh-dS-sQR" customClass="PostImageViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="ImageUI" id="jXh-dS-sQR" customClass="PostImageViewController" customModule="Ludipics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="wJA-lf-zSe"/>
                         <viewControllerLayoutGuide type="bottom" id="7pS-9y-S9Z"/>
@@ -247,7 +247,7 @@
         <!--Connect-->
         <scene sceneID="tZa-ym-oGy">
             <objects>
-                <tableViewController title="Connect" id="53j-8U-mkg" customClass="ConnectTableViewController" customModule="ParseStarterProject_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Connect" id="53j-8U-mkg" customClass="ConnectTableViewController" customModule="Ludipics" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="270" sectionHeaderHeight="28" sectionFooterHeight="28" id="L7q-CA-GbA">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -258,7 +258,7 @@
                             <items/>
                         </toolbar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="270" id="qkI-lM-Zuu" customClass="cell" customModule="ParseStarterProject_Swift" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="270" id="qkI-lM-Zuu" customClass="cell" customModule="Ludipics" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="92" width="375" height="270"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qkI-lM-Zuu" id="l1P-Ry-aSa">

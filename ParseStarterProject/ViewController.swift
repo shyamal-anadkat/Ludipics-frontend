@@ -131,6 +131,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
         if signupActive == true {
             
             signupButton.setTitle("Log In", forState: UIControlState.Normal)
+            //loginButton.titleLabel?.font = UIFont(name: "System", size: 42)
+            //signupButton.titleLabel?.font = UIFont(name: "System", size: 50)
             
             registeredText.text = "        Sign me Up"
             
@@ -145,6 +147,8 @@ class ViewController: UIViewController, UITextFieldDelegate{
             registeredText.text = "         Let me in !"
             
             loginButton.setTitle("Login", forState: UIControlState.Normal)
+            //signupButton.titleLabel?.font = UIFont(name: "System", size: 22)
+            //loginButton.titleLabel?.font = UIFont(name: "System", size: 18)
             
             signupActive = true
         }
