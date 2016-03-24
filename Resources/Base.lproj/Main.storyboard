@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
@@ -106,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZXb-9m-rbS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="370.5" y="344.5"/>
+            <point key="canvasLocation" x="107.5" y="388.5"/>
         </scene>
         <!--User List-->
         <scene sceneID="wGM-tI-9YC">
@@ -116,11 +117,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <toolbar key="tableFooterView" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="sEk-th-SFZ">
-                            <rect key="frame" x="0.0" y="136" width="375" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <items/>
-                        </toolbar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="Spb-Ob-Gmd">
                                 <rect key="frame" x="0.0" y="92" width="375" height="44"/>
@@ -137,14 +133,8 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="9i6-CF-BEv"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="lE3-AM-Oh4"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3ds-2t-WIg"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="r7o-6d-hrf"/>
-                        <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="ovP-KJ-JHs"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="iD5-Ip-unJ"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="myH-vs-iAV"/>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="7Bz-9Q-F2b"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="PpM-nz-RAg"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="2qG-hY-m93"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="User List" id="SjZ-RQ-ZR9">
                         <barButtonItem key="leftBarButtonItem" title="Connect" id="phY-AP-vLp">
@@ -164,6 +154,11 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </button>
                                 <color key="tintColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="IZ0-66-P6f">
+                                <connections>
+                                    <segue destination="6cB-hf-qCb" kind="show" identifier="logout" id="sEU-jd-VCr"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
@@ -273,7 +268,9 @@
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="eFc-kj-htm">
                                             <rect key="frame" x="38" y="8" width="299" height="187"/>
                                             <constraints>
+                                                <constraint firstAttribute="width" secondItem="eFc-kj-htm" secondAttribute="height" multiplier="299:187" id="hrr-0E-gAj"/>
                                                 <constraint firstAttribute="height" constant="187" id="sAc-lT-YQk"/>
+                                                <constraint firstAttribute="width" secondItem="eFc-kj-htm" secondAttribute="height" multiplier="299:187" id="ya2-Fe-2Ny"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5ad-hp-IJG">
@@ -322,44 +319,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sDs-Rd-izw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1205.5" y="-370.5"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="ckX-W7-2T3">
-            <objects>
-                <viewController id="vQN-BT-5d3" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="zeA-MT-h2i"/>
-                        <viewControllerLayoutGuide type="bottom" id="cZD-I4-zfE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="sWM-Fh-NYt">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="vp3-ah-BhR"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SYt-CC-GRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1948" y="-907"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="RGz-Uf-Bry">
-            <objects>
-                <viewController id="doh-z0-Om4" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="NOk-S3-pVb"/>
-                        <viewControllerLayoutGuide type="bottom" id="bEc-5b-UIZ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dX4-C9-7fl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="t1v-97-UBZ"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="viX-bs-Cmt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1948" y="-1568"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="XiR-23-nRK">

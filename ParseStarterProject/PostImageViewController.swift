@@ -28,6 +28,10 @@ class PostImageViewController: UIViewController, UINavigationControllerDelegate,
     // the image to be posted
     @IBOutlet var ludiImage: UIImageView!
     
+    @IBAction func logOut(sender: AnyObject) {
+        PFUser.logOut()
+    
+    }
     //choose image actio, allows to pick from gallery
     @IBAction func chooseImage(sender: AnyObject) {
         

@@ -88,6 +88,13 @@ class TableViewController: UITableViewController {
         })
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "logout" {
+            PFUser.logOut()
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
