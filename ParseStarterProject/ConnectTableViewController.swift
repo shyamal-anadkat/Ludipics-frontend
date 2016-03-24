@@ -21,14 +21,10 @@ class ConnectTableViewController: UITableViewController {
         super.viewDidLoad()
         //download images 
         
-        
-        
         var query = PFUser.query()
         query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             
             if let users = objects {
-                
-                
                 //remove added and stored ones so u dont get same users again
                 //empty them all just in case u know
                 self.messages.removeAll(keepCapacity: true)
@@ -73,33 +69,24 @@ class ConnectTableViewController: UITableViewController {
                             
                             for object in objects {
                                 //save these in our app
-                                
                                 self.messages.append(object["message"]! as! String)
                                 
                                 //download image file not actual image !
                                 self.imageFiles.append(object["imageFile"] as! PFFile)
                                 
-                                //get username for userid 
-                                
+                                //get username for userid
                                 self.usernames.append(self.users[object["userId"] as! String]!)
-                                
                                 self.tableView.reloadData()
-                                
                             }
                             
                             print(self.users)
                             print(self.messages)
-                            
                         }
-                        
                     })
-                    
                 }
-                
             }
          }
         })
-    
     }
 
     override func didReceiveMemoryWarning() {
@@ -107,7 +94,7 @@ class ConnectTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    // MARK: - Table view data source
+    //Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -121,6 +108,7 @@ class ConnectTableViewController: UITableViewController {
 
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
         let myCell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! cell
         //change type to the cell we defined
         // Configure the cell...
@@ -128,58 +116,15 @@ class ConnectTableViewController: UITableViewController {
         imageFiles[indexPath.row].getDataInBackgroundWithBlock { (data, error) -> Void in
             
             if let downloadedImage = UIImage(data: data!) {
-                
                 myCell.postedImage.image = downloadedImage
-                
-                
             }
-            
-            
         }
         //creates 3 cells
-       
-        
         myCell.username.text = usernames[indexPath.row]
-        
         myCell.message.text = messages[indexPath.row]
         return myCell
     }
 
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
 
     /*
     // MARK: - Navigation

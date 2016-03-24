@@ -3,7 +3,7 @@
 //  ParseStarterProject-Swift
 //
 //  Created by Shyamal Anadkat on 2016-03-21.
-//  Copyright © 2016 Parse. All rights reserved.
+//  Copyright © 2016 Ludipics. All rights reserved.
 //
 
 import UIKit
@@ -11,11 +11,7 @@ import Parse
 
 class TableViewController: UITableViewController {
     
-    @IBAction func logOut(sender: AnyObject) {
-        print("im pressed")
-    }
-   
-    
+ 
     //arrays to store users and userIDs
     var usernames = [""]
     var userids = [""]
@@ -24,18 +20,17 @@ class TableViewController: UITableViewController {
     //for refresh pull
     var refresher:UIRefreshControl!
     
-    
+    // pull to refresh function
     func refresh() {
         
         print("refreshed")
         //stops refreshing
         
-        
+        //query for getting followers and image data
         var query = PFUser.query()
         query?.findObjectsInBackgroundWithBlock({ (objects, error) -> Void in
             
             if let users = objects {
-                
                 
                 //remove added and stored ones so u dont get same users again
                 self.usernames.removeAll(keepCapacity: true)
@@ -50,7 +45,8 @@ class TableViewController: UITableViewController {
                         //we have PFUser now casted
                         
                         //current user should not appear on the list
-                        if user.objectId != PFUser.currentUser()?.objectId{
+                        //only if the user is not equal to current user then append
+                        if user.objectId != PFUser.currentUser()?.objectId  {
                             
                             //append user info - confident that these exist
                             self.usernames.append(user.username!)
@@ -72,9 +68,7 @@ class TableViewController: UITableViewController {
                                     //store info in array
                                     
                                     if objects.count > 0 {   //can only be 0 or 1
-                                        
                                         self.isFollowing[user.objectId!] = true
-                                        
                                     } else {
                                         self.isFollowing[user.objectId!] = false
                                     }
@@ -85,24 +79,17 @@ class TableViewController: UITableViewController {
                                     self.tableView.reloadData()
                                     self.refresher.endRefreshing()
                                 }
-                                
                             })
                         }
-                        
-                        
-                        
                     }
                 }
                 
             }
-            
-            
         })
         
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // create pull to refresh
         refresher = UIRefreshControl()
@@ -113,9 +100,6 @@ class TableViewController: UITableViewController {
         self.tableView.addSubview(refresher)
         
         refresh()
-        
-        
-        
         //loading users in the table view -> query for PF user
         
         var query = PFUser.query()
@@ -171,23 +155,16 @@ class TableViewController: UITableViewController {
                                     
                                     self.tableView.reloadData()
                                 }
-                                
                             })
                         }
-                        
-                        
-                        
                     }
                 }
                 
             }
-            
-            
         })
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-        
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
@@ -240,9 +217,7 @@ class TableViewController: UITableViewController {
         if isFollowing[followedObjectId] == false {
             
             isFollowing[followedObjectId] = true
-            
-            
-            
+    
             cell.accessoryType = UITableViewCellAccessoryType.Checkmark
             
             var following = PFObject(className: "Followers")
@@ -257,9 +232,7 @@ class TableViewController: UITableViewController {
             isFollowing[followedObjectId] = false
             cell.accessoryType = UITableViewCellAccessoryType.None
             
-            
             var query = PFQuery(className: "Followers")
-            
             
             query.whereKey("follower", equalTo: PFUser.currentUser()!.objectId!)
             query.whereKey("following", equalTo: userids[indexPath.row])
@@ -276,7 +249,6 @@ class TableViewController: UITableViewController {
                 }
                 //check if update when same number of usernames as isFollowings
                 //if self.isFollowing.count == self.usernames.count {
-                
                 //    self.tableView.reloadData()
                 //}
                 

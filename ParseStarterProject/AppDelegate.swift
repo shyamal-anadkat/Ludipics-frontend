@@ -1,5 +1,6 @@
 /**
 * Copyright (c) 2015-present, Parse, LLC.
+* Ludipics LLC 2016
 * All rights reserved.
 *
 * This source code is licensed under the BSD-style license found in the
