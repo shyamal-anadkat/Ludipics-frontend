@@ -7,7 +7,7 @@
 
 // Initial view controller.
 // Please keep the code clean and comment everywhere. - shyamal
-// This is Ludipics and this is our lifestyle.
+// This is Ludipics and this is our lifestyle.:)
 
 import UIKit
 import Parse
