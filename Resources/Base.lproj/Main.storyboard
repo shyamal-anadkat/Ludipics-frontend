@@ -137,11 +137,18 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="2qG-hY-m93"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="User List" id="SjZ-RQ-ZR9">
-                        <barButtonItem key="leftBarButtonItem" title="Connect" id="phY-AP-vLp">
-                            <connections>
-                                <segue destination="53j-8U-mkg" kind="show" id="9Wl-lm-jSp"/>
-                            </connections>
-                        </barButtonItem>
+                        <leftBarButtonItems>
+                            <barButtonItem title="Connect" id="phY-AP-vLp">
+                                <connections>
+                                    <segue destination="53j-8U-mkg" kind="show" id="9Wl-lm-jSp"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="LB" id="aRz-wr-NC8">
+                                <connections>
+                                    <segue destination="DCC-VI-WkR" kind="show" id="l64-1R-1gO"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
                         <rightBarButtonItems>
                             <barButtonItem title="Post " id="2Mn-QD-7Zc">
                                 <connections>
@@ -168,6 +175,33 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I1s-mh-HCu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1195.5" y="344.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="V2T-NM-IqX">
+            <objects>
+                <viewController id="DCC-VI-WkR" customClass="LBViewController" customModule="Ludipics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nw9-OX-cYk"/>
+                        <viewControllerLayoutGuide type="bottom" id="5j6-xe-E7f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RhS-vX-dnP">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="IED-iA-R3V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="253"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="map" destination="IED-iA-R3V" id="YPW-Op-5ar"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ass-af-nk3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1301.5" y="1181.5"/>
         </scene>
         <!--ImageUI-->
         <scene sceneID="3uI-WR-hoo">

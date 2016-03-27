@@ -17,7 +17,10 @@
 		81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA81781A49E0DB00E65899 /* AudioToolbox.framework */; };
 		81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */; };
 		81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */; };
-		B26EA7631CA0742B00EE25F1 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B26EA7621CA0742B00EE25F1 /* logo.png */; };
+		B21FFAF41CA8896B00B244F6 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B21FFAF31CA8896B00B244F6 /* logo.png */; };
+		B21FFAF71CA88A6800B244F6 /* LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B21FFAF51CA88A6800B244F6 /* LBViewController.swift */; };
+		B21FFAF81CA88A6800B244F6 /* LBViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B21FFAF61CA88A6800B244F6 /* LBViewController.xib */; };
+		B21FFAFA1CA88E6200B244F6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B21FFAF91CA88E6200B244F6 /* CoreLocation.framework */; };
 		B26EA7651CA0877F00EE25F1 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EA7641CA0877F00EE25F1 /* TableViewController.swift */; };
 		B26EA7671CA0E98400EE25F1 /* PostImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EA7661CA0E98400EE25F1 /* PostImageViewController.swift */; };
 		B26EA7691CA100B200EE25F1 /* cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B26EA7681CA100B200EE25F1 /* cell.swift */; };
@@ -39,7 +42,10 @@
 		81BA817A1A49E0E500E65899 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		81BA817E1A49E0F000E65899 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
 		81BA81801A49E10C00E65899 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
-		B26EA7621CA0742B00EE25F1 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../../Desktop/logo.png; sourceTree = "<group>"; };
+		B21FFAF31CA8896B00B244F6 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../logo.png; sourceTree = "<group>"; };
+		B21FFAF51CA88A6800B244F6 /* LBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBViewController.swift; sourceTree = "<group>"; };
+		B21FFAF61CA88A6800B244F6 /* LBViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBViewController.xib; sourceTree = "<group>"; };
+		B21FFAF91CA88E6200B244F6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		B26EA7641CA0877F00EE25F1 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		B26EA7661CA0E98400EE25F1 /* PostImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostImageViewController.swift; sourceTree = "<group>"; };
 		B26EA7681CA100B200EE25F1 /* cell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cell.swift; sourceTree = "<group>"; };
@@ -51,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21FFAFA1CA88E6200B244F6 /* CoreLocation.framework in Frameworks */,
 				81BA817F1A49E0F000E65899 /* libstdc++.6.dylib in Frameworks */,
 				81BA817B1A49E0E500E65899 /* SystemConfiguration.framework in Frameworks */,
 				81BA81791A49E0DB00E65899 /* AudioToolbox.framework in Frameworks */,
@@ -94,11 +101,13 @@
 			isa = PBXGroup;
 			children = (
 				81BA814A1A49DA1800E65899 /* AppDelegate.swift */,
-				B26EA7621CA0742B00EE25F1 /* logo.png */,
+				B21FFAF31CA8896B00B244F6 /* logo.png */,
 				81BA814C1A49DA1800E65899 /* ViewController.swift */,
 				B26EA7661CA0E98400EE25F1 /* PostImageViewController.swift */,
 				B26EA7641CA0877F00EE25F1 /* TableViewController.swift */,
 				814C3AC61B69877600E307BB /* Main.storyboard */,
+				B21FFAF51CA88A6800B244F6 /* LBViewController.swift */,
+				B21FFAF61CA88A6800B244F6 /* LBViewController.xib */,
 				B26EA7681CA100B200EE25F1 /* cell.swift */,
 				B26EA76A1CA102E900EE25F1 /* ConnectTableViewController.swift */,
 			);
@@ -109,6 +118,7 @@
 		81BA816A1A49DB5600E65899 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B21FFAF91CA88E6200B244F6 /* CoreLocation.framework */,
 				81BA816B1A49DB6800E65899 /* Bolts.framework */,
 				81BA816C1A49DB6800E65899 /* Parse.framework */,
 				81BA816E1A49DB6800E65899 /* ParseFacebookUtils.framework */,
@@ -188,9 +198,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B21FFAF41CA8896B00B244F6 /* logo.png in Resources */,
 				814C3ACA1B69877600E307BB /* Main.storyboard in Resources */,
+				B21FFAF81CA88A6800B244F6 /* LBViewController.xib in Resources */,
 				814C3ACB1B69877600E307BB /* Images.xcassets in Resources */,
-				B26EA7631CA0742B00EE25F1 /* logo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +214,7 @@
 			files = (
 				B26EA76B1CA102E900EE25F1 /* ConnectTableViewController.swift in Sources */,
 				B26EA7671CA0E98400EE25F1 /* PostImageViewController.swift in Sources */,
+				B21FFAF71CA88A6800B244F6 /* LBViewController.swift in Sources */,
 				81BA814D1A49DA1800E65899 /* ViewController.swift in Sources */,
 				B26EA7651CA0877F00EE25F1 /* TableViewController.swift in Sources */,
 				B26EA7691CA100B200EE25F1 /* cell.swift in Sources */,
