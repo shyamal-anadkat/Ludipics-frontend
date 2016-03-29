@@ -15,7 +15,7 @@ class LBViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDe
     @IBOutlet var map: MKMapView!
     
     var locationManager = CLLocationManager()
-    //testcommiy
+    //testcommit
     
     override func viewDidLoad() {
         super.viewDidLoad()
