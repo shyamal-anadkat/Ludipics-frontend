@@ -9,7 +9,7 @@ import Parse  //coz we use parse framework.
 
 class PostImageViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate {
     
-    //when you want to pop up an alert just use this function ok ?
+    //when you want to pop up an alert just use this function ok ?test
     func displayAlert(title: String, message: String) {
         var alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
