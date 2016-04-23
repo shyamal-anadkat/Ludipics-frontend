@@ -1,27 +1,46 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="1pX-8N-COu">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="EHf-IW-A2E">
+        <scene sceneID="JJy-DO-0e3">
             <objects>
-                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                <viewController id="1pX-8N-COu" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Llm-lL-Icb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
+                        <viewControllerLayoutGuide type="top" id="jFz-wd-FSi"/>
+                        <viewControllerLayoutGuide type="bottom" id="94o-6c-U6e"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                    <view key="view" contentMode="scaleToFill" id="12l-fi-QpB">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="nQ4-Fh-8Zb">
+                                <rect key="frame" x="177" y="84" width="246" height="210"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="nQ4-Fh-8Zb" secondAttribute="height" multiplier="41:35" id="AHe-tI-eSd"/>
+                                    <constraint firstAttribute="height" constant="210" id="KtZ-qQ-GX2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nQ4-Fh-8Zb" firstAttribute="centerX" secondItem="12l-fi-QpB" secondAttribute="centerX" id="01E-oT-Giy"/>
+                            <constraint firstItem="nQ4-Fh-8Zb" firstAttribute="top" secondItem="jFz-wd-FSi" secondAttribute="bottom" constant="64" id="cXB-br-s9i"/>
+                        </constraints>
                     </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="myB-Nk-yhE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="524" y="135"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo.png" width="420" height="423"/>
+    </resources>
 </document>
