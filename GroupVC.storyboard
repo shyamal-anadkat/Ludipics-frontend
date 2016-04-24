@@ -57,7 +57,6 @@
                         <outlet property="searchDisplayController" destination="mdv-Sk-k2d" id="ajp-wy-FpS"/>
                     </connections>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DkA-LL-uLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="mdv-Sk-k2d">
                     <connections>
                         <outlet property="delegate" destination="bnv-Ht-Il2" id="ecL-bA-zT9"/>
@@ -66,6 +65,7 @@
                         <outlet property="searchResultsDelegate" destination="bnv-Ht-Il2" id="fin-bg-gDU"/>
                     </connections>
                 </searchDisplayController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DkA-LL-uLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-250" y="369"/>
         </scene>

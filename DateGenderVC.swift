@@ -10,9 +10,34 @@ import UIKit
 
 class DateGenderVC: UIViewController, UITextFieldDelegate {
 
- 
+    
+    var Gender: Bool = true
+    
+    var genderSetGet: Bool {
+        get {
+            return Gender
+        }
+        set (newValue) {
+            Gender = newValue
+           print(genderSetGet)
+        }
+        
+    }
+    
+    
     @IBOutlet var dateLabel: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
+    
+    
+    
+    @IBAction func maleButton(sender: UIButton) {
+        genderSetGet = false
+    }
+    
+    
+    @IBAction func femaleButton(sender: UIButton) {
+        genderSetGet = true
+    }
     
     
     
@@ -21,8 +46,9 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         datePicker.datePickerMode = UIDatePickerMode.Date
         
-        datePicker.addTarget(self, action: "dateDidChange:", forControlEvents: .ValueChanged)
+        datePicker.addTarget(self, action: #selector(DateGenderVC.dateDidChange(_:)), forControlEvents: .ValueChanged)
         // Do any additional setup after loading the view.
+        
 
     }
     

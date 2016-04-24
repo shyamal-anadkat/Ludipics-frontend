@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpp-OR-3wK">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" alwaysBounceHorizontal="YES" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpp-OR-3wK">
                                 <rect key="frame" x="20" y="287" width="560" height="47"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -34,7 +34,7 @@
                                     </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                             </textView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LudipicsLogo" translatesAutoresizingMaskIntoConstraints="NO" id="lfS-gI-cTl">
                                 <rect key="frame" x="249" y="183" width="102" height="96"/>
@@ -328,29 +328,67 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="52" id="cRA-mw-MiQ"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="23"/>
-                                <color key="textColor" red="0.022898171097040176" green="0.015572802163660526" blue="0.032800674438476562" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="23"/>
+                                <color key="textColor" red="0.19829272640947057" green="0.37512527175464616" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What's your gender?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-kq-Bz7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your gender?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-kq-Bz7">
                                 <rect key="frame" x="20" y="363" width="560" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="XYd-c5-ciH"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-hu-1gA">
+                                <rect key="frame" x="186" y="410" width="228" height="135"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nck-oq-gNN">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="135"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="6sI-Fz-wlu"/>
+                                        </constraints>
+                                        <state key="normal" image="Male"/>
+                                        <connections>
+                                            <action selector="maleButton:" destination="ag0-Aq-Gy2" eventType="touchUpInside" id="VsN-ge-ueG"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhr-Mn-tGQ">
+                                        <rect key="frame" x="114" y="0.0" width="114" height="135"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="114" id="lH7-pP-QB4"/>
+                                            <constraint firstAttribute="height" constant="135" id="wgi-UH-2Fb"/>
+                                        </constraints>
+                                        <state key="normal" image="Female"/>
+                                        <connections>
+                                            <action selector="femaleButton:" destination="ag0-Aq-Gy2" eventType="touchUpInside" id="h9L-lq-YOh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Fhr-Mn-tGQ" firstAttribute="width" secondItem="Nck-oq-gNN" secondAttribute="width" id="F2A-P6-DKf"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lIB-jT-jCL" firstAttribute="top" secondItem="G6m-Yz-QRl" secondAttribute="bottom" constant="8" id="1bO-sS-Pxn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Ngd-kq-Bz7" secondAttribute="leading" id="6rH-hC-F3f"/>
+                            <constraint firstItem="Nfm-hu-1gA" firstAttribute="top" secondItem="Ngd-kq-Bz7" secondAttribute="bottom" constant="8" id="8ca-aU-UEy"/>
                             <constraint firstItem="lIB-jT-jCL" firstAttribute="leading" secondItem="C9O-aN-xcO" secondAttribute="leadingMargin" constant="18" id="Clg-gy-vnc"/>
                             <constraint firstAttribute="leadingMargin" secondItem="G6m-Yz-QRl" secondAttribute="leading" id="GYN-Zt-cAl"/>
+                            <constraint firstItem="Ngd-kq-Bz7" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="HGK-qf-bBy"/>
                             <constraint firstItem="G6m-Yz-QRl" firstAttribute="top" secondItem="sd5-sr-FsW" secondAttribute="bottom" constant="30" id="M6n-VG-WGX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="O1y-44-7QC" secondAttribute="trailing" constant="-20" id="QWN-1L-CiR"/>
                             <constraint firstItem="O1y-44-7QC" firstAttribute="leading" secondItem="C9O-aN-xcO" secondAttribute="leadingMargin" constant="-20" id="TRg-vZ-8gY"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lIB-jT-jCL" secondAttribute="trailing" constant="18" id="XKF-0J-XF0"/>
                             <constraint firstAttribute="trailingMargin" secondItem="G6m-Yz-QRl" secondAttribute="trailing" id="bac-2k-Gcs"/>
+                            <constraint firstItem="Nfm-hu-1gA" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="cmb-NT-AWE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ngd-kq-Bz7" secondAttribute="trailing" id="eok-Yp-yZn"/>
                             <constraint firstItem="O1y-44-7QC" firstAttribute="top" secondItem="lIB-jT-jCL" secondAttribute="bottom" constant="8" id="jgu-6f-It5"/>
                             <constraint firstItem="O1y-44-7QC" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="qSn-8x-XwD"/>
+                            <constraint firstItem="Ngd-kq-Bz7" firstAttribute="top" secondItem="O1y-44-7QC" secondAttribute="bottom" constant="8" id="vCk-Ia-ufy"/>
                         </constraints>
                     </view>
                     <connections>
@@ -387,6 +425,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Female" width="114" height="185"/>
         <image name="LudipicsLogo" width="509" height="482"/>
+        <image name="Male" width="82" height="185"/>
     </resources>
 </document>
