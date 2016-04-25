@@ -28,7 +28,12 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var dateLabel: UITextField!
     @IBOutlet var datePicker: UIDatePicker!
     
+    @IBOutlet var name: String!
+    @IBOutlet var email: String!
+    @IBOutlet var password: String!
     
+    
+     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
     @IBAction func maleButton(sender: UIButton) {
         genderSetGet = false
@@ -39,7 +44,13 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
         genderSetGet = true
     }
     
-    
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
+            
+        })))
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
     
     
     override func viewDidLoad() {
@@ -52,6 +63,67 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
 
     }
     
+    @IBAction func checkDate()
+    {
+        var bool = true
+        
+        let cal = NSCalendar.currentCalendar()
+        let thisComponents = cal.components([.Era, .Year, .Month, .Day], fromDate:NSDate())
+        
+        let birthComponents = cal.components([.Era, .Year, .Month, .Day], fromDate:datePicker.date)
+        
+        let years = thisComponents.year - birthComponents.year
+        
+        if(years >= 13)
+        {
+            if(years == 13)
+            {
+                if((thisComponents.month - birthComponents.month) <= 0)
+                {
+                    if(thisComponents.month == birthComponents.month)
+                    {
+                        if((thisComponents.day - birthComponents.day) > 0)
+                        {
+                            bool = false
+                        }
+                        
+                    }
+                }
+                else
+                {
+                    bool = false
+                }
+            }
+        }
+        else
+        {
+            bool = false
+        }
+        
+        
+        if bool == true
+        {
+            signUp()
+        }
+        else
+        {
+            if(years < 100)
+            {
+                displayAlert("Not Old Enough", message:"You need to be at least 13 years old to sign up")
+            }
+            else
+            {
+                displayAlert("Too Old", message:"Aren't you dead already?")
+            }
+        }
+    }
+    
+    
+    func getDate() -> String
+    {
+        return dateLabel.text!
+    }
+    
     func dateDidChange(sender: UIDatePicker) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateStyle = .LongStyle
@@ -62,7 +134,49 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
 
     }
     
-   
+    @IBAction func signUp()
+    {
+        //ignore user events till sign up is performed
+        activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        let user = PFUser()
+        
+        user.username = email
+        user.password = password
+        user["dob"] = getDate()
+        user["name"] = name
+        user["gender"] = genderSetGet
+        
+        print(name)
+        print(email)
+        print(password)
+        print(getDate())
+        //NSJSONReadingOptions.AllowFragments
+        //Sign up in background
+        user.signUpInBackgroundWithBlock({ (success, error) -> Void in
+            self.activityIndicator.stopAnimating()
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            
+            if error == nil {
+                
+                //signup success!
+                print("done signup")
+                //logged in
+                let storyboard = UIStoryboard(name: "GroupVC", bundle: nil)
+                let controller = storyboard.instantiateViewControllerWithIdentifier("GroupVCID") as UIViewController
+                self.presentViewController(controller, animated: true, completion: nil)
+                
+            } else {
+                self.displayAlert("Failed Signup", message: "\(error) \(error?.userInfo)")
+            }
+        })
+        
+    }
     
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {

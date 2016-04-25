@@ -74,7 +74,7 @@
 		B91FBC6E1CCA8AC9004ABBCC /* GroupTableCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableCellVC.h; sourceTree = "<group>"; };
 		B91FBC6F1CCA8AC9004ABBCC /* GroupTableCellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableCellVC.m; sourceTree = "<group>"; };
 		B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupVC.storyboard; sourceTree = "<group>"; };
-		B91FBC751CCA97B5004ABBCC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = ../../Desktop/Ludipics/logo.png; sourceTree = "<group>"; };
+		B91FBC751CCA97B5004ABBCC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = LudipicsUpdated/Assets.xcassets/logo.png; sourceTree = "<group>"; };
 		B91FBC781CCA9AF2004ABBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B91FBCB81CCAAB53004ABBCC /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B973054F1CCD3BE4000D5019 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };

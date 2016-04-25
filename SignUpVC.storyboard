@@ -50,7 +50,8 @@
                                 </constraints>
                                 <state key="normal" title="Sign Me Up"/>
                                 <connections>
-                                    <segue destination="TJN-i8-XFj" kind="show" id="2L5-6s-ciP"/>
+                                    <action selector="checkName" destination="1cg-8D-cjv" eventType="touchUpInside" id="A61-gs-Jwh"/>
+                                    <segue destination="TJN-i8-XFj" kind="show" identifier="segueTest1" id="StX-am-JO3"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Enter your Name (eg. Hahn McDondald)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OS5-mP-TlY">
@@ -155,7 +156,8 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="edr-lj-plh"/>
                                     <barButtonItem title="Next" width="63" id="x6t-Nm-4Rq">
                                         <connections>
-                                            <segue destination="MrO-Ph-h5h" kind="show" id="L5P-IB-KzY"/>
+                                            <action selector="checkEmail" destination="TJN-i8-XFj" id="bFe-z3-xQ1"/>
+                                            <segue destination="MrO-Ph-h5h" kind="show" identifier="segueTest2" id="Ye2-iq-UA2"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -265,7 +267,8 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="ov7-mB-D8D"/>
                                     <barButtonItem title="Next" width="63" id="EJB-h4-elq">
                                         <connections>
-                                            <segue destination="ag0-Aq-Gy2" kind="show" id="VPB-z6-2tq"/>
+                                            <action selector="checkPassword" destination="MrO-Ph-h5h" id="x3K-3p-by9"/>
+                                            <segue destination="ag0-Aq-Gy2" kind="show" identifier="segueTest3" id="TAd-yU-DWG"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -289,6 +292,9 @@
                             <constraint firstAttribute="leadingMargin" secondItem="CSW-1y-kdH" secondAttribute="leading" id="tjf-Hs-W8N"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordPrompt" destination="dhl-zT-QSX" id="tFy-tj-NDY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0I-V1-uBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -370,13 +376,26 @@
                                     <constraint firstItem="Fhr-Mn-tGQ" firstAttribute="width" secondItem="Nck-oq-gNN" secondAttribute="width" id="F2A-P6-DKf"/>
                                 </constraints>
                             </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eey-t0-RGM">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6B8-fd-J2h"/>
+                                    <barButtonItem title="Done" width="49" id="G23-3o-8mu">
+                                        <connections>
+                                            <action selector="checkDate" destination="ag0-Aq-Gy2" id="nzv-NU-nlP"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="Eey-t0-RGM" secondAttribute="trailing" constant="-20" id="0wM-6t-gPO"/>
                             <constraint firstItem="lIB-jT-jCL" firstAttribute="top" secondItem="G6m-Yz-QRl" secondAttribute="bottom" constant="8" id="1bO-sS-Pxn"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Ngd-kq-Bz7" secondAttribute="leading" id="6rH-hC-F3f"/>
                             <constraint firstItem="Nfm-hu-1gA" firstAttribute="top" secondItem="Ngd-kq-Bz7" secondAttribute="bottom" constant="8" id="8ca-aU-UEy"/>
                             <constraint firstItem="lIB-jT-jCL" firstAttribute="leading" secondItem="C9O-aN-xcO" secondAttribute="leadingMargin" constant="18" id="Clg-gy-vnc"/>
+                            <constraint firstItem="fmc-65-I3C" firstAttribute="top" secondItem="Eey-t0-RGM" secondAttribute="bottom" id="EnC-sT-gUm"/>
                             <constraint firstAttribute="leadingMargin" secondItem="G6m-Yz-QRl" secondAttribute="leading" id="GYN-Zt-cAl"/>
                             <constraint firstItem="Ngd-kq-Bz7" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="HGK-qf-bBy"/>
                             <constraint firstItem="G6m-Yz-QRl" firstAttribute="top" secondItem="sd5-sr-FsW" secondAttribute="bottom" constant="30" id="M6n-VG-WGX"/>
@@ -387,6 +406,7 @@
                             <constraint firstItem="Nfm-hu-1gA" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="cmb-NT-AWE"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Ngd-kq-Bz7" secondAttribute="trailing" id="eok-Yp-yZn"/>
                             <constraint firstItem="O1y-44-7QC" firstAttribute="top" secondItem="lIB-jT-jCL" secondAttribute="bottom" constant="8" id="jgu-6f-It5"/>
+                            <constraint firstItem="Eey-t0-RGM" firstAttribute="leading" secondItem="C9O-aN-xcO" secondAttribute="leadingMargin" constant="-20" id="k4c-qC-81w"/>
                             <constraint firstItem="O1y-44-7QC" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="qSn-8x-XwD"/>
                             <constraint firstItem="Ngd-kq-Bz7" firstAttribute="top" secondItem="O1y-44-7QC" secondAttribute="bottom" constant="8" id="vCk-Ia-ufy"/>
                         </constraints>

@@ -23,7 +23,7 @@
     
     _Description = @[@"3802 Members",@"332 Members",@"3423 Members",@"2344 Members",@"5234 Members"];
     
-    _Images = @[@"logo.png",@"logo.png",@"logo.png",@"logo.png",@"logo.png"];
+    _Images = @[@"StrangerSh",@"Nightlife",@"college-life",@"Artsy",@"peoplewatching"];
     
     
     
