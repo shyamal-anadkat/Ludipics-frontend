@@ -2,8 +2,7 @@
 //  LudipicsUpdated-Bridging-Header.h
 //  LudipicsUpdated
 //
-//  Created by Akshansh Thakur on 4/22/16.
-//  Copyright © 2016 Akshansh Thakur. All rights reserved.
+//  Copyright © 2016 Ludipics. All rights reserved.
 //
 #import "CameraFoundationVC.h"
 #import "GroupVC.h"

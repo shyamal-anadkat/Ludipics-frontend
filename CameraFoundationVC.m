@@ -2,8 +2,7 @@
 //  cameraFoundationVC.m
 //  ludipics
 //
-//  Created by Ritvik Upadhyaya on 13/02/16.
-//  Copyright © 2016 Ritvik Upadhyaya. All rights reserved.
+//  Copyright © 2016 Ludipics. All rights reserved.
 //
 
 #import "cameraFoundationVC.h"
