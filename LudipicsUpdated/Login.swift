@@ -9,8 +9,6 @@ import UIKit
 
 class Login:  UIViewController, UITextFieldDelegate{
 
-    
-    
     //if user already signed up
     var signupActive = true
     
