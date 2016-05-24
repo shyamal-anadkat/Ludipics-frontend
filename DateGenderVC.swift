@@ -1,7 +1,7 @@
 //
 //  DateGenderVC.swift
 //  LudipicsUpdated
-//  Copyright © 2016 Ludipics. All rights reserved.
+//  Copyright © 2016 Ludipics.  All rights reserved.
 //
 
 import UIKit
