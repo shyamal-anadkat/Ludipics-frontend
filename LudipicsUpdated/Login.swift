@@ -8,7 +8,9 @@
 import UIKit
 
 class Login:  UIViewController, UITextFieldDelegate{
-
+    
+    
+    
     //if user already signed up
     var signupActive = true
     
@@ -19,11 +21,11 @@ class Login:  UIViewController, UITextFieldDelegate{
     @IBOutlet var password: UITextField!
     
     //sign up button
-
+    
     
     //login button for user
-  
-
+    
+    
     func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
@@ -31,7 +33,7 @@ class Login:  UIViewController, UITextFieldDelegate{
         })))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-
+    
     @IBAction func loginPressed() {
         //ignore user events till sign up is performed
         activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
@@ -69,13 +71,13 @@ class Login:  UIViewController, UITextFieldDelegate{
             } else {
                 
                 print("user is nil.")
-                self.displayAlert("Failed Login", message: "\(error!) \(error!.userInfo)")
+                self.displayAlert("Failed Login", message: "Your username/password is incorrect. Please try again.")
             }
         })
         
-        }
-       
-        // Write code for the condition if the user has wrong pair of username/ password
+    }
+    
+    // Write code for the condition if the user has wrong pair of username/ password
     
     
     
@@ -94,7 +96,7 @@ class Login:  UIViewController, UITextFieldDelegate{
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-   
+    
     
     
     
@@ -102,12 +104,12 @@ class Login:  UIViewController, UITextFieldDelegate{
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
