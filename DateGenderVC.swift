@@ -1,9 +1,7 @@
 //
 //  DateGenderVC.swift
 //  LudipicsUpdated
-//
-//  Created by Akshansh Thakur on 4/23/16.
-//  Copyright © 2016 Akshansh Thakur. All rights reserved.
+//  Copyright © 2016 Ludipics. All rights reserved.
 //
 
 import UIKit
