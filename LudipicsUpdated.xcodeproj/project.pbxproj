@@ -336,7 +336,7 @@
 				TargetAttributes = {
 					B91FBC151CCA62B8004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 6VBJQ92VR9;
+						DevelopmentTeam = 9PXZ7JNJUZ;
 					};
 					B91FBC291CCA62BA004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
@@ -562,7 +562,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated.sahib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";
@@ -578,7 +578,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated.sahib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";

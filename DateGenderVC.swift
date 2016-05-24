@@ -10,8 +10,10 @@ import UIKit
 
 class DateGenderVC: UIViewController, UITextFieldDelegate {
 
-    
-    var Gender: Bool = true
+    @IBOutlet weak var female: UIButton!
+    @IBOutlet weak var male: UIButton!
+    var isHighlighted = false //is female highlighted
+    var Gender: Bool = false
     
     var genderSetGet: Bool {
         get {
@@ -35,15 +37,6 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
     
      var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
-    @IBAction func maleButton(sender: UIButton) {
-        genderSetGet = false
-    }
-    
-    
-    @IBAction func femaleButton(sender: UIButton) {
-        genderSetGet = true
-    }
-    
     func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
@@ -59,6 +52,7 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
         
         datePicker.addTarget(self, action: #selector(DateGenderVC.dateDidChange(_:)), forControlEvents: .ValueChanged)
         // Do any additional setup after loading the view.
+        male.highlighted = true
         
 
     }
@@ -78,11 +72,11 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
         {
             if(years == 13)
             {
-                if((thisComponents.month - birthComponents.month) <= 0)
+                if((thisComponents.month - birthComponents.month) >= 0)
                 {
                     if(thisComponents.month == birthComponents.month)
                     {
-                        if((thisComponents.day - birthComponents.day) > 0)
+                        if((thisComponents.day - birthComponents.day) < 0)
                         {
                             bool = false
                         }
@@ -184,13 +178,39 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
         return true;
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?)
+    {
         self.view.endEditing(true)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func buttonClicked(sender:UIButton)
+    {
+        dispatch_async(dispatch_get_main_queue(), {
+            
+            if (sender == self.male)
+            {
+                if self.genderSetGet == true
+                {
+                    self.female.highlighted = false
+                    sender.highlighted = true;
+                }
+                self.genderSetGet = false
+            }
+            if (sender == self.female)
+            {
+                if self.genderSetGet == false
+                {
+                    self.male.highlighted = false
+                    sender.highlighted = true;
+                }
+                self.genderSetGet = true
+            }
+        });
     }
    
     /*
