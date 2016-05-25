@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Parse
 
 class SignUpVC: UIViewController {
 

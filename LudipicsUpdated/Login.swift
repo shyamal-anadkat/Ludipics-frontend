@@ -6,10 +6,9 @@
 //
 
 import UIKit
+import Parse
 
 class Login:  UIViewController, UITextFieldDelegate{
-    
-    
     
     //if user already signed up
     var signupActive = true
@@ -19,11 +18,6 @@ class Login:  UIViewController, UITextFieldDelegate{
     
     //password text field
     @IBOutlet var password: UITextField!
-    
-    //sign up button
-    
-    
-    //login button for user
     
     
     func displayAlert(title: String, message: String) {
@@ -43,7 +37,6 @@ class Login:  UIViewController, UITextFieldDelegate{
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-        
         
         //let something: Bool = false
         
@@ -78,11 +71,7 @@ class Login:  UIViewController, UITextFieldDelegate{
     }
     
     // Write code for the condition if the user has wrong pair of username/ password
-    
-    
-    
-    
-    
+
     @IBAction func signUpButton() {
         let storyboard = UIStoryboard(name: "SignUpVC", bundle: nil)
         let controller = storyboard.instantiateViewControllerWithIdentifier("SignUpVCID") as UIViewController
@@ -91,15 +80,11 @@ class Login:  UIViewController, UITextFieldDelegate{
     //activity indicator
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
-    
     //end editing when touched -- text field. basically, keyboard goes away
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

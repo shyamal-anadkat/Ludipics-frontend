@@ -51,6 +51,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="LUDIPICS" id="4IX-oK-hss">
+                        <barButtonItem key="leftBarButtonItem" title="Leaderboard" id="T0A-Fw-6W1"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="RqR-nV-htn"/>
                     </navigationItem>
                     <connections>

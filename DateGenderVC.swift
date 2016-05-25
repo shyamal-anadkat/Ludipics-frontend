@@ -4,6 +4,7 @@
 //  Copyright © 2016 Ludipics.  All rights reserved.
 //
 
+import Parse
 import UIKit
 
 class DateGenderVC: UIViewController, UITextFieldDelegate {
