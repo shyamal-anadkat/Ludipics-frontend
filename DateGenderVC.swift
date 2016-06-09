@@ -78,11 +78,11 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
         {
             if(years == 13)
             {
-                if((thisComponents.month - birthComponents.month) <= 0)
+                if((thisComponents.month - birthComponents.month) >= 0)
                 {
                     if(thisComponents.month == birthComponents.month)
                     {
-                        if((thisComponents.day - birthComponents.day) > 0)
+                        if((thisComponents.day - birthComponents.day) < 0)
                         {
                             bool = false
                         }
@@ -168,7 +168,7 @@ class DateGenderVC: UIViewController, UITextFieldDelegate {
                 print("done signup")
                 //logged in
                 let storyboard = UIStoryboard(name: "GroupVC", bundle: nil)
-                let controller = storyboard.instantiateViewControllerWithIdentifier("GroupVCID") as UIViewController
+                let controller = storyboard.instantiateViewControllerWithIdentifier("GroupVCID") as! UITabBarController
                 self.presentViewController(controller, animated: true, completion: nil)
                 
             } else {

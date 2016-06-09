@@ -9,7 +9,10 @@
 import UIKit
 
 class SignUpVC: UIViewController {
+   
 
+    
+    
     @IBAction func Cancel(sender: UIBarButtonItem) {
        self.dismissViewControllerAnimated(true, completion: nil)
     
@@ -46,7 +49,7 @@ class SignUpVC: UIViewController {
             self.namePrompt.text = self.namePrompt.text?.lowercaseString.capitalizedString
             //let vc: UIViewController = UIViewController(nibName: "emailResponseVC", bundle: nil)
             //self.presentViewController(vc, animated: true, completion: nil)
-           // performSegueWithIdentifier("segueTest1", sender: nil)
+           performSegueWithIdentifier("segueTest1", sender: nil)
         }
         else
         {
@@ -60,7 +63,7 @@ class SignUpVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+       
         // Do any additional setup after loading the view.
         self.automaticallyAdjustsScrollViewInsets = false
     }

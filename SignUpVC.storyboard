@@ -51,7 +51,6 @@
                                 <state key="normal" title="Sign Me Up"/>
                                 <connections>
                                     <action selector="checkName" destination="1cg-8D-cjv" eventType="touchUpInside" id="A61-gs-Jwh"/>
-                                    <segue destination="TJN-i8-XFj" kind="show" identifier="segueTest1" id="StX-am-JO3"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder=" Enter your Name (eg. Hahn McDondald)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OS5-mP-TlY">
@@ -88,6 +87,8 @@
                     </navigationItem>
                     <connections>
                         <outlet property="namePrompt" destination="OS5-mP-TlY" id="loJ-bW-oXI"/>
+                        <outlet property="view" destination="WaY-Qd-U2q" id="ABf-N0-Wmg"/>
+                        <segue destination="TJN-i8-XFj" kind="show" identifier="segueTest1" id="BoB-oF-Fgr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHI-uC-yA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,7 +158,6 @@
                                     <barButtonItem title="Next" width="63" id="x6t-Nm-4Rq">
                                         <connections>
                                             <action selector="checkEmail" destination="TJN-i8-XFj" id="bFe-z3-xQ1"/>
-                                            <segue destination="MrO-Ph-h5h" kind="show" identifier="segueTest2" id="Ye2-iq-UA2"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -196,6 +196,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="emailAddressPrompt" destination="PP2-pz-KaL" id="rmK-rs-Rmv"/>
+                        <segue destination="MrO-Ph-h5h" kind="show" identifier="segueTest2" id="GPB-95-7bl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WOx-8l-nhu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -268,7 +269,6 @@
                                     <barButtonItem title="Next" width="63" id="EJB-h4-elq">
                                         <connections>
                                             <action selector="checkPassword" destination="MrO-Ph-h5h" id="x3K-3p-by9"/>
-                                            <segue destination="ag0-Aq-Gy2" kind="show" identifier="segueTest3" id="TAd-yU-DWG"/>
                                         </connections>
                                     </barButtonItem>
                                 </items>
@@ -294,6 +294,7 @@
                     </view>
                     <connections>
                         <outlet property="passwordPrompt" destination="dhl-zT-QSX" id="tFy-tj-NDY"/>
+                        <segue destination="ag0-Aq-Gy2" kind="show" identifier="segueTest3" id="krD-fM-mi6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0I-V1-uBR" userLabel="First Responder" sceneMemberID="firstResponder"/>

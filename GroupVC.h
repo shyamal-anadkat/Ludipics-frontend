@@ -7,12 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TestViewController;
 
 @interface GroupVC : UITableViewController
 
 @property (nonatomic, strong) NSArray *Images;
 @property (nonatomic, strong) NSArray *Title;
 @property (nonatomic, strong) NSArray *Description;
+@property (nonatomic, strong) NSString *navTitle;
+@property (strong, nonatomic) IBOutlet UITabBarItem *Camera;
 
 
 @end

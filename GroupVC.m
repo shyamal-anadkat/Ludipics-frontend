@@ -8,6 +8,7 @@
 
 #import "GroupVC.h"
 #import "GroupTableCellVC.h"
+#import "LudipicsUpdated-Swift.h"
 
 @interface GroupVC ()
 
@@ -16,6 +17,10 @@
 @implementation GroupVC
 - (void)viewDidLoad {
     [super viewDidLoad];
+   
+    
+    
+    
     // Do any additional setup after loading the view from its nib.\
     
     
@@ -29,6 +34,16 @@
     
 }
 
+- (void)viewDidLayoutSubviews
+{
+    
+    [super viewDidLayoutSubviews];
+    CGRect rect = self.navigationController.navigationBar.frame;
+    float y = rect.size.height + rect.origin.y;
+    self.tableView.contentInset = UIEdgeInsetsMake(y ,0,0,0);
+    
+}
+
 - (NSInteger) numberofSectionsinTableView:(UITableView*) tableView {
     return 1;
 }
@@ -39,11 +54,14 @@
     
 }
 
+
+
 - (UITableViewCell *) tableView: (UITableView *) tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath {
     
     static NSString *CellIdentifier = @"tableCell";
     
     GroupTableCellVC *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+   
     
     int row = [indexPath row];
     cell.TitleLabel.text = _Title[row];
@@ -54,9 +72,69 @@
     
 }
 
+
+
+-(void)tabBar:(UITabBar *)tabBar didSelectItem:(UITabBarItem *)item {
+    UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"cameraVCID"];
+    [self presentViewController:controller animated:YES completion:NULL];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+
+/*
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"detailShow"]) {
+        
+        
+        GroupPhotoDetailVC *groupphotodetailvc = [segue destinationViewController];
+        
+        
+        
+        NSIndexPath *myPath = [self.tableView indexPathForSelectedRow];
+        
+        
+        
+        GroupTableCellVC *cell = [self.tableView cellForRowAtIndexPath:myPath];
+        NSString *cellText = cell.TitleLabel.text;
+        _navTitle = cellText;
+        groupphotodetailvc.photodetailnavVC.title = _navTitle;
+        int row = [myPath row];
+        
+        groupphotodetailvc.DetailMod = @[_Title[row],_Description[row],_Images[row]];
+        
+    }
+}
+*/
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"detailShow"]) {
+        
+        NSIndexPath *myPath = [self.tableView indexPathForSelectedRow];
+        TestViewController *groupphotodetailvc = [segue destinationViewController];
+        
+        GroupTableCellVC *cell = [self.tableView cellForRowAtIndexPath:myPath];
+        NSString *cellText = cell.TitleLabel.text;
+        _navTitle = cellText;
+        groupphotodetailvc.navTitle.title = _navTitle;
+        int row = [myPath row];
+        groupphotodetailvc.DetailMod = @[_Title[row],_Description[row],_Images[row]];
+
+    }
+    
+    if ([[segue identifier] isEqualToString:@"seguetoCamera"])
+    {
+        // Get reference to the destination view controller
+        CameraVC *vc = [segue destinationViewController];
+        vc.hidesBottomBarWhenPushed = true;
+        // Pass any objects to the view controller here, like...
+        
+    }
+    
 }
 
 /*

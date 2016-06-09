@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B9093D471CD82BF2000C75AC /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093D461CD82BF2000C75AC /* CameraVC.swift */; };
 		B91FBC211CCA62BA004ABBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC201CCA62BA004ABBCC /* Assets.xcassets */; };
 		B91FBC241CCA62BA004ABBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC221CCA62BA004ABBCC /* LaunchScreen.storyboard */; };
 		B91FBC2F1CCA62BA004ABBCC /* LudipicsUpdatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBC2E1CCA62BA004ABBCC /* LudipicsUpdatedTests.swift */; };
@@ -18,6 +19,8 @@
 		B91FBC761CCA97B5004ABBCC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC751CCA97B5004ABBCC /* logo.png */; };
 		B91FBC791CCA9AF2004ABBCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC771CCA9AF2004ABBCC /* Main.storyboard */; };
 		B91FBCB91CCAAB53004ABBCC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBCB81CCAAB53004ABBCC /* Login.swift */; };
+		B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C8EE41CD012B700324C89 /* TestViewController.swift */; };
+		B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C90A91D09EB2E00745463 /* Discover.swift */; };
 		B97305501CCD3BE4000D5019 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B973054F1CCD3BE4000D5019 /* Parse.framework */; };
 		B97305521CCD3BEF000D5019 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97305511CCD3BEF000D5019 /* Bolts.framework */; };
 		B97305541CCD3C28000D5019 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97305531CCD3C28000D5019 /* AudioToolbox.framework */; };
@@ -56,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B9093D461CD82BF2000C75AC /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		B91FBC161CCA62B8004ABBCC /* LudipicsUpdated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudipicsUpdated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91FBC201CCA62BA004ABBCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B91FBC231CCA62BA004ABBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -77,6 +81,8 @@
 		B91FBC751CCA97B5004ABBCC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = LudipicsUpdated/Assets.xcassets/logo.png; sourceTree = "<group>"; };
 		B91FBC781CCA9AF2004ABBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B91FBCB81CCAAB53004ABBCC /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		B94C8EE41CD012B700324C89 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		B94C90A91D09EB2E00745463 /* Discover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		B973054F1CCD3BE4000D5019 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B97305511CCD3BEF000D5019 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B97305531CCD3C28000D5019 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -134,9 +140,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B9093D451CD82BBA000C75AC /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Camera;
+			sourceTree = "<group>";
+		};
 		B91FBC0D1CCA62B8004ABBCC = {
 			isa = PBXGroup;
 			children = (
+				B9093D451CD82BBA000C75AC /* Camera */,
 				B91FBC481CCA63C4004ABBCC /* ObjSupportFiles */,
 				B91FBC181CCA62BA004ABBCC /* LudipicsUpdated */,
 				B91FBC2D1CCA62BA004ABBCC /* LudipicsUpdatedTests */,
@@ -211,6 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				B91FBC691CCA8A48004ABBCC /* GroupVC.h */,
+				B94C90A91D09EB2E00745463 /* Discover.swift */,
+				B9093D461CD82BF2000C75AC /* CameraVC.swift */,
+				B94C8EE41CD012B700324C89 /* TestViewController.swift */,
 				B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */,
 				B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */,
 			);
@@ -407,10 +424,13 @@
 			files = (
 				B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */,
 				B91FBCB91CCAAB53004ABBCC /* Login.swift in Sources */,
+				B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */,
 				B91FBC4B1CCA650A004ABBCC /* CameraFoundationVC.m in Sources */,
+				B9093D471CD82BF2000C75AC /* CameraVC.swift in Sources */,
 				B91FBC6C1CCA8A48004ABBCC /* GroupVC.m in Sources */,
 				B98B81961CCB8D020030912D /* emailResponseVC.swift in Sources */,
 				B98B81901CCB2EC50030912D /* SignUpVC.swift in Sources */,
+				B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */,
 				B98B81981CCBA2F80030912D /* passwordResponseVC.swift in Sources */,
 				B9A35B541CCC590800A03D39 /* AppDelegate.swift in Sources */,
 				B91FBC711CCA8AC9004ABBCC /* GroupTableCellVC.m in Sources */,
@@ -559,6 +579,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -575,6 +597,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEFINES_MODULE = NO;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
