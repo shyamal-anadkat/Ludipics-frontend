@@ -115,6 +115,7 @@
 				B973055E1CCD3C4F000D5019 /* Security.framework in Frameworks */,
 				B973055C1CCD3C47000D5019 /* QuartzCore.framework in Frameworks */,
 				B973055A1CCD3C3E000D5019 /* CoreLocation.framework in Frameworks */,
+				B21ED2731CF2C82D00F63AB0 /* MapKit.framework in Frameworks */,
 				B97305581CCD3C38000D5019 /* CoreGraphics.framework in Frameworks */,
 				B97305561CCD3C2F000D5019 /* CFNetwork.framework in Frameworks */,
 				B97305541CCD3C28000D5019 /* AudioToolbox.framework in Frameworks */,
@@ -246,6 +247,7 @@
 		B91FBCD21CCACC49004ABBCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B21ED2721CF2C82D00F63AB0 /* MapKit.framework */,
 				B97305651CCD3C71000D5019 /* libsqlite3.tbd */,
 				B97305631CCD3C67000D5019 /* libz.tbd */,
 				B97305611CCD3C5F000D5019 /* SystemConfiguration.framework */,
@@ -353,7 +355,7 @@
 				TargetAttributes = {
 					B91FBC151CCA62B8004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = 6VBJQ92VR9;
+						DevelopmentTeam = G547D7BDTT;
 					};
 					B91FBC291CCA62BA004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
@@ -584,7 +586,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated.sahib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";
@@ -602,7 +604,7 @@
 				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated.sahib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";

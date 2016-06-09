@@ -2,13 +2,14 @@
 //  emailResponseVC.swift
 //  LudipicsUpdated
 //
-//  Created by Akshansh Thakur on 4/23/16.
-//  Copyright © 2016 Akshansh Thakur. All rights reserved.
+//  Copyright © 2016 Ludipics.  All rights reserved.
 //
 
 import UIKit
+import Parse
 
-class emailResponseVC: UIViewController {
+class emailResponseVC: UIViewController
+{
 
     
     @IBOutlet var emailAddressPrompt: UITextField!
@@ -24,11 +25,7 @@ class emailResponseVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-       
-        
-
     }
 
     @IBAction func checkEmail()
@@ -39,7 +36,6 @@ class emailResponseVC: UIViewController {
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         bool = emailTest.evaluateWithObject(self.emailAddressPrompt.text)
         
-        
         if(self.emailAddressPrompt.text?.characters.count == 0)
         {
             bool = false
@@ -47,10 +43,28 @@ class emailResponseVC: UIViewController {
         
         if bool == true
         {
-            self.emailAddressPrompt.text = self.emailAddressPrompt.text?.lowercaseString
-            //let vc: UIViewController = UIViewController(nibName: "passwordResponseVC", bundle: nil)
-            //self.presentViewController(vc, animated: true, completion: nil)
-            performSegueWithIdentifier("segueTest2", sender: nil)
+            let query = PFUser.query()
+            query!.whereKey("username", equalTo: self.emailAddressPrompt.text!)
+            query!.findObjectsInBackgroundWithBlock { (objects, error) -> Void in
+                
+                if error == nil
+                {
+                    if (objects!.count > 0)
+                    {
+                        bool = false
+                        self.displayAlert("This email address is already registered!", message: " Please enter another email address or log in with this email address.")
+                    }
+                    else
+                    {
+                        self.emailAddressPrompt.text = self.emailAddressPrompt.text?.lowercaseString
+                        self.performSegueWithIdentifier("segueTest2", sender: nil)
+                    }
+                } else
+                {
+                    print("Some weird shit just happened.")
+                    bool = false
+                }
+            }
         }
         else
         {

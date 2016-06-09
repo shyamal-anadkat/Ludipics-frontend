@@ -2,15 +2,13 @@
 //  ViewController.swift
 //  LudipicsTm
 //
-//  Created by Akshansh Thakur on 4/22/16.
-//  Copyright © 2016 Akshansh Thakur. All rights reserved.
+//  Copyright © 2016 Ludipics. All rights reserved.
 //
 
 import UIKit
+import Parse
 
 class Login:  UIViewController, UITextFieldDelegate{
-
-    
     
     //if user already signed up
     var signupActive = true
@@ -21,12 +19,7 @@ class Login:  UIViewController, UITextFieldDelegate{
     //password text field
     @IBOutlet var password: UITextField!
     
-    //sign up button
-
     
-    //login button for user
-  
-
     func displayAlert(title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction((UIAlertAction(title: "OK", style: .Default, handler: { (action) -> Void in
@@ -34,7 +27,7 @@ class Login:  UIViewController, UITextFieldDelegate{
         })))
         self.presentViewController(alert, animated: true, completion: nil)
     }
-
+    
     @IBAction func loginPressed() {
         //ignore user events till sign up is performed
         activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
@@ -44,7 +37,6 @@ class Login:  UIViewController, UITextFieldDelegate{
         view.addSubview(activityIndicator)
         activityIndicator.startAnimating()
         UIApplication.sharedApplication().beginIgnoringInteractionEvents()
-        
         
         //let something: Bool = false
         
@@ -72,18 +64,14 @@ class Login:  UIViewController, UITextFieldDelegate{
             } else {
                 
                 print("user is nil.")
-                self.displayAlert("Failed Login", message: "\(error!) \(error!.userInfo)")
+                self.displayAlert("Failed Login", message: "Your username/password is incorrect. Please try again.")
             }
         })
         
-        }
-       
-        // Write code for the condition if the user has wrong pair of username/ password
+    }
     
-    
-    
-    
-    
+    // Write code for the condition if the user has wrong pair of username/ password
+
     @IBAction func signUpButton() {
         let storyboard = UIStoryboard(name: "SignUpVC", bundle: nil)
         let controller = storyboard.instantiateViewControllerWithIdentifier("SignUpVCID") as UIViewController
@@ -92,25 +80,21 @@ class Login:  UIViewController, UITextFieldDelegate{
     //activity indicator
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
-    
     //end editing when touched -- text field. basically, keyboard goes away
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
         self.view.endEditing(true)
     }
-   
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
