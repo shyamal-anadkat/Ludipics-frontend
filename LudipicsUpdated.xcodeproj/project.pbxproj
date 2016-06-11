@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B20114911D0B9F9D0066F26D /* leaderboard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B20114901D0B9F9D0066F26D /* leaderboard@3x.png */; };
+		B20114981D0BA5070066F26D /* binocular@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B20114971D0BA5070066F26D /* binocular@3x.png */; };
+		B201149A1D0BA50C0066F26D /* icon-camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B20114991D0BA50C0066F26D /* icon-camera@3x.png */; };
+		B201149C1D0BA8DD0066F26D /* profile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B201149B1D0BA8DD0066F26D /* profile@3x.png */; };
+		B201149E1D0BA9010066F26D /* groups@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B201149D1D0BA9010066F26D /* groups@3x.png */; };
+		B20114A61D0BB1A00066F26D /* LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20114A51D0BB1A00066F26D /* LBViewController.swift */; };
 		B9093D471CD82BF2000C75AC /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093D461CD82BF2000C75AC /* CameraVC.swift */; };
 		B91FBC211CCA62BA004ABBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC201CCA62BA004ABBCC /* Assets.xcassets */; };
 		B91FBC241CCA62BA004ABBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC221CCA62BA004ABBCC /* LaunchScreen.storyboard */; };
@@ -59,6 +65,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B20114901D0B9F9D0066F26D /* leaderboard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard@3x.png"; sourceTree = "<group>"; };
+		B20114971D0BA5070066F26D /* binocular@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "binocular@3x.png"; sourceTree = "<group>"; };
+		B20114991D0BA50C0066F26D /* icon-camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-camera@3x.png"; sourceTree = "<group>"; };
+		B201149B1D0BA8DD0066F26D /* profile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@3x.png"; sourceTree = "<group>"; };
+		B201149D1D0BA9010066F26D /* groups@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups@3x.png"; sourceTree = "<group>"; };
+		B20114A51D0BB1A00066F26D /* LBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBViewController.swift; sourceTree = "<group>"; };
 		B9093D461CD82BF2000C75AC /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		B91FBC161CCA62B8004ABBCC /* LudipicsUpdated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudipicsUpdated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91FBC201CCA62BA004ABBCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -115,7 +127,6 @@
 				B973055E1CCD3C4F000D5019 /* Security.framework in Frameworks */,
 				B973055C1CCD3C47000D5019 /* QuartzCore.framework in Frameworks */,
 				B973055A1CCD3C3E000D5019 /* CoreLocation.framework in Frameworks */,
-				B21ED2731CF2C82D00F63AB0 /* MapKit.framework in Frameworks */,
 				B97305581CCD3C38000D5019 /* CoreGraphics.framework in Frameworks */,
 				B97305561CCD3C2F000D5019 /* CFNetwork.framework in Frameworks */,
 				B97305541CCD3C28000D5019 /* AudioToolbox.framework in Frameworks */,
@@ -141,6 +152,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B20114921D0BA1570066F26D /* Tab Bar Icons */ = {
+			isa = PBXGroup;
+			children = (
+				B201149D1D0BA9010066F26D /* groups@3x.png */,
+				B20114991D0BA50C0066F26D /* icon-camera@3x.png */,
+				B201149B1D0BA8DD0066F26D /* profile@3x.png */,
+				B20114971D0BA5070066F26D /* binocular@3x.png */,
+				B20114901D0B9F9D0066F26D /* leaderboard@3x.png */,
+			);
+			name = "Tab Bar Icons";
+			sourceTree = "<group>";
+		};
+		B20114A31D0BAC0B0066F26D /* ProfileVC */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ProfileVC;
+			sourceTree = "<group>";
+		};
+		B20114A41D0BACCC0066F26D /* LeaderboardVC */ = {
+			isa = PBXGroup;
+			children = (
+				B20114A51D0BB1A00066F26D /* LBViewController.swift */,
+			);
+			name = LeaderboardVC;
+			sourceTree = "<group>";
+		};
 		B9093D451CD82BBA000C75AC /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,6 +242,8 @@
 		B91FBC481CCA63C4004ABBCC /* ObjSupportFiles */ = {
 			isa = PBXGroup;
 			children = (
+				B20114A41D0BACCC0066F26D /* LeaderboardVC */,
+				B20114A31D0BAC0B0066F26D /* ProfileVC */,
 				B91FBC751CCA97B5004ABBCC /* logo.png */,
 				B91FBC471CCA639F004ABBCC /* LudipicsUpdated-BridgingHeader.h */,
 				B91FBC5C1CCA8785004ABBCC /* CameraVC */,
@@ -228,6 +268,7 @@
 				B91FBC691CCA8A48004ABBCC /* GroupVC.h */,
 				B94C90A91D09EB2E00745463 /* Discover.swift */,
 				B9093D461CD82BF2000C75AC /* CameraVC.swift */,
+				B20114921D0BA1570066F26D /* Tab Bar Icons */,
 				B94C8EE41CD012B700324C89 /* TestViewController.swift */,
 				B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */,
 				B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */,
@@ -247,7 +288,6 @@
 		B91FBCD21CCACC49004ABBCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B21ED2721CF2C82D00F63AB0 /* MapKit.framework */,
 				B97305651CCD3C71000D5019 /* libsqlite3.tbd */,
 				B97305631CCD3C67000D5019 /* libz.tbd */,
 				B97305611CCD3C5F000D5019 /* SystemConfiguration.framework */,
@@ -395,8 +435,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91FBC761CCA97B5004ABBCC /* logo.png in Resources */,
+				B20114911D0B9F9D0066F26D /* leaderboard@3x.png in Resources */,
 				B91FBC791CCA9AF2004ABBCC /* Main.storyboard in Resources */,
+				B20114981D0BA5070066F26D /* binocular@3x.png in Resources */,
 				B91FBC241CCA62BA004ABBCC /* LaunchScreen.storyboard in Resources */,
+				B201149E1D0BA9010066F26D /* groups@3x.png in Resources */,
+				B201149A1D0BA50C0066F26D /* icon-camera@3x.png in Resources */,
+				B201149C1D0BA8DD0066F26D /* profile@3x.png in Resources */,
 				B98B81931CCB2F040030912D /* SignUpVC.storyboard in Resources */,
 				B91FBC741CCA95E7004ABBCC /* GroupVC.storyboard in Resources */,
 				B91FBC211CCA62BA004ABBCC /* Assets.xcassets in Resources */,
@@ -424,6 +469,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B20114A61D0BB1A00066F26D /* LBViewController.swift in Sources */,
 				B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */,
 				B91FBCB91CCAAB53004ABBCC /* Login.swift in Sources */,
 				B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */,
