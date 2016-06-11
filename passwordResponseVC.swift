@@ -43,9 +43,9 @@ class passwordResponseVC: UIViewController {
         }
     }
     
-    override func prepareForSegue(segue:UIStoryboardSegue!, sender:AnyObject!) {
+    override func prepareForSegue(segue:UIStoryboardSegue, sender:AnyObject!) {
         if(segue.identifier == "segueTest3") {
-            let svc = segue!.destinationViewController as! DateGenderVC
+            let svc = segue.destinationViewController as! DateGenderVC
             svc.name = name
             svc.email = email
             svc.password = passwordPrompt.text!

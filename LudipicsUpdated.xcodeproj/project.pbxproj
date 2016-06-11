@@ -19,8 +19,13 @@
 		B91FBC761CCA97B5004ABBCC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC751CCA97B5004ABBCC /* logo.png */; };
 		B91FBC791CCA9AF2004ABBCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC771CCA9AF2004ABBCC /* Main.storyboard */; };
 		B91FBCB91CCAAB53004ABBCC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBCB81CCAAB53004ABBCC /* Login.swift */; };
+		B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E847A1D0C4DC800591188 /* customTextField.swift */; };
+		B92E84851D0C61F600591188 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92E84821D0C61F600591188 /* FBSDKCoreKit.framework */; };
+		B92E84861D0C61F600591188 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92E84831D0C61F600591188 /* FBSDKLoginKit.framework */; };
+		B92E84871D0C61F600591188 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B92E84841D0C61F600591188 /* FBSDKShareKit.framework */; };
 		B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C8EE41CD012B700324C89 /* TestViewController.swift */; };
 		B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C90A91D09EB2E00745463 /* Discover.swift */; };
+		B94C90AF1D0BBF3200745463 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C90AE1D0BBF3100745463 /* LoginView.swift */; };
 		B97305501CCD3BE4000D5019 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B973054F1CCD3BE4000D5019 /* Parse.framework */; };
 		B97305521CCD3BEF000D5019 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97305511CCD3BEF000D5019 /* Bolts.framework */; };
 		B97305541CCD3C28000D5019 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B97305531CCD3C28000D5019 /* AudioToolbox.framework */; };
@@ -81,8 +86,13 @@
 		B91FBC751CCA97B5004ABBCC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = LudipicsUpdated/Assets.xcassets/logo.png; sourceTree = "<group>"; };
 		B91FBC781CCA9AF2004ABBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B91FBCB81CCAAB53004ABBCC /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		B92E847A1D0C4DC800591188 /* customTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTextField.swift; sourceTree = "<group>"; };
+		B92E84821D0C61F600591188 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = ../FacebookSDK/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		B92E84831D0C61F600591188 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = ../FacebookSDK/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		B92E84841D0C61F600591188 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = ../FacebookSDK/FBSDKShareKit.framework; sourceTree = "<group>"; };
 		B94C8EE41CD012B700324C89 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B94C90A91D09EB2E00745463 /* Discover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
+		B94C90AE1D0BBF3100745463 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = ../LoginView.swift; sourceTree = "<group>"; };
 		B973054F1CCD3BE4000D5019 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		B97305511CCD3BEF000D5019 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		B97305531CCD3C28000D5019 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -110,13 +120,15 @@
 			files = (
 				B97305661CCD3C71000D5019 /* libsqlite3.tbd in Frameworks */,
 				B97305641CCD3C67000D5019 /* libz.tbd in Frameworks */,
+				B92E84871D0C61F600591188 /* FBSDKShareKit.framework in Frameworks */,
 				B97305621CCD3C5F000D5019 /* SystemConfiguration.framework in Frameworks */,
 				B97305601CCD3C55000D5019 /* StoreKit.framework in Frameworks */,
+				B92E84861D0C61F600591188 /* FBSDKLoginKit.framework in Frameworks */,
 				B973055E1CCD3C4F000D5019 /* Security.framework in Frameworks */,
 				B973055C1CCD3C47000D5019 /* QuartzCore.framework in Frameworks */,
 				B973055A1CCD3C3E000D5019 /* CoreLocation.framework in Frameworks */,
-				B21ED2731CF2C82D00F63AB0 /* MapKit.framework in Frameworks */,
 				B97305581CCD3C38000D5019 /* CoreGraphics.framework in Frameworks */,
+				B92E84851D0C61F600591188 /* FBSDKCoreKit.framework in Frameworks */,
 				B97305561CCD3C2F000D5019 /* CFNetwork.framework in Frameworks */,
 				B97305541CCD3C28000D5019 /* AudioToolbox.framework in Frameworks */,
 				B97305501CCD3BE4000D5019 /* Parse.framework in Frameworks */,
@@ -247,7 +259,9 @@
 		B91FBCD21CCACC49004ABBCC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B21ED2721CF2C82D00F63AB0 /* MapKit.framework */,
+				B92E84821D0C61F600591188 /* FBSDKCoreKit.framework */,
+				B92E84831D0C61F600591188 /* FBSDKLoginKit.framework */,
+				B92E84841D0C61F600591188 /* FBSDKShareKit.framework */,
 				B97305651CCD3C71000D5019 /* libsqlite3.tbd */,
 				B97305631CCD3C67000D5019 /* libz.tbd */,
 				B97305611CCD3C5F000D5019 /* SystemConfiguration.framework */,
@@ -281,6 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				B91FBCB81CCAAB53004ABBCC /* Login.swift */,
+				B94C90AE1D0BBF3100745463 /* LoginView.swift */,
+				B92E847A1D0C4DC800591188 /* customTextField.swift */,
 				B9A35B531CCC590800A03D39 /* AppDelegate.swift */,
 				B91FBC771CCA9AF2004ABBCC /* Main.storyboard */,
 			);
@@ -355,7 +371,7 @@
 				TargetAttributes = {
 					B91FBC151CCA62B8004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = G547D7BDTT;
+						DevelopmentTeam = 6VBJQ92VR9;
 					};
 					B91FBC291CCA62BA004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
@@ -432,8 +448,10 @@
 				B91FBC6C1CCA8A48004ABBCC /* GroupVC.m in Sources */,
 				B98B81961CCB8D020030912D /* emailResponseVC.swift in Sources */,
 				B98B81901CCB2EC50030912D /* SignUpVC.swift in Sources */,
+				B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */,
 				B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */,
 				B98B81981CCBA2F80030912D /* passwordResponseVC.swift in Sources */,
+				B94C90AF1D0BBF3200745463 /* LoginView.swift in Sources */,
 				B9A35B541CCC590800A03D39 /* AppDelegate.swift in Sources */,
 				B91FBC711CCA8AC9004ABBCC /* GroupTableCellVC.m in Sources */,
 			);
@@ -583,10 +601,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					/Users/akshanshthakur/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated.sahib;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdatedios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";
@@ -601,10 +622,13 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)",
+					/Users/akshanshthakur/Documents/FacebookSDK,
+				);
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdated.sahib;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdatedios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";
