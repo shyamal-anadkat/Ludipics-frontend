@@ -137,6 +137,7 @@
                             <constraint firstItem="sfP-Cd-XLI" firstAttribute="leading" secondItem="dWB-po-85N" secondAttribute="leadingMargin" constant="-20" id="o91-M5-Wqn"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Bqb-6g-rUe"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -148,13 +149,13 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yXX-H7-OUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="K2i-84-z9D"/>
             </objects>
-            <point key="canvasLocation" x="5363" y="935"/>
+            <point key="canvasLocation" x="2539" y="1564"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Groups-->
         <scene sceneID="YHN-zh-rLA">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MJ8-gU-cNy" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="mostRecent" id="OsZ-w1-WBK"/>
+                    <tabBarItem key="tabBarItem" title="Groups" image="groups.png" selectedImage="groups.png" id="OsZ-w1-WBK"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="vPp-RW-8Qt">
@@ -276,42 +277,13 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kQ0-RW-PgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="545" y="2391"/>
+            <point key="canvasLocation" x="984" y="2456"/>
         </scene>
         <!--Camera-->
-        <scene sceneID="K1Y-Kq-jph">
-            <objects>
-                <tableViewController id="a0U-gE-Nob" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="HzZ-qx-GXe">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="hEw-bI-LCE">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hEw-bI-LCE" id="d8C-wf-sss">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="a0U-gE-Nob" id="ffs-Cb-tE4"/>
-                            <outlet property="delegate" destination="a0U-gE-Nob" id="0aX-sL-Lzh"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Camera" id="scZ-wH-OQM"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="n1q-45-UYS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2701" y="1368"/>
-        </scene>
-        <!--Navigation Controller-->
         <scene sceneID="LU6-sJ-KIb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ipj-D0-nd9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="favorites" id="DDR-PP-aTF"/>
+                    <tabBarItem key="tabBarItem" title="Camera" image="icon-camera.png" selectedImage="icon-camera.png" id="DDR-PP-aTF"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fi2-iP-yfa">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -319,18 +291,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="a0U-gE-Nob" kind="relationship" relationship="rootViewController" id="QL0-fc-fOA"/>
+                        <segue destination="jZq-zc-Gfg" kind="relationship" relationship="rootViewController" id="ww6-lN-nja"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr7-XJ-E0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1711" y="1564"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Leaderboard-->
         <scene sceneID="UGJ-NH-X0M">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uR6-sg-KAP" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="featured" id="rJH-Mg-37K"/>
+                    <tabBarItem key="tabBarItem" title="Leaderboard" image="leaderboard.png" selectedImage="leaderboard.png" id="rJH-Mg-37K"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1qd-Uq-epE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -338,18 +310,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Gyu-Kl-jv4" kind="relationship" relationship="rootViewController" id="5bh-bJ-p7a"/>
+                        <segue destination="Gyu-Kl-jv4" kind="relationship" relationship="rootViewController" id="PYG-OA-jur"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YA5-z8-tpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1022" y="1611"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Profile-->
         <scene sceneID="z6b-rB-QqB">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="q4W-6k-ERf" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="more" id="os1-Xz-qLX"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile.png" selectedImage="profile.png" id="os1-Xz-qLX"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="akR-pU-UMg">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -364,11 +336,11 @@
             </objects>
             <point key="canvasLocation" x="545" y="349"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Discover-->
         <scene sceneID="oIS-g0-9rK">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1tK-yX-EY9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="gUA-Bc-Val"/>
+                    <tabBarItem key="tabBarItem" title="Discover" image="binocular.png" selectedImage="binocular.png" id="gUA-Bc-Val"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zdC-4a-qUX">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -384,4 +356,11 @@
             <point key="canvasLocation" x="1473" y="-515"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="binocular.png" width="42" height="42"/>
+        <image name="groups.png" width="42" height="42"/>
+        <image name="icon-camera.png" width="42" height="42"/>
+        <image name="leaderboard.png" width="42" height="42"/>
+        <image name="profile.png" width="42" height="42"/>
+    </resources>
 </document>
