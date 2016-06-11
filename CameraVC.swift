@@ -90,12 +90,7 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
         
         
     }
-    
-    
-    
     @IBOutlet var tempImageView: UIImageView!
-    
-    
     func didPressTakePhoto(){
         
         if let videoConnection = stillImageOutput?.connectionWithMediaType(AVMediaTypeVideo){
@@ -104,8 +99,6 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                 (sampleBuffer, error) in
                 
                 if sampleBuffer != nil {
-                    
-                    
                     var imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
                     var dataProvider  = CGDataProviderCreateWithCFData(imageData)
                     var cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true,.RenderingIntentDefault)
@@ -114,19 +107,12 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                     
                     self.tempImageView.image = image
                     self.tempImageView.hidden = false
-                    
                 }
-                
-                
             })
         }
         
         
     }
-    
-    
-   
-    
     var didTakePhoto = Bool()
     
     func didPressTakeAnother(){
