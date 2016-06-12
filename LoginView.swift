@@ -11,9 +11,19 @@ import FBSDKLoginKit
 class LoginView: UIViewController, UITextFieldDelegate
 {
     
+    //Login
     var emailText = customTextField()
     var passwordText = customTextField()
+    //Sign Up
+    var email = customTextField()
+    var username = customTextField()
+    var password = customTextField()
+    
     var signinButton = UIButton()
+    var SignUpButton = UIButton()
+    var LoginButton = UIButton()
+    var takemeinButton = UIButton()
+    
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var fbLoginButton = FBSDKLoginButton()
     var imageTri = UIImageView()
@@ -48,6 +58,12 @@ class LoginView: UIViewController, UITextFieldDelegate
         self.view.addSubview(emailText)
         self.view.addSubview(passwordText)
         self.view.addSubview(signinButton) // add to hierarchy before attempting constraints on subviews
+        self.view.addSubview(takemeinButton)
+        
+        self.view.addSubview(email)
+        self.view.addSubview(password)
+        self.view.addSubview(username)
+        
         
         self.configureButtons()
         self.configureTextFields()
@@ -64,7 +80,7 @@ class LoginView: UIViewController, UITextFieldDelegate
     
     
     
-    /**** This method, configures text fields (username/password)  ****/
+    /**** This method, configures text fields (username/password) for LOGIN  ****/
     func configureTextFields() {
         
         self.view.bringSubviewToFront(emailText)
@@ -142,21 +158,20 @@ class LoginView: UIViewController, UITextFieldDelegate
         
         self.view.bringSubviewToFront(self.imageTri)
         
-        
-        let SignUpButton = UIButton(frame: CGRect(origin: CGPoint(x: 35.0, y: view.frame.height/3 - 55.0), size: CGSize(width: 100.0, height: 60.0)))
-        let LoginButton = UIButton(frame: CGRect(origin: CGPoint(x: view.frame.width - 120.0, y: view.frame.height/3 - 55.0), size: CGSize(width: 100.0, height: 60.0)))
-        
+        SignUpButton = UIButton(frame: CGRect(origin: CGPoint(x: 35.0, y: view.frame.height/3 - 55.0), size: CGSize(width: 100.0, height: 60.0)))
+        self.SignUpButton.addTarget(self, action: #selector(LoginView.SignUpButtonPressed(_:)), forControlEvents: .TouchUpInside)
+        LoginButton = UIButton(frame: CGRect(origin: CGPoint(x: view.frame.width - 120.0, y: view.frame.height/3 - 55.0), size: CGSize(width: 100.0, height: 60.0)))
+        self.LoginButton.addTarget(self, action: #selector(LoginView.LoginButtonPressed(_:)), forControlEvents: .TouchUpInside)
         self.imageTri.frame = CGRect(origin: CGPoint(x: view.frame.width - 97.0, y: view.frame.height/3 - 10), size: CGSize(width: 50.0, height: 50.0))
         
         let textColor = UIColor(red: 138.0/255.0, green: 23.0/255.0, blue: 37.0/255.0, alpha: 1.0)
-        
-        
         
        // LoginButton.translatesAutoresizingMaskIntoConstraints = false
        // SignUpButton.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(LoginButton)
         view.addSubview(SignUpButton)
+        
         
         LoginButton.setTitle("Log In", forState: .Normal)
         SignUpButton.setTitle("Sign Up", forState: .Normal)
@@ -234,6 +249,105 @@ class LoginView: UIViewController, UITextFieldDelegate
     }
     
     
+    /**** This method, configures text fields (username/password) for LOGIN  ****/
+    func configureTextFieldsForSignUp() {
+        
+        self.view.bringSubviewToFront(email)
+        self.view.bringSubviewToFront(password)
+        self.view.bringSubviewToFront(username)
+        
+        self.email.translatesAutoresizingMaskIntoConstraints = false
+        self.password.translatesAutoresizingMaskIntoConstraints = false
+        self.username.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.email.autocapitalizationType = .None
+        self.password.autocapitalizationType = .None
+        self.username.autocapitalizationType = .None
+        
+        self.email.layer.masksToBounds = false
+        self.email.layer.shadowRadius = 2.0
+        self.email.layer.shadowColor = UIColor.lightGrayColor().CGColor
+        self.email.layer.shadowOffset = CGSizeMake(1.0, 1.0)
+        self.email.layer.shadowOpacity = 1.0
+        self.email.layer.shadowRadius = 1.0
+        
+        self.password.layer.masksToBounds = false
+        self.password.layer.shadowRadius = 2.0
+        self.password.layer.shadowColor = UIColor.lightGrayColor().CGColor
+        self.password.layer.shadowOffset = CGSizeMake(1.0, 1.0)
+        self.password.layer.shadowOpacity = 1.0
+        self.password.layer.shadowRadius = 1.0
+        
+        self.username.layer.masksToBounds = false
+        self.username.layer.shadowRadius = 2.0
+        self.username.layer.shadowColor = UIColor.lightGrayColor().CGColor
+        self.username.layer.shadowOffset = CGSizeMake(1.0, 1.0)
+        self.username.layer.shadowOpacity = 1.0
+        self.username.layer.shadowRadius = 1.0
+        
+        self.email.layer.cornerRadius = 20.0
+        self.password.layer.cornerRadius = 20.0
+        self.username.layer.cornerRadius = 20.0
+        
+        self.password.alpha = 1.0
+        self.email.alpha = 1.0
+        self.username.alpha = 1.0
+        
+        self.email.clearButtonMode = .WhileEditing
+        self.password.clearButtonMode = .WhileEditing
+        self.username.clearButtonMode = .WhileEditing
+        
+        self.email.keyboardType = .EmailAddress
+        self.password.keyboardType = .ASCIICapable
+        self.username.keyboardType = .NamePhonePad
+        
+        self.username.returnKeyType = .Next
+        self.email.returnKeyType = .Next
+        self.password.returnKeyType = .Done
+        
+        self.password.secureTextEntry = true
+        
+        self.username.autocorrectionType = .No
+        self.email.autocorrectionType = .No
+        self.password.autocorrectionType = .No
+        
+        self.username.spellCheckingType = .No
+        self.email.spellCheckingType = .No
+        self.password.spellCheckingType = .No
+        
+        self.password.backgroundColor = UIColor.whiteColor()
+        self.email.backgroundColor = UIColor.whiteColor()
+        self.username.backgroundColor = UIColor.whiteColor()
+        
+        let textFieldFont = UIFont(name: "HelveticaNeue-Medium", size: 14.0)
+        
+        
+        self.username.attributedPlaceholder =
+            NSAttributedString(string: "Username", attributes: [NSForegroundColorAttributeName : UIColor(red: 246.0/255.0, green: 123.0/255.0, blue: 125.0/255.0, alpha: 1.0),
+                NSFontAttributeName : textFieldFont!,])
+        
+        self.email.attributedPlaceholder =
+            NSAttributedString(string: "Email", attributes: [NSForegroundColorAttributeName : UIColor(red: 246.0/255.0, green: 123.0/255.0, blue: 125.0/255.0, alpha: 1.0),
+                NSFontAttributeName : textFieldFont!,])
+        
+        self.password.attributedPlaceholder =
+            NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName : UIColor(red: 246.0/255.0, green: 123.0/255.0, blue: 125.0/255.0, alpha: 1.0),
+                NSFontAttributeName : textFieldFont!,])
+        
+        
+        self.view.addConstraints([self.username.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.username.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.username.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 60.0), self.username.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        
+        self.view.addConstraints([self.email.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.email.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.email.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 105.0), self.email.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        
+        self.view.addConstraints([self.password.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.password.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.password.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 149.0), self.password.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        
+        self.username.hidden = false
+        self.email.hidden = false
+        self.password.hidden = false
+        
+    }
+
+    
     
     /**** Override method to sort touches outside textfield editing rect ****/
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -252,10 +366,10 @@ class LoginView: UIViewController, UITextFieldDelegate
     func configureTransButtons() {
         
         self.view.bringSubviewToFront(self.signinButton)
+        self.view.bringSubviewToFront(self.takemeinButton)
         
         
         self.signinButton.translatesAutoresizingMaskIntoConstraints = false
-
         self.signinButton.layer.masksToBounds = false
         self.signinButton.layer.shadowRadius = 2.0
         self.signinButton.layer.shadowColor = UIColor.lightGrayColor().CGColor
@@ -265,23 +379,129 @@ class LoginView: UIViewController, UITextFieldDelegate
         self.signinButton.layer.cornerRadius = 20.0
         
         
+        self.takemeinButton.translatesAutoresizingMaskIntoConstraints = false
+        self.takemeinButton.layer.masksToBounds = false
+        self.takemeinButton.layer.shadowRadius = 2.0
+        self.takemeinButton.layer.shadowColor = UIColor.lightGrayColor().CGColor
+        self.takemeinButton.layer.shadowOffset = CGSizeMake(1.0, 1.0)
+        self.takemeinButton.layer.shadowOpacity = 1.0
+        self.takemeinButton.layer.shadowRadius = 1.0
+        self.takemeinButton.layer.cornerRadius = 20.0
+        
+        
         self.signinButton.setTitle("Log In", forState: .Normal)
+        self.takemeinButton.setTitle("Ludi Up", forState: .Normal)
         
         let customTextColor = UIColor(red: 246.0/255.0, green: 123.0/255.0, blue: 125.0/255.0, alpha: 1.0)
         
         self.signinButton.setTitleColor(customTextColor, forState: .Normal)
+        self.takemeinButton.setTitleColor(customTextColor, forState: .Normal)
         
     
         self.signinButton.setTitleShadowColor(UIColor.darkGrayColor(), forState: .Normal)
-        
         self.signinButton.addTarget(self, action: #selector(LoginView.signinButtonPressed(_:)), forControlEvents: .TouchUpInside)
-        
         self.signinButton.backgroundColor = UIColor.whiteColor()
         
-        self.view.addConstraints([self.signinButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 105.0), self.signinButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -105.0), self.signinButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 160.0), self.signinButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.takemeinButton.setTitleShadowColor(UIColor.darkGrayColor(), forState: .Normal)
+        self.takemeinButton.addTarget(self, action: #selector(LoginView.takemeinButtonPressed(_:)), forControlEvents: .TouchUpInside)
+        self.takemeinButton.backgroundColor = UIColor.whiteColor()
         
+        self.view.addConstraints([self.signinButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 105.0), self.signinButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -105.0), self.signinButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 160.0), self.signinButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.takemeinButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 105.0), self.takemeinButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -105.0), self.takemeinButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 200.0), self.takemeinButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        
+        self.takemeinButton.hidden = true
             }
     
+    func SignUpButtonPressed(sender: AnyObject) {
+        
+        self.imageTri.hidden = true
+        self.imageTri.frame = CGRect(origin: CGPoint(x: 55, y: view.frame.height/3 - 10), size: CGSize(width: 50.0, height: 50.0))
+        self.imageTri.hidden = false
+        self.signinButton.hidden = true
+        self.fbLoginButton.hidden = true
+        self.emailText.hidden = true
+        self.passwordText.hidden = true
+        
+        //self.configureTextFields()
+        self.configureTextFieldsForSignUp()
+        self.takemeinButton.hidden = false
+    
+    }
+    
+    func LoginButtonPressed(sender: AnyObject) {
+        
+        self.imageTri.frame = CGRect(origin: CGPoint(x: view.frame.width - 97.0, y: view.frame.height/3 - 10), size: CGSize(width: 50.0, height: 50.0))
+        self.imageTri.hidden = false
+        self.takemeinButton.hidden = true
+        self.email.hidden = true
+        self.username.hidden = true
+        self.password.hidden = true
+        
+        self.signinButton.hidden = false
+        
+        self.fbLoginButton.hidden = false
+        self.emailText.hidden = false
+        self.passwordText.hidden = false
+
+        
+    }
+    
+    
+    func takemeinButtonPressed(sender :AnyObject) {
+        
+        //ignore user events till sign up is performed
+        activityIndicator = UIActivityIndicatorView(frame: CGRectMake(0,0,50,50))
+        activityIndicator.center = self.view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        UIApplication.sharedApplication().beginIgnoringInteractionEvents()
+        let user = PFUser()
+        
+        
+        user.username = self.email.text
+        user.password = self.password.text
+
+        print(username)
+        print(email)
+        print(password)
+        //Sign up in background
+        user.signUpInBackgroundWithBlock({ (success, error) -> Void in
+            
+            if true {
+            self.activityIndicator.stopAnimating()
+            UIApplication.sharedApplication().endIgnoringInteractionEvents()
+            
+            if error == nil {
+                
+                //signup success!
+                print("done signup")
+                //logged in
+                let storyboard = UIStoryboard(name: "GroupVC", bundle: nil)
+                let controller = storyboard.instantiateViewControllerWithIdentifier("GroupVCID") as! UITabBarController
+                self.presentViewController(controller, animated: true, completion: nil)
+                
+            } else {
+                //self.displayAlert("Failed Signup", message: "\(error) \(error?.userInfo)")
+                
+                let alert = UIAlertController(title: "Failed to SignUp",
+                    message: "\(error) \(error?.userInfo)",
+                    preferredStyle: UIAlertControllerStyle.Alert
+                )
+                
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
+                    
+                    
+                }))
+                self.presentViewController(alert, animated: true, completion: nil)
+                }}
+            else {
+                
+            }
+        })
+    
+    }
     
     /*** Need to add more functionality to this ****/
     func signinButtonPressed(sender: AnyObject) {
@@ -311,7 +531,6 @@ class LoginView: UIViewController, UITextFieldDelegate
                     
                     alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
                         
-                        
                     }))
                     self.presentViewController(alert, animated: true, completion: nil)
                 }
@@ -322,6 +541,7 @@ class LoginView: UIViewController, UITextFieldDelegate
            
         }
     }
+    
     
     
     /*** Tests if email is fine ****/
@@ -337,8 +557,8 @@ class LoginView: UIViewController, UITextFieldDelegate
         if(self.emailText.text!.characters.count == 0)
         {
             bool = false
-            let alert = UIAlertController(title: "Failed to login",
-                                          message: "Please enter valid login credentials",
+            let alert = UIAlertController(title: "Invalid Email",
+                                          message: "Please enter valid credentials",
                                           preferredStyle: UIAlertControllerStyle.Alert
             )
             
@@ -357,8 +577,8 @@ class LoginView: UIViewController, UITextFieldDelegate
         }
         else
         {
-            let alert = UIAlertController(title: "Failed to login",
-                                          message: "Please enter a valid login credentials",
+            let alert = UIAlertController(title: "Invalid Email",
+                                          message: "Please enter a valid credentials",
                                           preferredStyle: UIAlertControllerStyle.Alert
             )
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
@@ -367,6 +587,54 @@ class LoginView: UIViewController, UITextFieldDelegate
             return false
         }
     }
+
+    
+    
+    /***Name check****/
+    
+    func checkName() -> Bool
+    {
+        var bool = true
+        let regex = try! NSRegularExpression(pattern: ".*[^A-Za-z].*", options: NSRegularExpressionOptions())
+        
+        if (regex.firstMatchInString(self.username.text!, options: NSMatchingOptions() , range:NSMakeRange(0, (self.username.text?.characters.count)!)) != nil)
+        {
+            print("Couldn't handle special characters")
+            bool = false
+            return bool
+        }
+        
+        if(self.username.text?.characters.count == 0)
+        {
+            bool = false
+            return bool
+        }
+        
+        if bool == true
+        {
+            self.username.text = self.username.text?.lowercaseString.capitalizedString
+            //let vc: UIViewController = UIViewController(nibName: "emailResponseVC", bundle: nil)
+            //self.presentViewController(vc, animated: true, completion: nil)
+            //performSegueWithIdentifier("segueTest1", sender: nil)
+            return bool
+        }
+        else
+        {
+            let alert = UIAlertController(title: "Invalid Username",
+                                          message: "Can't handle special characters",
+                                          preferredStyle: UIAlertControllerStyle.Alert
+            )
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
+            }))
+            self.presentViewController(alert, animated: true, completion: nil)
+            return bool
+        }
+    }
+    
+    
+    
+    
+
 
     /**** Password regex ****/
     func checkPassword() -> Bool
@@ -388,4 +656,5 @@ class LoginView: UIViewController, UITextFieldDelegate
             return false
         }
     }
+
 }

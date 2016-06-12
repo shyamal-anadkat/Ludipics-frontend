@@ -245,7 +245,6 @@
 				B91FBC751CCA97B5004ABBCC /* logo.png */,
 				B91FBC471CCA639F004ABBCC /* LudipicsUpdated-BridgingHeader.h */,
 				B91FBC5C1CCA8785004ABBCC /* CameraVC */,
-				B91FBC5D1CCA87C5004ABBCC /* GroupVC */,
 				B91FBC5E1CCA87DC004ABBCC /* GroupTable */,
 			);
 			name = ObjSupportFiles;
@@ -272,6 +271,7 @@
 				B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */,
 			);
 			name = GroupVC;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		B91FBC5E1CCA87DC004ABBCC /* GroupTable */ = {
@@ -321,11 +321,12 @@
 		B98B81941CCB2F350030912D /* Main FIles */ = {
 			isa = PBXGroup;
 			children = (
-				B91FBCB81CCAAB53004ABBCC /* Login.swift */,
-				B94C90AE1D0BBF3100745463 /* LoginView.swift */,
 				B92E847A1D0C4DC800591188 /* customTextField.swift */,
 				B9A35B531CCC590800A03D39 /* AppDelegate.swift */,
 				B91FBC771CCA9AF2004ABBCC /* Main.storyboard */,
+				B91FBCB81CCAAB53004ABBCC /* Login.swift */,
+				B94C90AE1D0BBF3100745463 /* LoginView.swift */,
+				B91FBC5D1CCA87C5004ABBCC /* GroupVC */,
 			);
 			name = "Main FIles";
 			sourceTree = "<group>";
