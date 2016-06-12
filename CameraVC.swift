@@ -99,11 +99,13 @@ class CameraVC: UIViewController, UIImagePickerControllerDelegate, UINavigationC
                 (sampleBuffer, error) in
                 
                 if sampleBuffer != nil {
-                    var imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
-                    var dataProvider  = CGDataProviderCreateWithCFData(imageData)
-                    var cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true,.RenderingIntentDefault)
                     
-                    var image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
+                    
+                    let imageData = AVCaptureStillImageOutput.jpegStillImageNSDataRepresentation(sampleBuffer)
+                    let dataProvider  = CGDataProviderCreateWithCFData(imageData)
+                    let cgImageRef = CGImageCreateWithJPEGDataProvider(dataProvider, nil, true,.RenderingIntentDefault)
+                    
+                    let image = UIImage(CGImage: cgImageRef!, scale: 1.0, orientation: UIImageOrientation.Right)
                     
                     self.tempImageView.image = image
                     self.tempImageView.hidden = false

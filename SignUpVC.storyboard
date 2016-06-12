@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OHI-uC-yA8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1884" y="259"/>
+            <point key="canvasLocation" x="1542" y="133"/>
         </scene>
         <!--Email ResponseVC-->
         <scene sceneID="ZDu-cH-o7M">
@@ -294,134 +294,11 @@
                     </view>
                     <connections>
                         <outlet property="passwordPrompt" destination="dhl-zT-QSX" id="tFy-tj-NDY"/>
-                        <segue destination="ag0-Aq-Gy2" kind="show" identifier="segueTest3" id="krD-fM-mi6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H0I-V1-uBR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3276" y="259"/>
-        </scene>
-        <!--DateGenderVC-->
-        <scene sceneID="62H-Jo-QQj">
-            <objects>
-                <viewController title="DateGenderVC" id="ag0-Aq-Gy2" customClass="DateGenderVC" customModule="LudipicsUpdated" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="sd5-sr-FsW"/>
-                        <viewControllerLayoutGuide type="bottom" id="fmc-65-I3C"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="C9O-aN-xcO">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="O1y-44-7QC">
-                                <rect key="frame" x="0.0" y="172" width="600" height="163"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="163" id="jrB-ae-v1L"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="483116254.52886599">
-                                    <!--2016-04-23 14:57:34 +0000-->
-                                </date>
-                            </datePicker>
-                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lIB-jT-jCL">
-                                <rect key="frame" x="38" y="134" width="524" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="wJO-rj-7t3"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter your date of birth" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6m-Yz-QRl">
-                                <rect key="frame" x="20" y="74" width="560" height="52"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="52" id="cRA-mw-MiQ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="TimesNewRomanPSMT" family="Times New Roman" pointSize="23"/>
-                                <color key="textColor" red="0.19829272640947057" green="0.37512527175464616" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your gender?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ngd-kq-Bz7">
-                                <rect key="frame" x="20" y="343" width="560" height="39"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="39" id="XYd-c5-ciH"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfm-hu-1gA">
-                                <rect key="frame" x="186" y="390" width="228" height="135"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nck-oq-gNN">
-                                        <rect key="frame" x="0.0" y="0.0" width="114" height="135"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="135" id="6sI-Fz-wlu"/>
-                                        </constraints>
-                                        <state key="normal" image="Male"/>
-                                        <connections>
-                                            <action selector="buttonClicked:" destination="ag0-Aq-Gy2" eventType="touchUpInside" id="Aec-g4-cyu"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fhr-Mn-tGQ">
-                                        <rect key="frame" x="114" y="0.0" width="114" height="135"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="114" id="lH7-pP-QB4"/>
-                                            <constraint firstAttribute="height" constant="135" id="wgi-UH-2Fb"/>
-                                        </constraints>
-                                        <state key="normal" image="Female"/>
-                                        <connections>
-                                            <action selector="buttonClicked:" destination="ag0-Aq-Gy2" eventType="touchUpInside" id="dNY-YS-x6o"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="Fhr-Mn-tGQ" firstAttribute="width" secondItem="Nck-oq-gNN" secondAttribute="width" id="F2A-P6-DKf"/>
-                                </constraints>
-                            </stackView>
-                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Eey-t0-RGM">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6B8-fd-J2h"/>
-                                    <barButtonItem title="Done" width="49" id="G23-3o-8mu">
-                                        <connections>
-                                            <action selector="checkDate" destination="ag0-Aq-Gy2" id="nzv-NU-nlP"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="Eey-t0-RGM" secondAttribute="trailing" constant="-20" id="0wM-6t-gPO"/>
-                            <constraint firstItem="lIB-jT-jCL" firstAttribute="top" secondItem="G6m-Yz-QRl" secondAttribute="bottom" constant="8" id="1bO-sS-Pxn"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="Ngd-kq-Bz7" secondAttribute="leading" id="6rH-hC-F3f"/>
-                            <constraint firstItem="Nfm-hu-1gA" firstAttribute="top" secondItem="Ngd-kq-Bz7" secondAttribute="bottom" constant="8" id="8ca-aU-UEy"/>
-                            <constraint firstItem="lIB-jT-jCL" firstAttribute="leading" secondItem="C9O-aN-xcO" secondAttribute="leadingMargin" constant="18" id="Clg-gy-vnc"/>
-                            <constraint firstItem="fmc-65-I3C" firstAttribute="top" secondItem="Eey-t0-RGM" secondAttribute="bottom" id="EnC-sT-gUm"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="G6m-Yz-QRl" secondAttribute="leading" id="GYN-Zt-cAl"/>
-                            <constraint firstItem="Ngd-kq-Bz7" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="HGK-qf-bBy"/>
-                            <constraint firstItem="G6m-Yz-QRl" firstAttribute="top" secondItem="sd5-sr-FsW" secondAttribute="bottom" constant="10" id="M6n-VG-WGX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="O1y-44-7QC" secondAttribute="trailing" constant="-20" id="QWN-1L-CiR"/>
-                            <constraint firstItem="O1y-44-7QC" firstAttribute="leading" secondItem="C9O-aN-xcO" secondAttribute="leadingMargin" constant="-20" id="TRg-vZ-8gY"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lIB-jT-jCL" secondAttribute="trailing" constant="18" id="XKF-0J-XF0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="G6m-Yz-QRl" secondAttribute="trailing" id="bac-2k-Gcs"/>
-                            <constraint firstItem="Nfm-hu-1gA" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="cmb-NT-AWE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Ngd-kq-Bz7" secondAttribute="trailing" id="eok-Yp-yZn"/>
-                            <constraint firstItem="O1y-44-7QC" firstAttribute="top" secondItem="lIB-jT-jCL" secondAttribute="bottom" constant="8" id="jgu-6f-It5"/>
-                            <constraint firstItem="Eey-t0-RGM" firstAttribute="leading" secondItem="C9O-aN-xcO" secondAttribute="leadingMargin" constant="-20" id="k4c-qC-81w"/>
-                            <constraint firstItem="O1y-44-7QC" firstAttribute="centerX" secondItem="C9O-aN-xcO" secondAttribute="centerX" id="qSn-8x-XwD"/>
-                            <constraint firstItem="Ngd-kq-Bz7" firstAttribute="top" secondItem="O1y-44-7QC" secondAttribute="bottom" constant="8" id="vCk-Ia-ufy"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="dateLabel" destination="lIB-jT-jCL" id="dov-Qk-H4g"/>
-                        <outlet property="datePicker" destination="O1y-44-7QC" id="twa-Fc-iyC"/>
-                        <outlet property="female" destination="Fhr-Mn-tGQ" id="2EO-wG-zJ1"/>
-                        <outlet property="male" destination="Nck-oq-gNN" id="wXW-ct-ODP"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kag-O9-XYX" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3984" y="259"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="m6h-Yp-pu1">
@@ -444,12 +321,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e6y-05-Xft" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1167" y="259"/>
+            <point key="canvasLocation" x="3111" y="-482"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Female" width="114" height="185"/>
         <image name="LudipicsLogo" width="509" height="482"/>
-        <image name="Male" width="82" height="185"/>
     </resources>
 </document>
