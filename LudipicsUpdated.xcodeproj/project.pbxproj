@@ -7,11 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B20114911D0B9F9D0066F26D /* leaderboard@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B20114901D0B9F9D0066F26D /* leaderboard@3x.png */; };
-		B20114981D0BA5070066F26D /* binocular@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B20114971D0BA5070066F26D /* binocular@3x.png */; };
-		B201149A1D0BA50C0066F26D /* icon-camera@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B20114991D0BA50C0066F26D /* icon-camera@3x.png */; };
-		B201149C1D0BA8DD0066F26D /* profile@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B201149B1D0BA8DD0066F26D /* profile@3x.png */; };
-		B201149E1D0BA9010066F26D /* groups@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = B201149D1D0BA9010066F26D /* groups@3x.png */; };
 		B20114A61D0BB1A00066F26D /* LBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20114A51D0BB1A00066F26D /* LBViewController.swift */; };
 		B20114B61D0CA00B0066F26D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B31D0CA00B0066F26D /* FBSDKCoreKit.framework */; };
 		B20114B71D0CA00B0066F26D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */; };
@@ -70,11 +65,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B20114901D0B9F9D0066F26D /* leaderboard@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "leaderboard@3x.png"; sourceTree = "<group>"; };
-		B20114971D0BA5070066F26D /* binocular@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "binocular@3x.png"; sourceTree = "<group>"; };
-		B20114991D0BA50C0066F26D /* icon-camera@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-camera@3x.png"; sourceTree = "<group>"; };
-		B201149B1D0BA8DD0066F26D /* profile@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@3x.png"; sourceTree = "<group>"; };
-		B201149D1D0BA9010066F26D /* groups@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "groups@3x.png"; sourceTree = "<group>"; };
 		B20114A51D0BB1A00066F26D /* LBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBViewController.swift; sourceTree = "<group>"; };
 		B20114B31D0CA00B0066F26D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -168,11 +158,6 @@
 		B20114921D0BA1570066F26D /* Tab Bar Icons */ = {
 			isa = PBXGroup;
 			children = (
-				B201149D1D0BA9010066F26D /* groups@3x.png */,
-				B20114991D0BA50C0066F26D /* icon-camera@3x.png */,
-				B201149B1D0BA8DD0066F26D /* profile@3x.png */,
-				B20114971D0BA5070066F26D /* binocular@3x.png */,
-				B20114901D0B9F9D0066F26D /* leaderboard@3x.png */,
 			);
 			name = "Tab Bar Icons";
 			sourceTree = "<group>";
@@ -453,13 +438,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91FBC761CCA97B5004ABBCC /* logo.png in Resources */,
-				B20114911D0B9F9D0066F26D /* leaderboard@3x.png in Resources */,
 				B91FBC791CCA9AF2004ABBCC /* Main.storyboard in Resources */,
-				B20114981D0BA5070066F26D /* binocular@3x.png in Resources */,
 				B91FBC241CCA62BA004ABBCC /* LaunchScreen.storyboard in Resources */,
-				B201149E1D0BA9010066F26D /* groups@3x.png in Resources */,
-				B201149A1D0BA50C0066F26D /* icon-camera@3x.png in Resources */,
-				B201149C1D0BA8DD0066F26D /* profile@3x.png in Resources */,
 				B98B81931CCB2F040030912D /* SignUpVC.storyboard in Resources */,
 				B91FBC741CCA95E7004ABBCC /* GroupVC.storyboard in Resources */,
 				B91FBC211CCA62BA004ABBCC /* Assets.xcassets in Resources */,

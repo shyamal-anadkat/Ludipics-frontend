@@ -2,8 +2,7 @@
 //  LoginView.swift
 //  LudipicsUpdated
 //
-//  Created by Akshansh Thakur on 6/11/16.
-//  Copyright © 2016 Akshansh Thakur. All rights reserved.
+//  Copyright © 2016 Ludipics. All rights reserved.
 //
 
 import UIKit
@@ -144,10 +143,10 @@ class LoginView: UIViewController, UITextFieldDelegate
         self.view.bringSubviewToFront(self.imageTri)
         
         
-        let SignUpButton = UIButton(frame: CGRect(origin: CGPoint(x: 20.0, y: view.frame.height/3 - 67.0), size: CGSize(width: 100.0, height: 60.0)))
-        let LoginButton = UIButton(frame: CGRect(origin: CGPoint(x: view.frame.width - 120.0, y: view.frame.height/3 - 67.0), size: CGSize(width: 100.0, height: 60.0)))
+        let SignUpButton = UIButton(frame: CGRect(origin: CGPoint(x: 35.0, y: view.frame.height/3 - 55.0), size: CGSize(width: 100.0, height: 60.0)))
+        let LoginButton = UIButton(frame: CGRect(origin: CGPoint(x: view.frame.width - 120.0, y: view.frame.height/3 - 55.0), size: CGSize(width: 100.0, height: 60.0)))
         
-        self.imageTri.frame = CGRect(origin: CGPoint(x: view.frame.width - 97.0, y: view.frame.height/3 - 37.0), size: CGSize(width: 60.0, height: 60.0))
+        self.imageTri.frame = CGRect(origin: CGPoint(x: view.frame.width - 97.0, y: view.frame.height/3 - 10), size: CGSize(width: 50.0, height: 50.0))
         
         let textColor = UIColor(red: 138.0/255.0, green: 23.0/255.0, blue: 37.0/255.0, alpha: 1.0)
         
@@ -165,8 +164,8 @@ class LoginView: UIViewController, UITextFieldDelegate
         SignUpButton.setTitleColor(textColor, forState: .Normal)
         LoginButton.setTitleColor(textColor, forState: .Normal)
         
-        SignUpButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 22.0)
-        LoginButton.titleLabel?.font = UIFont(name: "HelveticaNeue-Bold", size: 22.0)
+        SignUpButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 18.0)
+        LoginButton.titleLabel?.font = UIFont(name: "HelveticaNeue", size: 18.0)
         
         let constraints = [NSLayoutConstraint()]
         
@@ -194,15 +193,14 @@ class LoginView: UIViewController, UITextFieldDelegate
         backGroundImageView2.alpha = 0.40
         backGroundImageView3.alpha = 1.0
         
-        
         logoMainImageView.frame.size = CGSizeMake(240.0, 100.0)
         logoMainImageView.center = CGPoint(x: view.center.x, y: 65.0)
         backGroundImageView1.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3 + 20.0)
         backGroundImageView2.frame = CGRect(x: 0, y: view.frame.height/3 + 20.0, width: view.frame.width, height: view.frame.height/3 + 20.0)
         backGroundImageView3.frame = CGRect(x: 0, y: 2*(view.frame.height/3) + 40.0, width: view.frame.width, height: view.frame.height/3 - 40.0)
         
-        
         view.addSubview(logoMainImageView)
+        
         view.addSubview(backGroundImageView1)
         view.addSubview(backGroundImageView2)
         view.addSubview(backGroundImageView3)
@@ -323,8 +321,6 @@ class LoginView: UIViewController, UITextFieldDelegate
         else {
            
         }
-        
-        
     }
     
     
@@ -341,8 +337,8 @@ class LoginView: UIViewController, UITextFieldDelegate
         if(self.emailText.text!.characters.count == 0)
         {
             bool = false
-            let alert = UIAlertController(title: "Invalid Email",
-                                          message: "Please enter a valid email",
+            let alert = UIAlertController(title: "Failed to login",
+                                          message: "Please enter valid login credentials",
                                           preferredStyle: UIAlertControllerStyle.Alert
             )
             
@@ -361,19 +357,14 @@ class LoginView: UIViewController, UITextFieldDelegate
         }
         else
         {
-            
-            let alert = UIAlertController(title: "Invalid Email",
-                                          message: "Please enter a valid email",
+            let alert = UIAlertController(title: "Failed to login",
+                                          message: "Please enter a valid login credentials",
                                           preferredStyle: UIAlertControllerStyle.Alert
             )
-            
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
-                
-                
             }))
             self.presentViewController(alert, animated: true, completion: nil)
             return false
-            
         }
     }
 
@@ -381,7 +372,6 @@ class LoginView: UIViewController, UITextFieldDelegate
     func checkPassword() -> Bool
     {
         let bool = self.passwordText.text!.characters.count >= 6
-        
         if bool == true
         {
             return true
@@ -392,16 +382,10 @@ class LoginView: UIViewController, UITextFieldDelegate
                                           message: "Password must be at least 6 characters long",
                                           preferredStyle: UIAlertControllerStyle.Alert
             )
-            
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
-                
-                
             }))
-            
             self.presentViewController(alert, animated: true, completion: nil)
             return false
         }
     }
-
-    
 }
