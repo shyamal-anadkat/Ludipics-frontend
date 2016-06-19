@@ -577,6 +577,8 @@
 			files = (
 				B20114A61D0BB1A00066F26D /* LBViewController.swift in Sources */,
 				B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */,
+				B91FBCB91CCAAB53004ABBCC /* Login.swift in Sources */,
+				B9180AE91D166DE800DEAFD4 /* CameraFlashButton.m in Sources */,
 				B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */,
 				B9180AF21D166DE800DEAFD4 /* Constants.m in Sources */,
 				B9180AF11D166DE800DEAFD4 /* CaptureSessionManager.m in Sources */,

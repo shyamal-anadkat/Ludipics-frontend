@@ -50,7 +50,7 @@ class LoginView: UIViewController, UITextFieldDelegate
         
         self.fbLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
         self.fbLoginButton.center.x = self.view.center.x
-        self.fbLoginButton.center.y = 2*(self.view.frame.height/3)
+        self.fbLoginButton.center.y = (self.view.frame.height/3) + 210.0
         self.fbLoginButton.frame.size.height = 40.0
         
         self.fbLoginButton.layer.cornerRadius = 18.0
@@ -232,12 +232,9 @@ class LoginView: UIViewController, UITextFieldDelegate
         
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(logoMainImageView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor))
         constraints.append(logoMainImageView.widthAnchor.constraintEqualToAnchor(nil, constant: 240.0))
         constraints.append(logoMainImageView.heightAnchor.constraintEqualToAnchor(nil, constant: 100.0))
         constraints.append(logoMainImageView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 55.0))
-        
-        constraints.append(backGroundImageView1.widthAnchor.constraintEqualToAnchor(view.widthAnchor))
         constraints.append(backGroundImageView1.heightAnchor.constraintEqualToAnchor(nil, constant: view.frame.height/3 + 20.0))
         constraints.append(backGroundImageView1.topAnchor.constraintEqualToAnchor(view.topAnchor))
         constraints.append(backGroundImageView1.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor))
