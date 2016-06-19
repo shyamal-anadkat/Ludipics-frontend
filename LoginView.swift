@@ -39,14 +39,14 @@ class LoginView: UIViewController, UITextFieldDelegate
         
         self.fbLoginButton.readPermissions = ["public_profile", "email", "user_friends"]
         self.fbLoginButton.center.x = self.view.center.x
-        self.fbLoginButton.center.y = (self.view.frame.height/3) + 210.0
+        self.fbLoginButton.center.y = 2*(self.view.frame.height/3)
         self.fbLoginButton.frame.size.height = 40.0
         
         self.fbLoginButton.layer.cornerRadius = 18.0
         
         self.view.addSubview(self.fbLoginButton)
         
-        self.view.addConstraints([self.fbLoginButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 40.0), self.fbLoginButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -40.0), self.fbLoginButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 210.0), self.fbLoginButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.fbLoginButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 40.0), self.fbLoginButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -40.0), self.fbLoginButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: 2*(self.view.frame.height/3)), self.fbLoginButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
         
     
     
@@ -208,8 +208,9 @@ class LoginView: UIViewController, UITextFieldDelegate
         backGroundImageView2.alpha = 0.40
         backGroundImageView3.alpha = 1.0
         
-        logoMainImageView.frame.size = CGSizeMake(240.0, 100.0)
-        logoMainImageView.center = CGPoint(x: view.center.x, y: 65.0)
+        
+        logoMainImageView.frame.size = CGSizeMake(200.0, 80.0)
+        logoMainImageView.center = CGPoint(x: view.center.x, y: 35.0)
         backGroundImageView1.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height/3 + 20.0)
         backGroundImageView2.frame = CGRect(x: 0, y: view.frame.height/3 + 20.0, width: view.frame.width, height: view.frame.height/3 + 20.0)
         backGroundImageView3.frame = CGRect(x: 0, y: 2*(view.frame.height/3) + 40.0, width: view.frame.width, height: view.frame.height/3 - 40.0)
@@ -225,9 +226,9 @@ class LoginView: UIViewController, UITextFieldDelegate
         var constraints = [NSLayoutConstraint]()
         
         constraints.append(logoMainImageView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor))
-        constraints.append(logoMainImageView.widthAnchor.constraintEqualToAnchor(nil, constant: 240.0))
-        constraints.append(logoMainImageView.heightAnchor.constraintEqualToAnchor(nil, constant: 100.0))
-        constraints.append(logoMainImageView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 65.0))
+        constraints.append(logoMainImageView.widthAnchor.constraintEqualToAnchor(nil, constant: 200.0))
+        constraints.append(logoMainImageView.heightAnchor.constraintEqualToAnchor(nil, constant: 80.0))
+        constraints.append(logoMainImageView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 35.0))
         
         constraints.append(backGroundImageView1.widthAnchor.constraintEqualToAnchor(view.widthAnchor))
         constraints.append(backGroundImageView1.heightAnchor.constraintEqualToAnchor(nil, constant: view.frame.height/3 + 20.0))
