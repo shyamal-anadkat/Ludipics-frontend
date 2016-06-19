@@ -125,15 +125,7 @@
 
     }
     
-    if ([[segue identifier] isEqualToString:@"seguetoCamera"])
-    {
-        // Get reference to the destination view controller
-        CameraVC *vc = [segue destinationViewController];
-        vc.hidesBottomBarWhenPushed = true;
-        // Pass any objects to the view controller here, like...
-        
-    }
-    
+       
 }
 
 /*
