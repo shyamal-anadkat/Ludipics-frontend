@@ -504,7 +504,7 @@
 				TargetAttributes = {
 					B91FBC151CCA62B8004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = B4A2SH3GMH;
+						DevelopmentTeam = AE38M2STX6;
 					};
 					B91FBC291CCA62BA004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
@@ -753,7 +753,7 @@
 				);
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Patrick.Ludipics;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";
@@ -774,7 +774,7 @@
 				);
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Patrick.Ludipics;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";
@@ -787,7 +787,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LudipicsUpdatedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Patrick.LudipicspdatedTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdatedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LudipicsUpdated.app/LudipicsUpdated";
 			};
@@ -799,7 +799,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = LudipicsUpdatedTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Patrick.LudipicspdatedTests;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdatedTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LudipicsUpdated.app/LudipicsUpdated";
 			};
@@ -810,7 +810,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = LudipicsUpdatedUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Patrick.LudipicsUpdatedUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdatedUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = LudipicsUpdated;
 			};
@@ -821,7 +821,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = LudipicsUpdatedUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.Patrick.LudipicsUpdatedUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdatedUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = LudipicsUpdated;
 			};
