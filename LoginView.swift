@@ -27,7 +27,18 @@ class LoginView: UIViewController, UITextFieldDelegate
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var fbLoginButton = FBSDKLoginButton()
     var imageTri = UIImageView()
-
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        if PFUser.currentUser()?.username != nil {
+            print("user logged in")
+            let storyboard = UIStoryboard(name: "GroupVC", bundle: nil)
+            let controller = storyboard.instantiateViewControllerWithIdentifier("GroupVCID") as UIViewController
+            self.presentViewController(controller, animated: true, completion: nil)
+        }
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,10 +58,7 @@ class LoginView: UIViewController, UITextFieldDelegate
         self.view.addSubview(self.fbLoginButton)
         
         self.view.addConstraints([self.fbLoginButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 40.0), self.fbLoginButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -40.0), self.fbLoginButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 210.0), self.fbLoginButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
-        
-    
-    
-        /****                           ****/
+      
 
         /**** Following block calls methods to configure the background image views/ text fields/ buttons ****/
         self.configureImageViews()
@@ -542,8 +550,6 @@ class LoginView: UIViewController, UITextFieldDelegate
         }
     }
     
-    
-    
     /*** Tests if email is fine ****/
     func checkEmail() -> Bool
     {
@@ -587,8 +593,6 @@ class LoginView: UIViewController, UITextFieldDelegate
             return false
         }
     }
-
-    
     
     /***Name check****/
     
@@ -631,11 +635,6 @@ class LoginView: UIViewController, UITextFieldDelegate
         }
     }
     
-    
-    
-    
-
-
     /**** Password regex ****/
     func checkPassword() -> Bool
     {
