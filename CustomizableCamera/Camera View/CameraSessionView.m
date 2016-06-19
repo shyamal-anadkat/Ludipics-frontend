@@ -39,6 +39,8 @@
 @property (nonatomic, strong) CameraDismissButton *cameraDismiss;
 @property (nonatomic, strong) CameraFocalReticule *focalReticule;
 @property (nonatomic, strong) UIView *topBarView;
+@property (readwrite) BOOL flashOn;
+@property (readwrite) BOOL layerOn;
 
 //Temporary/Diagnostic properties
 @property (nonatomic, strong) UILabel *ISOLabel, *apertureLabel, *shutterSpeedLabel;
@@ -139,7 +141,7 @@
         
         //Button Visual attribution
         _cameraShutter.frame = (CGRect){0,0, shutterButtonSize};
-        _cameraShutter.center = CGPointMake(self.frame.size.width/2, self.frame.size.height*0.925);
+        _cameraShutter.center = CGPointMake(self.frame.size.width/2, self.frame.size.height*0.895);
         _cameraShutter.tag = ShutterButtonTag;
         _cameraShutter.backgroundColor = [UIColor clearColor];
         
@@ -163,6 +165,7 @@
         if (_cameraFlash) {
             _cameraFlash.frame = (CGRect){0,0, barButtonItemSize};
             _cameraFlash.center = CGPointMake(_topBarView.frame.size.width - 105.0, _topBarView.center.y + 5.0);
+            _cameraFlash.alpha = 0.3;
             _cameraFlash.tag = FlashButtonTag;
             if ( UI_USER_INTERFACE_IDIOM() != UIUserInterfaceIdiomPad ) [_topBarView addSubview:_cameraFlash];
         }
@@ -232,24 +235,72 @@
 - (void)onTapShutterButton {
     
     //Animate shutter release
-    [self animateShutterRelease];
+    self.captureManager.enableTorch = self.flashOn;
     
-    //Capture image from camera
+    if (self.flashOn) {
+        [self performSelector:@selector(takePicture)
+               withObject:(nil)
+               afterDelay:(1.0)];
+    }
+    else {
+        [self takePicture];
+    }
+}
+
+- (void)layerAdd {
+    [_cameraFlash setAlpha: 1.0];
+    self.layerOn = YES;
+}
+
+-(void)layerRemove {
+    [_cameraFlash setAlpha: 0.3];
+    self.layerOn = NO;
+}
+
+
+
+- (void)onTapFlashButton {
+   
+    
+    BOOL enable = !self.captureManager.isTorchEnabled;
+     self.flashOn = enable;
+    if (self.layerOn) {
+        [self layerRemove];
+    }
+    else {
+        [self layerAdd];
+    }
+    
+   
+}
+
+- (void)takePicture {
+    [self animateShutterRelease];
     [_captureManager captureStillImage];
 }
 
-- (void)onTapFlashButton {
-    BOOL enable = !self.captureManager.isTorchEnabled;
-    self.captureManager.enableTorch = enable;
-}
-
 - (void)onTapToggleButton {
+    
+    
+    
     if (cameraBeingUsed == RearFacingCamera) {
+        
+        if (self.flashOn) {
+            self.flashOn = NO;
+            
         [self setupCaptureManager:FrontFacingCamera];
         cameraBeingUsed = FrontFacingCamera;
         [self composeInterface];
         [[_captureManager captureSession] startRunning];
         _cameraFlash.hidden = YES;
+        }
+        else {
+            [self setupCaptureManager:FrontFacingCamera];
+            cameraBeingUsed = FrontFacingCamera;
+            [self composeInterface];
+            [[_captureManager captureSession] startRunning];
+            _cameraFlash.hidden = YES;
+        }
     } else {
         [self setupCaptureManager:RearFacingCamera];
         cameraBeingUsed = RearFacingCamera;
