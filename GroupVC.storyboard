@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Test View Controller-->
@@ -95,61 +94,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DkA-LL-uLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3534" y="921"/>
-        </scene>
-        <!--CameraVC-->
-        <scene sceneID="QD1-Ia-QTf">
-            <objects>
-                <viewController storyboardIdentifier="cameraVCID" id="jZq-zc-Gfg" customClass="CameraVC" customModule="LudipicsUpdated" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="DFU-wh-fOo"/>
-                        <viewControllerLayoutGuide type="bottom" id="Scw-se-jKQ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="dWB-po-85N">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ni-wI-lLu">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <subviews>
-                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="sfP-Cd-XLI">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                        <gestureRecognizers/>
-                                    </imageView>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="sfP-Cd-XLI" secondAttribute="trailing" constant="-20" id="5qd-Fx-z0R"/>
-                            <constraint firstItem="sfP-Cd-XLI" firstAttribute="centerY" secondItem="dWB-po-85N" secondAttribute="centerY" id="AqB-vi-Y2T"/>
-                            <constraint firstItem="Scw-se-jKQ" firstAttribute="top" secondItem="4Ni-wI-lLu" secondAttribute="bottom" id="BOx-qN-6wz"/>
-                            <constraint firstItem="Scw-se-jKQ" firstAttribute="top" secondItem="4Ni-wI-lLu" secondAttribute="bottom" id="Djn-68-LA6"/>
-                            <constraint firstItem="sfP-Cd-XLI" firstAttribute="top" secondItem="DFU-wh-fOo" secondAttribute="bottom" constant="-20" id="HJb-nx-imk"/>
-                            <constraint firstItem="4Ni-wI-lLu" firstAttribute="top" secondItem="DFU-wh-fOo" secondAttribute="bottom" constant="-20" id="XTb-Np-y3P"/>
-                            <constraint firstItem="4Ni-wI-lLu" firstAttribute="centerY" secondItem="dWB-po-85N" secondAttribute="centerY" id="Yke-5P-SkZ"/>
-                            <constraint firstItem="4Ni-wI-lLu" firstAttribute="centerX" secondItem="dWB-po-85N" secondAttribute="centerX" id="bPX-U5-zYG"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4Ni-wI-lLu" secondAttribute="trailing" constant="-20" id="c2R-wz-PXy"/>
-                            <constraint firstItem="sfP-Cd-XLI" firstAttribute="centerX" secondItem="dWB-po-85N" secondAttribute="centerX" id="kjB-6K-98R"/>
-                            <constraint firstItem="Scw-se-jKQ" firstAttribute="top" secondItem="sfP-Cd-XLI" secondAttribute="bottom" id="kjb-yu-8i0"/>
-                            <constraint firstItem="4Ni-wI-lLu" firstAttribute="leading" secondItem="dWB-po-85N" secondAttribute="leadingMargin" constant="-20" id="koU-4d-OpB"/>
-                            <constraint firstItem="sfP-Cd-XLI" firstAttribute="leading" secondItem="dWB-po-85N" secondAttribute="leadingMargin" constant="-20" id="o91-M5-Wqn"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="Bqb-6g-rUe"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="cameraView" destination="4Ni-wI-lLu" id="6sd-s8-NZQ"/>
-                        <outlet property="swipeR" destination="K2i-84-z9D" id="ko7-bM-f4w"/>
-                        <outlet property="tempImageView" destination="sfP-Cd-XLI" id="mUw-MY-tQR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yXX-H7-OUo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer cancelsTouchesInView="NO" direction="right" id="K2i-84-z9D"/>
-            </objects>
-            <point key="canvasLocation" x="2539" y="1564"/>
         </scene>
         <!--Groups-->
         <scene sceneID="YHN-zh-rLA">
@@ -297,12 +241,31 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="jZq-zc-Gfg" kind="relationship" relationship="rootViewController" id="ww6-lN-nja"/>
+                        <segue destination="L8x-j4-rCf" kind="relationship" relationship="rootViewController" id="YHW-Ap-GI8"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lr7-XJ-E0g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1711" y="1564"/>
+        </scene>
+        <!--Camera View-->
+        <scene sceneID="922-eZ-wiN">
+            <objects>
+                <viewController id="L8x-j4-rCf" customClass="cameraView" customModule="LudipicsUpdated" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jBL-mK-tTJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="48y-SG-jha"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tfU-Nf-RjI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="kHu-JH-08d"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9mV-PC-4aN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="1569"/>
         </scene>
         <!--Leaderboard-->
         <scene sceneID="UGJ-NH-X0M">

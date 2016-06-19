@@ -11,7 +11,19 @@
 		B20114B61D0CA00B0066F26D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B31D0CA00B0066F26D /* FBSDKCoreKit.framework */; };
 		B20114B71D0CA00B0066F26D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */; };
 		B20114B81D0CA00B0066F26D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B51D0CA00B0066F26D /* FBSDKShareKit.framework */; };
-		B9093D471CD82BF2000C75AC /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093D461CD82BF2000C75AC /* CameraVC.swift */; };
+		B9180AE71D166DE800DEAFD4 /* CameraSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180ACE1D166DE800DEAFD4 /* CameraSessionView.m */; };
+		B9180AE81D166DE800DEAFD4 /* CameraDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AD21D166DE800DEAFD4 /* CameraDismissButton.m */; };
+		B9180AE91D166DE800DEAFD4 /* CameraFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AD41D166DE800DEAFD4 /* CameraFlashButton.m */; };
+		B9180AEA1D166DE800DEAFD4 /* CameraFocalReticule.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AD61D166DE800DEAFD4 /* CameraFocalReticule.m */; };
+		B9180AEB1D166DE800DEAFD4 /* CameraShutterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AD81D166DE800DEAFD4 /* CameraShutterButton.m */; };
+		B9180AEC1D166DE800DEAFD4 /* CameraToggleButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180ADA1D166DE800DEAFD4 /* CameraToggleButton.m */; };
+		B9180AED1D166DE800DEAFD4 /* LaunchCameraButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180ADC1D166DE800DEAFD4 /* LaunchCameraButton.m */; };
+		B9180AEE1D166DE800DEAFD4 /* Cool Camera Mockup.sketch in Resources */ = {isa = PBXBuildFile; fileRef = B9180ADD1D166DE800DEAFD4 /* Cool Camera Mockup.sketch */; };
+		B9180AEF1D166DE800DEAFD4 /* PaintCodeFile.pcvd in Resources */ = {isa = PBXBuildFile; fileRef = B9180ADE1D166DE800DEAFD4 /* PaintCodeFile.pcvd */; };
+		B9180AF01D166DE800DEAFD4 /* CameraStyleKitClass.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AE11D166DE800DEAFD4 /* CameraStyleKitClass.m */; };
+		B9180AF11D166DE800DEAFD4 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AE41D166DE800DEAFD4 /* CaptureSessionManager.m */; };
+		B9180AF21D166DE800DEAFD4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AE61D166DE800DEAFD4 /* Constants.m */; };
+		B9180AF41D16700100DEAFD4 /* cameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9180AF31D16700100DEAFD4 /* cameraView.swift */; };
 		B91FBC211CCA62BA004ABBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC201CCA62BA004ABBCC /* Assets.xcassets */; };
 		B91FBC241CCA62BA004ABBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC221CCA62BA004ABBCC /* LaunchScreen.storyboard */; };
 		B91FBC2F1CCA62BA004ABBCC /* LudipicsUpdatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBC2E1CCA62BA004ABBCC /* LudipicsUpdatedTests.swift */; };
@@ -68,7 +80,29 @@
 		B20114B31D0CA00B0066F26D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B20114B51D0CA00B0066F26D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		B9093D461CD82BF2000C75AC /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
+		B9180ACD1D166DE800DEAFD4 /* CameraSessionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSessionView.h; sourceTree = "<group>"; };
+		B9180ACE1D166DE800DEAFD4 /* CameraSessionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraSessionView.m; sourceTree = "<group>"; };
+		B9180AD11D166DE800DEAFD4 /* CameraDismissButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDismissButton.h; sourceTree = "<group>"; };
+		B9180AD21D166DE800DEAFD4 /* CameraDismissButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraDismissButton.m; sourceTree = "<group>"; };
+		B9180AD31D166DE800DEAFD4 /* CameraFlashButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraFlashButton.h; sourceTree = "<group>"; };
+		B9180AD41D166DE800DEAFD4 /* CameraFlashButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraFlashButton.m; sourceTree = "<group>"; };
+		B9180AD51D166DE800DEAFD4 /* CameraFocalReticule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraFocalReticule.h; sourceTree = "<group>"; };
+		B9180AD61D166DE800DEAFD4 /* CameraFocalReticule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraFocalReticule.m; sourceTree = "<group>"; };
+		B9180AD71D166DE800DEAFD4 /* CameraShutterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraShutterButton.h; sourceTree = "<group>"; };
+		B9180AD81D166DE800DEAFD4 /* CameraShutterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraShutterButton.m; sourceTree = "<group>"; };
+		B9180AD91D166DE800DEAFD4 /* CameraToggleButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraToggleButton.h; sourceTree = "<group>"; };
+		B9180ADA1D166DE800DEAFD4 /* CameraToggleButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraToggleButton.m; sourceTree = "<group>"; };
+		B9180ADB1D166DE800DEAFD4 /* LaunchCameraButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchCameraButton.h; sourceTree = "<group>"; };
+		B9180ADC1D166DE800DEAFD4 /* LaunchCameraButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchCameraButton.m; sourceTree = "<group>"; };
+		B9180ADD1D166DE800DEAFD4 /* Cool Camera Mockup.sketch */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Cool Camera Mockup.sketch"; sourceTree = "<group>"; };
+		B9180ADE1D166DE800DEAFD4 /* PaintCodeFile.pcvd */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = PaintCodeFile.pcvd; sourceTree = "<group>"; };
+		B9180AE01D166DE800DEAFD4 /* CameraStyleKitClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraStyleKitClass.h; sourceTree = "<group>"; };
+		B9180AE11D166DE800DEAFD4 /* CameraStyleKitClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraStyleKitClass.m; sourceTree = "<group>"; };
+		B9180AE31D166DE800DEAFD4 /* CaptureSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaptureSessionManager.h; sourceTree = "<group>"; };
+		B9180AE41D166DE800DEAFD4 /* CaptureSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionManager.m; sourceTree = "<group>"; };
+		B9180AE51D166DE800DEAFD4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		B9180AE61D166DE800DEAFD4 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		B9180AF31D16700100DEAFD4 /* cameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraView.swift; sourceTree = "<group>"; };
 		B91FBC161CCA62B8004ABBCC /* LudipicsUpdated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudipicsUpdated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91FBC201CCA62BA004ABBCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B91FBC231CCA62BA004ABBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -182,6 +216,79 @@
 			name = Camera;
 			sourceTree = "<group>";
 		};
+		B9180ACB1D166DE800DEAFD4 /* CameraLudipicsModule */ = {
+			isa = PBXGroup;
+			children = (
+				B9180ACC1D166DE800DEAFD4 /* Don't Modify */,
+				B9180ACF1D166DE800DEAFD4 /* Don't Modify */,
+				B9180AE21D166DE800DEAFD4 /* Custom Model NOModify */,
+			);
+			name = CameraLudipicsModule;
+			path = CustomizableCamera;
+			sourceTree = "<group>";
+		};
+		B9180ACC1D166DE800DEAFD4 /* Don't Modify */ = {
+			isa = PBXGroup;
+			children = (
+				B9180ACD1D166DE800DEAFD4 /* CameraSessionView.h */,
+				B9180ACE1D166DE800DEAFD4 /* CameraSessionView.m */,
+			);
+			name = "Don't Modify";
+			path = "Camera View";
+			sourceTree = "<group>";
+		};
+		B9180ACF1D166DE800DEAFD4 /* Don't Modify */ = {
+			isa = PBXGroup;
+			children = (
+				B9180AD01D166DE800DEAFD4 /* CameraViewComponents */,
+				B9180ADD1D166DE800DEAFD4 /* Cool Camera Mockup.sketch */,
+				B9180ADE1D166DE800DEAFD4 /* PaintCodeFile.pcvd */,
+				B9180ADF1D166DE800DEAFD4 /* UI Assets */,
+			);
+			name = "Don't Modify";
+			path = "Graphical Assets";
+			sourceTree = "<group>";
+		};
+		B9180AD01D166DE800DEAFD4 /* CameraViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B9180AD11D166DE800DEAFD4 /* CameraDismissButton.h */,
+				B9180AD21D166DE800DEAFD4 /* CameraDismissButton.m */,
+				B9180AD31D166DE800DEAFD4 /* CameraFlashButton.h */,
+				B9180AD41D166DE800DEAFD4 /* CameraFlashButton.m */,
+				B9180AD51D166DE800DEAFD4 /* CameraFocalReticule.h */,
+				B9180AD61D166DE800DEAFD4 /* CameraFocalReticule.m */,
+				B9180AD71D166DE800DEAFD4 /* CameraShutterButton.h */,
+				B9180AD81D166DE800DEAFD4 /* CameraShutterButton.m */,
+				B9180AD91D166DE800DEAFD4 /* CameraToggleButton.h */,
+				B9180ADA1D166DE800DEAFD4 /* CameraToggleButton.m */,
+				B9180ADB1D166DE800DEAFD4 /* LaunchCameraButton.h */,
+				B9180ADC1D166DE800DEAFD4 /* LaunchCameraButton.m */,
+			);
+			path = CameraViewComponents;
+			sourceTree = "<group>";
+		};
+		B9180ADF1D166DE800DEAFD4 /* UI Assets */ = {
+			isa = PBXGroup;
+			children = (
+				B9180AE01D166DE800DEAFD4 /* CameraStyleKitClass.h */,
+				B9180AE11D166DE800DEAFD4 /* CameraStyleKitClass.m */,
+			);
+			path = "UI Assets";
+			sourceTree = "<group>";
+		};
+		B9180AE21D166DE800DEAFD4 /* Custom Model NOModify */ = {
+			isa = PBXGroup;
+			children = (
+				B9180AE31D166DE800DEAFD4 /* CaptureSessionManager.h */,
+				B9180AE41D166DE800DEAFD4 /* CaptureSessionManager.m */,
+				B9180AE51D166DE800DEAFD4 /* Constants.h */,
+				B9180AE61D166DE800DEAFD4 /* Constants.m */,
+			);
+			name = "Custom Model NOModify";
+			path = "Model Classes";
+			sourceTree = "<group>";
+		};
 		B91FBC0D1CCA62B8004ABBCC = {
 			isa = PBXGroup;
 			children = (
@@ -262,10 +369,11 @@
 			children = (
 				B91FBC691CCA8A48004ABBCC /* GroupVC.h */,
 				B94C90A91D09EB2E00745463 /* Discover.swift */,
-				B9093D461CD82BF2000C75AC /* CameraVC.swift */,
+				B9180ACB1D166DE800DEAFD4 /* CameraLudipicsModule */,
 				B20114921D0BA1570066F26D /* Tab Bar Icons */,
 				B94C8EE41CD012B700324C89 /* TestViewController.swift */,
 				B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */,
+				B9180AF31D16700100DEAFD4 /* cameraView.swift */,
 				B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */,
 			);
 			name = GroupVC;
@@ -396,7 +504,7 @@
 				TargetAttributes = {
 					B91FBC151CCA62B8004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = G547D7BDTT;
+						DevelopmentTeam = AE38M2STX6;
 					};
 					B91FBC291CCA62BA004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
@@ -436,8 +544,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				B91FBC761CCA97B5004ABBCC /* logo.png in Resources */,
+				B9180AEE1D166DE800DEAFD4 /* Cool Camera Mockup.sketch in Resources */,
 				B91FBC791CCA9AF2004ABBCC /* Main.storyboard in Resources */,
 				B91FBC241CCA62BA004ABBCC /* LaunchScreen.storyboard in Resources */,
+				B9180AEF1D166DE800DEAFD4 /* PaintCodeFile.pcvd in Resources */,
 				B98B81931CCB2F040030912D /* SignUpVC.storyboard in Resources */,
 				B91FBC741CCA95E7004ABBCC /* GroupVC.storyboard in Resources */,
 				B91FBC211CCA62BA004ABBCC /* Assets.xcassets in Resources */,
@@ -468,15 +578,24 @@
 				B20114A61D0BB1A00066F26D /* LBViewController.swift in Sources */,
 				B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */,
 				B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */,
+				B9180AF21D166DE800DEAFD4 /* Constants.m in Sources */,
+				B9180AF11D166DE800DEAFD4 /* CaptureSessionManager.m in Sources */,
 				B91FBC4B1CCA650A004ABBCC /* CameraFoundationVC.m in Sources */,
-				B9093D471CD82BF2000C75AC /* CameraVC.swift in Sources */,
+				B9180AE81D166DE800DEAFD4 /* CameraDismissButton.m in Sources */,
+				B9180AEA1D166DE800DEAFD4 /* CameraFocalReticule.m in Sources */,
+				B9180AE71D166DE800DEAFD4 /* CameraSessionView.m in Sources */,
+				B9180AF01D166DE800DEAFD4 /* CameraStyleKitClass.m in Sources */,
 				B91FBC6C1CCA8A48004ABBCC /* GroupVC.m in Sources */,
 				B98B81961CCB8D020030912D /* emailResponseVC.swift in Sources */,
 				B98B81901CCB2EC50030912D /* SignUpVC.swift in Sources */,
 				B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */,
 				B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */,
+				B9180AED1D166DE800DEAFD4 /* LaunchCameraButton.m in Sources */,
+				B9180AF41D16700100DEAFD4 /* cameraView.swift in Sources */,
 				B98B81981CCBA2F80030912D /* passwordResponseVC.swift in Sources */,
+				B9180AEB1D166DE800DEAFD4 /* CameraShutterButton.m in Sources */,
 				B94C90AF1D0BBF3200745463 /* LoginView.swift in Sources */,
+				B9180AEC1D166DE800DEAFD4 /* CameraToggleButton.m in Sources */,
 				B9A35B541CCC590800A03D39 /* AppDelegate.swift in Sources */,
 				B91FBC711CCA8AC9004ABBCC /* GroupTableCellVC.m in Sources */,
 			);
@@ -632,7 +751,7 @@
 				);
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdatedios;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";
@@ -653,7 +772,7 @@
 				);
 				INFOPLIST_FILE = LudipicsUpdated/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsUpdatedios;
+				PRODUCT_BUNDLE_IDENTIFIER = Akshansh.LudipicsU;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h";
