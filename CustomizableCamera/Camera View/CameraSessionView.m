@@ -260,6 +260,8 @@
 
 
 - (void)onTapFlashButton {
+   
+    
     BOOL enable = !self.captureManager.isTorchEnabled;
      self.flashOn = enable;
     if (self.layerOn) {
@@ -278,12 +280,27 @@
 }
 
 - (void)onTapToggleButton {
+    
+    
+    
     if (cameraBeingUsed == RearFacingCamera) {
+        
+        if (self.flashOn) {
+            self.flashOn = NO;
+            
         [self setupCaptureManager:FrontFacingCamera];
         cameraBeingUsed = FrontFacingCamera;
         [self composeInterface];
         [[_captureManager captureSession] startRunning];
         _cameraFlash.hidden = YES;
+        }
+        else {
+            [self setupCaptureManager:FrontFacingCamera];
+            cameraBeingUsed = FrontFacingCamera;
+            [self composeInterface];
+            [[_captureManager captureSession] startRunning];
+            _cameraFlash.hidden = YES;
+        }
     } else {
         [self setupCaptureManager:RearFacingCamera];
         cameraBeingUsed = RearFacingCamera;
