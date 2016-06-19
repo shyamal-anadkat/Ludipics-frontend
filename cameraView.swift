@@ -31,12 +31,14 @@ class cameraView: UIViewController, CACameraSessionDelegate {
         self.crossImage.tag = 1001
         
         self.navigationController?.navigationBar.hidden = true
-        self.tabBarController?.tabBar.hidden = true
         
         self.cameraV = CameraSessionView(frame: self.view.frame)
         self.cancelButton.setTitle("Cancel", forState: .Normal)
         self.cancelButton.setTitleColor(UIColor.whiteColor(), forState: .Normal)
         self.cancelButton.frame = CGRect(origin: CGPoint(x: self.view.frame.origin.x + 10.0, y: self.view.frame.origin.y + 3.0), size: CGSize(width: 120.0, height: 40.0))
+        self.cancelButton.addTarget(self, action: #selector(cameraView.switchTab), forControlEvents: .TouchUpInside)
+        
+        
         let font = UIFont(name: "HelveticaNeue-Medium", size: 18.0)
         
         let mySelectedAttributedTitle = NSAttributedString(string: "Cancel",
@@ -57,12 +59,20 @@ class cameraView: UIViewController, CACameraSessionDelegate {
         self.view.addSubview(self.imageView)
         self.view.addSubview(crossImage)
         self.cameraV.hidden = true
+        self.cancelButton.hidden = true
         
+    }
+    
+    func switchTab() {
+        self.tabBarController?.selectedIndex = 0
     }
     
     func sendImageAway() {
         
         self.cameraV.hidden = false
+        self.cancelButton.hidden = false
+        
+        
         let views = self.view.subviews
         for EveryView in views {
             if EveryView.tag == 1000 {
@@ -75,7 +85,15 @@ class cameraView: UIViewController, CACameraSessionDelegate {
         }
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.tabBarController?.tabBar.hidden = true
+    }
     
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.tabBarController?.tabBar.hidden = false
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
