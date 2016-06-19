@@ -45,6 +45,8 @@ class cameraView: UIViewController, CACameraSessionDelegate {
         
         self.cancelButton.setAttributedTitle(mySelectedAttributedTitle, forState: .Normal)
         self.cancelButton.contentHorizontalAlignment = .Left
+        self.cancelButton.addTarget(self, action: "cancelButton:", forControlEvents: UIControlEvents.TouchUpInside)
+        
         self.cameraV.delegate = self
         self.view.addSubview(self.cameraV)
         
@@ -73,6 +75,15 @@ class cameraView: UIViewController, CACameraSessionDelegate {
                 EveryView.removeFromSuperview()
             }
         }
+    }
+    
+    func cancelButton(sender: UIButton!) {
+        print("Cancel Camera button tapped")
+        // go back to the groups page view
+        let storyboard = UIStoryboard(name: "GroupVC", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("GroupVCID") as! UITabBarController
+        self.presentViewController(controller, animated: true, completion: nil)
+        
     }
     
     
