@@ -34,7 +34,6 @@
 		B91FBC741CCA95E7004ABBCC /* GroupVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */; };
 		B91FBC761CCA97B5004ABBCC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC751CCA97B5004ABBCC /* logo.png */; };
 		B91FBC791CCA9AF2004ABBCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC771CCA9AF2004ABBCC /* Main.storyboard */; };
-		B91FBCB91CCAAB53004ABBCC /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBCB81CCAAB53004ABBCC /* Login.swift */; };
 		B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E847A1D0C4DC800591188 /* customTextField.swift */; };
 		B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C8EE41CD012B700324C89 /* TestViewController.swift */; };
 		B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C90A91D09EB2E00745463 /* Discover.swift */; };
@@ -124,7 +123,6 @@
 		B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupVC.storyboard; sourceTree = "<group>"; };
 		B91FBC751CCA97B5004ABBCC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = LudipicsUpdated/Assets.xcassets/logo.png; sourceTree = "<group>"; };
 		B91FBC781CCA9AF2004ABBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		B91FBCB81CCAAB53004ABBCC /* Login.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		B92E847A1D0C4DC800591188 /* customTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTextField.swift; sourceTree = "<group>"; };
 		B94C8EE41CD012B700324C89 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B94C90A91D09EB2E00745463 /* Discover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
@@ -432,7 +430,6 @@
 				B92E847A1D0C4DC800591188 /* customTextField.swift */,
 				B9A35B531CCC590800A03D39 /* AppDelegate.swift */,
 				B91FBC771CCA9AF2004ABBCC /* Main.storyboard */,
-				B91FBCB81CCAAB53004ABBCC /* Login.swift */,
 				B94C90AE1D0BBF3100745463 /* LoginView.swift */,
 				B91FBC5D1CCA87C5004ABBCC /* GroupVC */,
 			);
