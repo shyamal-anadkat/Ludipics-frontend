@@ -11,14 +11,15 @@ import Parse
 
 class Discover: UITableViewController {
 
-    @IBAction func Logout(sender: UIBarButtonItem) {
+    //*** logs out user and navigates back to login-signup screen ***//
+    @IBAction func logout(sender: UIBarButtonItem) {
+     
+        
         PFUser.logOut()
-        //PFUser.currentUser() == nil
-        let storyboard = UIStoryboard(name: "LoginView", bundle: nil)
-        let controller = storyboard.instantiateViewControllerWithIdentifier("LoginVCID") as UIViewController
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewControllerWithIdentifier("loginVCID") as UIViewController
         self.presentViewController(controller, animated: true, completion: nil)
-        
-        
-        
     }
 }
+

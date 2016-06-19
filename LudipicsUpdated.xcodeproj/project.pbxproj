@@ -11,7 +11,6 @@
 		B20114B61D0CA00B0066F26D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B31D0CA00B0066F26D /* FBSDKCoreKit.framework */; };
 		B20114B71D0CA00B0066F26D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */; };
 		B20114B81D0CA00B0066F26D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B51D0CA00B0066F26D /* FBSDKShareKit.framework */; };
-		B28E7A821D15BC230048B7F0 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B28E7A811D15BC230048B7F0 /* SWRevealViewController.m */; };
 		B9093D471CD82BF2000C75AC /* CameraVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9093D461CD82BF2000C75AC /* CameraVC.swift */; };
 		B91FBC211CCA62BA004ABBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC201CCA62BA004ABBCC /* Assets.xcassets */; };
 		B91FBC241CCA62BA004ABBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC221CCA62BA004ABBCC /* LaunchScreen.storyboard */; };
@@ -69,8 +68,6 @@
 		B20114B31D0CA00B0066F26D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B20114B51D0CA00B0066F26D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		B28E7A801D15BC230048B7F0 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
-		B28E7A811D15BC230048B7F0 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../Downloads/SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
 		B9093D461CD82BF2000C75AC /* CameraVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraVC.swift; sourceTree = "<group>"; };
 		B91FBC161CCA62B8004ABBCC /* LudipicsUpdated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudipicsUpdated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91FBC201CCA62BA004ABBCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -178,15 +175,6 @@
 			name = LeaderboardVC;
 			sourceTree = "<group>";
 		};
-		B28E7A7F1D15BA6F0048B7F0 /* SWRevealViewController */ = {
-			isa = PBXGroup;
-			children = (
-				B28E7A801D15BC230048B7F0 /* SWRevealViewController.h */,
-				B28E7A811D15BC230048B7F0 /* SWRevealViewController.m */,
-			);
-			name = SWRevealViewController;
-			sourceTree = "<group>";
-		};
 		B9093D451CD82BBA000C75AC /* Camera */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,7 +185,6 @@
 		B91FBC0D1CCA62B8004ABBCC = {
 			isa = PBXGroup;
 			children = (
-				B28E7A7F1D15BA6F0048B7F0 /* SWRevealViewController */,
 				B9093D451CD82BBA000C75AC /* Camera */,
 				B91FBC481CCA63C4004ABBCC /* ObjSupportFiles */,
 				B91FBC181CCA62BA004ABBCC /* LudipicsUpdated */,
@@ -488,7 +475,6 @@
 				B98B81901CCB2EC50030912D /* SignUpVC.swift in Sources */,
 				B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */,
 				B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */,
-				B28E7A821D15BC230048B7F0 /* SWRevealViewController.m in Sources */,
 				B98B81981CCBA2F80030912D /* passwordResponseVC.swift in Sources */,
 				B94C90AF1D0BBF3200745463 /* LoginView.swift in Sources */,
 				B9A35B541CCC590800A03D39 /* AppDelegate.swift in Sources */,

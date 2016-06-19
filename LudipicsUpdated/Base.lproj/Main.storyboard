@@ -8,7 +8,7 @@
         <!--Login View-->
         <scene sceneID="EDf-Zr-kET">
             <objects>
-                <viewController storyboardIdentifier="LoginVCID" id="WYx-8c-Cuq" customClass="LoginView" customModule="LudipicsUpdated" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginVCID" id="WYx-8c-Cuq" customClass="LoginView" customModule="LudipicsUpdated" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="av6-bS-26G"/>
                         <viewControllerLayoutGuide type="bottom" id="seG-9K-mvl"/>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QIf-1A-4qm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970" y="324"/>
+            <point key="canvasLocation" x="980" y="306"/>
         </scene>
     </scenes>
 </document>

@@ -197,7 +197,7 @@
                     <navigationItem key="navigationItem" title="Discover" id="oek-NY-z4M">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="hhX-Tu-5cb">
                             <connections>
-                                <action selector="Logout:" destination="XaO-fb-Dnv" id="8Vf-BB-KNf"/>
+                                <action selector="logout:" destination="XaO-fb-Dnv" id="uE8-gz-v1a"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

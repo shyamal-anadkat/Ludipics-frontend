@@ -28,7 +28,7 @@ class LoginView: UIViewController, UITextFieldDelegate
     var fbLoginButton = FBSDKLoginButton()
     var imageTri = UIImageView()
     
-    
+    //*** checks if user is already logged in ***/
     override func viewDidAppear(animated: Bool) {
         if PFUser.currentUser()?.username != nil {
             print("user logged in")
@@ -57,7 +57,7 @@ class LoginView: UIViewController, UITextFieldDelegate
         
         self.view.addSubview(self.fbLoginButton)
         
-        self.view.addConstraints([self.fbLoginButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 40.0), self.fbLoginButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -40.0), self.fbLoginButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 210.0), self.fbLoginButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.fbLoginButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 40.0), self.fbLoginButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -40.0), self.fbLoginButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 190.0), self.fbLoginButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
       
 
         /**** Following block calls methods to configure the background image views/ text fields/ buttons ****/
@@ -153,9 +153,9 @@ class LoginView: UIViewController, UITextFieldDelegate
             NSAttributedString(string: "Password", attributes: [NSForegroundColorAttributeName : UIColor(red: 246.0/255.0, green: 123.0/255.0, blue: 125.0/255.0, alpha: 1.0),
                 NSFontAttributeName : textFieldFont!,])
         
-        self.view.addConstraints([self.emailText.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.emailText.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.emailText.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 60.0), self.emailText.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.emailText.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.emailText.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.emailText.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 50.0), self.emailText.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
         
-        self.view.addConstraints([self.passwordText.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.passwordText.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.passwordText.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 103.0), self.passwordText.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.passwordText.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.passwordText.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.passwordText.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 93.0), self.passwordText.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
     }
     
     
@@ -223,7 +223,6 @@ class LoginView: UIViewController, UITextFieldDelegate
         backGroundImageView3.frame = CGRect(x: 0, y: 2*(view.frame.height/3) + 40.0, width: view.frame.width, height: view.frame.height/3 - 40.0)
         
         view.addSubview(logoMainImageView)
-        
         view.addSubview(backGroundImageView1)
         view.addSubview(backGroundImageView2)
         view.addSubview(backGroundImageView3)
@@ -235,7 +234,7 @@ class LoginView: UIViewController, UITextFieldDelegate
         constraints.append(logoMainImageView.centerXAnchor.constraintEqualToAnchor(view.centerXAnchor))
         constraints.append(logoMainImageView.widthAnchor.constraintEqualToAnchor(nil, constant: 240.0))
         constraints.append(logoMainImageView.heightAnchor.constraintEqualToAnchor(nil, constant: 100.0))
-        constraints.append(logoMainImageView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 65.0))
+        constraints.append(logoMainImageView.topAnchor.constraintEqualToAnchor(view.topAnchor, constant: 55.0))
         
         constraints.append(backGroundImageView1.widthAnchor.constraintEqualToAnchor(view.widthAnchor))
         constraints.append(backGroundImageView1.heightAnchor.constraintEqualToAnchor(nil, constant: view.frame.height/3 + 20.0))
@@ -343,11 +342,11 @@ class LoginView: UIViewController, UITextFieldDelegate
                 NSFontAttributeName : textFieldFont!,])
         
         
-        self.view.addConstraints([self.username.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.username.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.username.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 60.0), self.username.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.username.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.username.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.username.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 50.0), self.username.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
         
-        self.view.addConstraints([self.email.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.email.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.email.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 105.0), self.email.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.email.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.email.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.email.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 93.0), self.email.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
         
-        self.view.addConstraints([self.password.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.password.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.password.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 149.0), self.password.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.password.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 30.0), self.password.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -30.0), self.password.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 136.0), self.password.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
         
         self.username.hidden = false
         self.email.hidden = false
@@ -364,6 +363,9 @@ class LoginView: UIViewController, UITextFieldDelegate
         if touch.phase == .Began {
             self.emailText.resignFirstResponder()
             self.passwordText.resignFirstResponder()
+            self.password.resignFirstResponder()
+            self.username.resignFirstResponder()
+            self.email.resignFirstResponder()
             self.view.frame.origin.y = 0
         }
     }
@@ -414,8 +416,8 @@ class LoginView: UIViewController, UITextFieldDelegate
         self.takemeinButton.addTarget(self, action: #selector(LoginView.takemeinButtonPressed(_:)), forControlEvents: .TouchUpInside)
         self.takemeinButton.backgroundColor = UIColor.whiteColor()
         
-        self.view.addConstraints([self.signinButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 105.0), self.signinButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -105.0), self.signinButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 160.0), self.signinButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
-        self.view.addConstraints([self.takemeinButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 105.0), self.takemeinButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -105.0), self.takemeinButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 200.0), self.takemeinButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.signinButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 105.0), self.signinButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -105.0), self.signinButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 142.0), self.signinButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
+        self.view.addConstraints([self.takemeinButton.leftAnchor.constraintEqualToAnchor(self.view.leftAnchor, constant: 105.0), self.takemeinButton.rightAnchor.constraintEqualToAnchor(self.view.rightAnchor, constant: -105.0), self.takemeinButton.topAnchor.constraintEqualToAnchor(self.view.topAnchor, constant: self.view.frame.height/3 + 185.0), self.takemeinButton.heightAnchor.constraintEqualToAnchor(nil, constant: 40.0)])
         
         self.takemeinButton.hidden = true
             }
