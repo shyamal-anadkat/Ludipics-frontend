@@ -98,9 +98,10 @@ class cameraView: UIViewController, CACameraSessionDelegate {
         }
     }
     
-    override func viewDidAppear(animated: Bool) {
-        super.viewDidAppear(animated)
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
         self.tabBarController?.tabBar.hidden = true
+        self.navigationController?.navigationBar.hidden = true
     }
     
     override func viewDidDisappear(animated: Bool) {
@@ -111,6 +112,7 @@ class cameraView: UIViewController, CACameraSessionDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "postTo" {
             segue.destinationViewController as! postTOVC
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .Plain, target: nil, action: nil)
         }
     }
     

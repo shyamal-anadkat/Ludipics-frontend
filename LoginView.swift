@@ -101,14 +101,12 @@ class LoginView: UIViewController, UITextFieldDelegate
         self.passwordText.autocapitalizationType = .None
         
         self.emailText.layer.masksToBounds = false
-        self.emailText.layer.shadowRadius = 2.0
         self.emailText.layer.shadowColor = UIColor.lightGrayColor().CGColor
         self.emailText.layer.shadowOffset = CGSizeMake(1.0, 1.0)
         self.emailText.layer.shadowOpacity = 1.0
         self.emailText.layer.shadowRadius = 1.0
         
         self.passwordText.layer.masksToBounds = false
-        self.passwordText.layer.shadowRadius = 2.0
         self.passwordText.layer.shadowColor = UIColor.lightGrayColor().CGColor
         self.passwordText.layer.shadowOffset = CGSizeMake(1.0, 1.0)
         self.passwordText.layer.shadowOpacity = 1.0
