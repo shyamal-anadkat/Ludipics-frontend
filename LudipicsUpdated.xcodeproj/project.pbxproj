@@ -24,6 +24,8 @@
 		B9180AF11D166DE800DEAFD4 /* CaptureSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AE41D166DE800DEAFD4 /* CaptureSessionManager.m */; };
 		B9180AF21D166DE800DEAFD4 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AE61D166DE800DEAFD4 /* Constants.m */; };
 		B9180AF41D16700100DEAFD4 /* cameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9180AF31D16700100DEAFD4 /* cameraView.swift */; };
+		B9180AF61D17BB8B00DEAFD4 /* postTOVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9180AF51D17BB8A00DEAFD4 /* postTOVC.swift */; };
+		B9180AF81D17F92600DEAFD4 /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9180AF71D17F92500DEAFD4 /* postCell.swift */; };
 		B91FBC211CCA62BA004ABBCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC201CCA62BA004ABBCC /* Assets.xcassets */; };
 		B91FBC241CCA62BA004ABBCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC221CCA62BA004ABBCC /* LaunchScreen.storyboard */; };
 		B91FBC2F1CCA62BA004ABBCC /* LudipicsUpdatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBC2E1CCA62BA004ABBCC /* LudipicsUpdatedTests.swift */; };
@@ -103,6 +105,8 @@
 		B9180AE51D166DE800DEAFD4 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		B9180AE61D166DE800DEAFD4 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		B9180AF31D16700100DEAFD4 /* cameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraView.swift; sourceTree = "<group>"; };
+		B9180AF51D17BB8A00DEAFD4 /* postTOVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postTOVC.swift; sourceTree = "<group>"; };
+		B9180AF71D17F92500DEAFD4 /* postCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
 		B91FBC161CCA62B8004ABBCC /* LudipicsUpdated.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LudipicsUpdated.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B91FBC201CCA62BA004ABBCC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B91FBC231CCA62BA004ABBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -374,6 +378,8 @@
 				B94C8EE41CD012B700324C89 /* TestViewController.swift */,
 				B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */,
 				B9180AF31D16700100DEAFD4 /* cameraView.swift */,
+				B9180AF71D17F92500DEAFD4 /* postCell.swift */,
+				B9180AF51D17BB8A00DEAFD4 /* postTOVC.swift */,
 				B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */,
 			);
 			name = GroupVC;
@@ -575,9 +581,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9180AF61D17BB8B00DEAFD4 /* postTOVC.swift in Sources */,
 				B20114A61D0BB1A00066F26D /* LBViewController.swift in Sources */,
 				B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */,
-				B91FBCB91CCAAB53004ABBCC /* Login.swift in Sources */,
+				B9180AF81D17F92600DEAFD4 /* postCell.swift in Sources */,
 				B9180AE91D166DE800DEAFD4 /* CameraFlashButton.m in Sources */,
 				B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */,
 				B9180AF21D166DE800DEAFD4 /* Constants.m in Sources */,
