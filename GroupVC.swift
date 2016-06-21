@@ -31,18 +31,18 @@ class GroupVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         segmentControl = UISegmentedControl(items: ["Public", "Local"])
         segmentControl.selectedSegmentIndex = 0
         segmentControl.frame.origin.y = self.view.frame.origin.y
-        segmentControl.frame.size.height = 45.0
+        segmentControl.frame.size.height = 40.0
         segmentControl.frame.size.width = self.view.frame.width
-        segmentControl.tintColor = UIColor(red: 161.0/255.0, green: 67.0/255.0, blue: 82.0/255.0, alpha: 1.0)
+        segmentControl.tintColor = UIColor(red: 221.0/255.0, green: 67.0/255.0, blue: 82.0/255.0, alpha: 1.0)
         segmentControl.setTitleTextAttributes([
-            NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 16.0)!,
+            NSFontAttributeName : UIFont(name: "HelveticaNeue-Medium", size: 14.0)!,
             NSForegroundColorAttributeName : UIColor(red: 161.0/255.0, green: 67.0/255.0, blue: 82.0/255.0, alpha: 1.0)
             ], forState: .Normal)
         segmentControl.addTarget(self, action: #selector(GroupVC.segmentSelected), forControlEvents: .ValueChanged)
         
         
         
-        tableView = UITableView(frame: CGRect(x: 0, y: 45.0, width: self.view.frame.width, height: self.view.frame.height - 45.0))
+        tableView = UITableView(frame: CGRect(x: 0, y: 40.0, width: self.view.frame.width, height: self.view.frame.height - 40.0))
         tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.backgroundColor = UIColor(red: 231.0/255.0, green: 230.0/255.0, blue: 230.0/255.0, alpha: 1.0)
         tableView.delegate = self
@@ -79,7 +79,7 @@ class GroupVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         if segmentControl.selectedSegmentIndex == 0 {
-            return 100.0
+            return 80.0
         }
         else {
             return 0
@@ -110,11 +110,11 @@ class GroupVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             let ImageView = UIImageView(image: UIImage(named: self.ImageNames[indexPath.section]))
             let followerIcon = UIImageView(image: UIImage(named: "followerIcon"))
             
-            ImageView.frame = CGRect(x: cell.contentView.frame.origin.x + 10.0, y: cell.contentView.frame.origin.y + 10.0, width: 80, height: 80.0)
+            ImageView.frame = CGRect(x: cell.contentView.frame.origin.x + 10.0, y: cell.contentView.frame.origin.y + 10.0, width: 60, height: 60.0)
             
-            nameLabel.frame = CGRect(x: cell.contentView.frame.origin.x + 110.0, y: cell.contentView.frame.origin.y + 10.0, width: 200, height: 50.0)
-            followersLabel.frame = CGRect(x: cell.contentView.frame.origin.x + 145.0, y: cell.contentView.frame.origin.y + 60.0, width: 200, height: 30.0)
-            followerIcon.frame = CGRect(x: cell.contentView.frame.origin.x + 110.0, y: cell.contentView.frame.origin.y + 60.0, width: 30, height: 30.0)
+            nameLabel.frame = CGRect(x: cell.contentView.frame.origin.x + 110.0, y: cell.contentView.frame.origin.y + 7.5, width: 200, height: 40.0)
+            followersLabel.frame = CGRect(x: cell.contentView.frame.origin.x + 143.0, y: cell.contentView.frame.origin.y + 42.5, width: 200, height: 30.0)
+            followerIcon.frame = CGRect(x: cell.contentView.frame.origin.x + 108.0, y: cell.contentView.frame.origin.y + 42.5, width: 30, height: 30.0)
             
             
             
@@ -136,11 +136,11 @@ class GroupVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             //nameLabel.text =
             //followersLabel.text =
             
-            ImageView.layer.cornerRadius = 40.0
+            ImageView.layer.cornerRadius = 30.0
             ImageView.clipsToBounds = true
             
             ImageView.layer.borderWidth = 1.0
-            ImageView.layer.borderColor = UIColor(red: 161.0/255.0, green: 67.0/255.0, blue: 82.0/255.0, alpha: 1.0).CGColor
+            ImageView.layer.borderColor = UIColor(red: 231.0/255.0, green: 67.0/255.0, blue: 82.0/255.0, alpha: 1.0).CGColor
             
             cell.contentView.addSubview(followerIcon)
             cell.contentView.addSubview(nameLabel)
@@ -162,7 +162,7 @@ class GroupVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         if segmentControl.selectedSegmentIndex == 0 {
-            return 3.0
+            return 1.0
         }
         else {
             return 0.0
