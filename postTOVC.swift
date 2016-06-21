@@ -45,12 +45,14 @@ class postTOVC: UITableViewController {
 
         bottomBar.frame = CGRect(origin: CGPoint(x: self.tableView.frame.origin.x, y: self.tableView.frame.height - 120.0), size: CGSize(width: self.tableView.frame.width, height: 60.0))
         
+        
         self.tableView.addSubview(bottomBar)
         self.tableView.addSubview(post)
         self.tableView.addSubview(bottomLabel)
         
-        self.bottomLabel.font = UIFont(name: "", size: 12.0)
-        
+        self.bottomLabel.font = UIFont(name: "", size: 10.0)
+        self.bottomLabel.numberOfLines = 0
+        self.bottomLabel.lineBreakMode = .ByWordWrapping
         bottomBar = configureBottomBar(bottomBar)
         
         self.tableView.tableFooterView = UIView()
