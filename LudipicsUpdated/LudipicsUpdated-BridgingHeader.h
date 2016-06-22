@@ -5,8 +5,6 @@
 //  Copyright © 2016 Ludipics. All rights reserved.
 //
 #import "CameraFoundationVC.h"
-#import "GroupVC.h"
-#import "GroupTableCellVC.h"
 #import <Parse/Parse.h>
 #import <Bolts/BFTask.h>
 #import "CameraSessionView.h"

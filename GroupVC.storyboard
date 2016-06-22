@@ -5,96 +5,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--Test View Controller-->
-        <scene sceneID="r4r-CE-DOS">
-            <objects>
-                <viewController id="UDL-UW-T41" customClass="TestViewController" customModule="LudipicsUpdated" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="bYz-ce-gQf"/>
-                        <viewControllerLayoutGuide type="bottom" id="eMv-fV-6PY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="S3e-Uf-uy3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="rMc-sC-XlG">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="W20-YK-lI7"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="navTitle" destination="rMc-sC-XlG" id="JNx-H9-NZ2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="df1-yG-UNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4380" y="921"/>
-        </scene>
-        <!--LUDIPICS-->
-        <scene sceneID="f19-p8-ywd">
-            <objects>
-                <tableViewController id="bnv-Ht-Il2" customClass="GroupVC" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="106" sectionHeaderHeight="28" sectionFooterHeight="28" id="i6C-B1-Cxv">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCell" rowHeight="106" id="byo-5y-IzM" customClass="GroupTableCellVC">
-                                <rect key="frame" x="0.0" y="92" width="600" height="106"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="byo-5y-IzM" id="i3w-kn-LmF">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="105"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CrG-OL-bOT">
-                                            <rect key="frame" x="8" y="8" width="95" height="82"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TitleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZsE-0j-bQj">
-                                            <rect key="frame" x="111" y="8" width="481" height="43"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DescriptionLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaM-Gl-zNH">
-                                            <rect key="frame" x="111" y="59" width="481" height="31"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="DescriptionLabel" destination="gaM-Gl-zNH" id="uJE-0M-usG"/>
-                                    <outlet property="ThumbImage" destination="CrG-OL-bOT" id="UvZ-Lr-2mk"/>
-                                    <outlet property="TitleLabel" destination="ZsE-0j-bQj" id="qcp-Ve-RQ0"/>
-                                    <segue destination="UDL-UW-T41" kind="show" identifier="detailShow" id="QY0-2G-09z"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="bnv-Ht-Il2" id="Gai-v2-qDW"/>
-                            <outlet property="delegate" destination="bnv-Ht-Il2" id="iaA-Cj-OkL"/>
-                        </connections>
-                    </tableView>
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" title="LUDIPICS" id="4IX-oK-hss">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="VVx-e3-w7M"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="mdv-Sk-k2d" id="ajp-wy-FpS"/>
-                    </connections>
-                </tableViewController>
-                <searchDisplayController id="mdv-Sk-k2d">
-                    <connections>
-                        <outlet property="delegate" destination="bnv-Ht-Il2" id="ecL-bA-zT9"/>
-                        <outlet property="searchContentsController" destination="bnv-Ht-Il2" id="2gD-vI-42R"/>
-                        <outlet property="searchResultsDataSource" destination="bnv-Ht-Il2" id="kzU-9h-If4"/>
-                        <outlet property="searchResultsDelegate" destination="bnv-Ht-Il2" id="fin-bg-gDU"/>
-                    </connections>
-                </searchDisplayController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DkA-LL-uLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3528" y="385"/>
-        </scene>
         <!--Groups-->
         <scene sceneID="YHN-zh-rLA">
             <objects>
@@ -108,12 +18,31 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="bnv-Ht-Il2" kind="relationship" relationship="rootViewController" id="gYR-cD-5eN"/>
+                        <segue destination="K90-xm-IPY" kind="relationship" relationship="rootViewController" id="OcI-GH-KLg"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ymE-Rn-cx2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2701" y="385"/>
+        </scene>
+        <!--GroupVC-->
+        <scene sceneID="on2-kc-ojO">
+            <objects>
+                <viewController id="K90-xm-IPY" customClass="GroupVC" customModule="LudipicsUpdated" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a4f-4e-OJU"/>
+                        <viewControllerLayoutGuide type="bottom" id="Tlw-Hh-hVS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v3d-p5-z9F">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="F2h-EZ-1E2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MTe-Rn-mwN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3474" y="385"/>
         </scene>
         <!--Discover-->
         <scene sceneID="009-CH-MhX">

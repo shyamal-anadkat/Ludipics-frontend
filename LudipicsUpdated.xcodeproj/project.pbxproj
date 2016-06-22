@@ -31,13 +31,10 @@
 		B91FBC2F1CCA62BA004ABBCC /* LudipicsUpdatedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBC2E1CCA62BA004ABBCC /* LudipicsUpdatedTests.swift */; };
 		B91FBC3A1CCA62BA004ABBCC /* LudipicsUpdatedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B91FBC391CCA62BA004ABBCC /* LudipicsUpdatedUITests.swift */; };
 		B91FBC4B1CCA650A004ABBCC /* CameraFoundationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B91FBC4A1CCA650A004ABBCC /* CameraFoundationVC.m */; };
-		B91FBC6C1CCA8A48004ABBCC /* GroupVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */; };
-		B91FBC711CCA8AC9004ABBCC /* GroupTableCellVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B91FBC6F1CCA8AC9004ABBCC /* GroupTableCellVC.m */; };
 		B91FBC741CCA95E7004ABBCC /* GroupVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */; };
 		B91FBC761CCA97B5004ABBCC /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC751CCA97B5004ABBCC /* logo.png */; };
 		B91FBC791CCA9AF2004ABBCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B91FBC771CCA9AF2004ABBCC /* Main.storyboard */; };
 		B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B92E847A1D0C4DC800591188 /* customTextField.swift */; };
-		B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C8EE41CD012B700324C89 /* TestViewController.swift */; };
 		B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C90A91D09EB2E00745463 /* Discover.swift */; };
 		B94C90AF1D0BBF3200745463 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94C90AE1D0BBF3100745463 /* LoginView.swift */; };
 		B97305501CCD3BE4000D5019 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B973054F1CCD3BE4000D5019 /* Parse.framework */; };
@@ -57,6 +54,7 @@
 		B98B81961CCB8D020030912D /* emailResponseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B81951CCB8D010030912D /* emailResponseVC.swift */; };
 		B98B81981CCBA2F80030912D /* passwordResponseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B81971CCBA2F80030912D /* passwordResponseVC.swift */; };
 		B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B81991CCBC58E0030912D /* DateGenderVC.swift */; };
+		B994DCF81D19B284008F4269 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994DCF71D19B284008F4269 /* GroupVC.swift */; };
 		B9A35B541CCC590800A03D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A35B531CCC590800A03D39 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -120,15 +118,10 @@
 		B91FBC471CCA639F004ABBCC /* LudipicsUpdated-BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "LudipicsUpdated-BridgingHeader.h"; path = "LudipicsUpdated/LudipicsUpdated-BridgingHeader.h"; sourceTree = "<group>"; };
 		B91FBC491CCA650A004ABBCC /* CameraFoundationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraFoundationVC.h; sourceTree = "<group>"; };
 		B91FBC4A1CCA650A004ABBCC /* CameraFoundationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraFoundationVC.m; sourceTree = "<group>"; };
-		B91FBC691CCA8A48004ABBCC /* GroupVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupVC.h; sourceTree = "<group>"; };
-		B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupVC.m; sourceTree = "<group>"; };
-		B91FBC6E1CCA8AC9004ABBCC /* GroupTableCellVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupTableCellVC.h; sourceTree = "<group>"; };
-		B91FBC6F1CCA8AC9004ABBCC /* GroupTableCellVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupTableCellVC.m; sourceTree = "<group>"; };
 		B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GroupVC.storyboard; sourceTree = "<group>"; };
 		B91FBC751CCA97B5004ABBCC /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo.png; path = LudipicsUpdated/Assets.xcassets/logo.png; sourceTree = "<group>"; };
 		B91FBC781CCA9AF2004ABBCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B92E847A1D0C4DC800591188 /* customTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = customTextField.swift; sourceTree = "<group>"; };
-		B94C8EE41CD012B700324C89 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		B94C90A91D09EB2E00745463 /* Discover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		B94C90AE1D0BBF3100745463 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginView.swift; path = ../LoginView.swift; sourceTree = "<group>"; };
 		B973054F1CCD3BE4000D5019 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
@@ -148,6 +141,7 @@
 		B98B81951CCB8D010030912D /* emailResponseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = emailResponseVC.swift; sourceTree = "<group>"; };
 		B98B81971CCBA2F80030912D /* passwordResponseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = passwordResponseVC.swift; sourceTree = "<group>"; };
 		B98B81991CCBC58E0030912D /* DateGenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateGenderVC.swift; sourceTree = "<group>"; };
+		B994DCF71D19B284008F4269 /* GroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupVC.swift; sourceTree = "<group>"; };
 		B9A35B531CCC590800A03D39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -191,13 +185,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B20114921D0BA1570066F26D /* Tab Bar Icons */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "Tab Bar Icons";
-			sourceTree = "<group>";
-		};
 		B20114A31D0BAC0B0066F26D /* ProfileVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -371,15 +358,12 @@
 		B91FBC5D1CCA87C5004ABBCC /* GroupVC */ = {
 			isa = PBXGroup;
 			children = (
-				B91FBC691CCA8A48004ABBCC /* GroupVC.h */,
-				B94C90A91D09EB2E00745463 /* Discover.swift */,
 				B9180ACB1D166DE800DEAFD4 /* CameraLudipicsModule */,
-				B20114921D0BA1570066F26D /* Tab Bar Icons */,
-				B94C8EE41CD012B700324C89 /* TestViewController.swift */,
-				B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */,
 				B9180AF31D16700100DEAFD4 /* cameraView.swift */,
-				B9180AF71D17F92500DEAFD4 /* postCell.swift */,
+				B94C90A91D09EB2E00745463 /* Discover.swift */,
 				B9180AF51D17BB8A00DEAFD4 /* postTOVC.swift */,
+				B9180AF71D17F92500DEAFD4 /* postCell.swift */,
+				B994DCF71D19B284008F4269 /* GroupVC.swift */,
 				B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */,
 			);
 			name = GroupVC;
@@ -389,8 +373,6 @@
 		B91FBC5E1CCA87DC004ABBCC /* GroupTable */ = {
 			isa = PBXGroup;
 			children = (
-				B91FBC6E1CCA8AC9004ABBCC /* GroupTableCellVC.h */,
-				B91FBC6F1CCA8AC9004ABBCC /* GroupTableCellVC.m */,
 			);
 			name = GroupTable;
 			sourceTree = "<group>";
@@ -586,15 +568,14 @@
 				B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */,
 				B9180AF81D17F92600DEAFD4 /* postCell.swift in Sources */,
 				B9180AE91D166DE800DEAFD4 /* CameraFlashButton.m in Sources */,
-				B94C8EE51CD012B700324C89 /* TestViewController.swift in Sources */,
 				B9180AF21D166DE800DEAFD4 /* Constants.m in Sources */,
+				B994DCF81D19B284008F4269 /* GroupVC.swift in Sources */,
 				B9180AF11D166DE800DEAFD4 /* CaptureSessionManager.m in Sources */,
 				B91FBC4B1CCA650A004ABBCC /* CameraFoundationVC.m in Sources */,
 				B9180AE81D166DE800DEAFD4 /* CameraDismissButton.m in Sources */,
 				B9180AEA1D166DE800DEAFD4 /* CameraFocalReticule.m in Sources */,
 				B9180AE71D166DE800DEAFD4 /* CameraSessionView.m in Sources */,
 				B9180AF01D166DE800DEAFD4 /* CameraStyleKitClass.m in Sources */,
-				B91FBC6C1CCA8A48004ABBCC /* GroupVC.m in Sources */,
 				B98B81961CCB8D020030912D /* emailResponseVC.swift in Sources */,
 				B98B81901CCB2EC50030912D /* SignUpVC.swift in Sources */,
 				B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */,
@@ -606,7 +587,6 @@
 				B94C90AF1D0BBF3200745463 /* LoginView.swift in Sources */,
 				B9180AEC1D166DE800DEAFD4 /* CameraToggleButton.m in Sources */,
 				B9A35B541CCC590800A03D39 /* AppDelegate.swift in Sources */,
-				B91FBC711CCA8AC9004ABBCC /* GroupTableCellVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
