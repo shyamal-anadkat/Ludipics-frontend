@@ -11,6 +11,8 @@
 		B20114B61D0CA00B0066F26D /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B31D0CA00B0066F26D /* FBSDKCoreKit.framework */; };
 		B20114B71D0CA00B0066F26D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */; };
 		B20114B81D0CA00B0066F26D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B51D0CA00B0066F26D /* FBSDKShareKit.framework */; };
+		B20C53D61D1A2AC60077C8AC /* LeaderboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B20C53D51D1A2AC60077C8AC /* LeaderboardVC.m */; };
+		B24E46B91D18D943008820A9 /* RKSwipeBetweenViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = B24E46B81D18D943008820A9 /* RKSwipeBetweenViewControllers.m */; };
 		B9180AE71D166DE800DEAFD4 /* CameraSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180ACE1D166DE800DEAFD4 /* CameraSessionView.m */; };
 		B9180AE81D166DE800DEAFD4 /* CameraDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AD21D166DE800DEAFD4 /* CameraDismissButton.m */; };
 		B9180AE91D166DE800DEAFD4 /* CameraFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AD41D166DE800DEAFD4 /* CameraFlashButton.m */; };
@@ -82,6 +84,10 @@
 		B20114B31D0CA00B0066F26D /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		B20114B51D0CA00B0066F26D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		B20C53D41D1A2AC60077C8AC /* LeaderboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardVC.h; sourceTree = "<group>"; };
+		B20C53D51D1A2AC60077C8AC /* LeaderboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardVC.m; sourceTree = "<group>"; };
+		B24E46B71D18D92F008820A9 /* RKSwipeBetweenViewControllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKSwipeBetweenViewControllers.h; sourceTree = "<group>"; };
+		B24E46B81D18D943008820A9 /* RKSwipeBetweenViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSwipeBetweenViewControllers.m; sourceTree = "<group>"; };
 		B9180ACD1D166DE800DEAFD4 /* CameraSessionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSessionView.h; sourceTree = "<group>"; };
 		B9180ACE1D166DE800DEAFD4 /* CameraSessionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraSessionView.m; sourceTree = "<group>"; };
 		B9180AD11D166DE800DEAFD4 /* CameraDismissButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDismissButton.h; sourceTree = "<group>"; };
@@ -208,6 +214,8 @@
 		B20114A41D0BACCC0066F26D /* LeaderboardVC */ = {
 			isa = PBXGroup;
 			children = (
+				B24E46B71D18D92F008820A9 /* RKSwipeBetweenViewControllers.h */,
+				B24E46B81D18D943008820A9 /* RKSwipeBetweenViewControllers.m */,
 				B20114A51D0BB1A00066F26D /* LBViewController.swift */,
 			);
 			name = LeaderboardVC;
@@ -371,6 +379,7 @@
 		B91FBC5D1CCA87C5004ABBCC /* GroupVC */ = {
 			isa = PBXGroup;
 			children = (
+				B20C53D41D1A2AC60077C8AC /* LeaderboardVC.h */,
 				B91FBC691CCA8A48004ABBCC /* GroupVC.h */,
 				B94C90A91D09EB2E00745463 /* Discover.swift */,
 				B9180ACB1D166DE800DEAFD4 /* CameraLudipicsModule */,
@@ -379,6 +388,7 @@
 				B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */,
 				B9180AF31D16700100DEAFD4 /* cameraView.swift */,
 				B9180AF71D17F92500DEAFD4 /* postCell.swift */,
+				B20C53D51D1A2AC60077C8AC /* LeaderboardVC.m */,
 				B9180AF51D17BB8A00DEAFD4 /* postTOVC.swift */,
 				B91FBC731CCA95E7004ABBCC /* GroupVC.storyboard */,
 			);
@@ -510,7 +520,7 @@
 				TargetAttributes = {
 					B91FBC151CCA62B8004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = AE38M2STX6;
+						DevelopmentTeam = G547D7BDTT;
 					};
 					B91FBC291CCA62BA004ABBCC = {
 						CreatedOnToolsVersion = 7.3;
@@ -593,9 +603,11 @@
 				B9180AE81D166DE800DEAFD4 /* CameraDismissButton.m in Sources */,
 				B9180AEA1D166DE800DEAFD4 /* CameraFocalReticule.m in Sources */,
 				B9180AE71D166DE800DEAFD4 /* CameraSessionView.m in Sources */,
+				B20C53D61D1A2AC60077C8AC /* LeaderboardVC.m in Sources */,
 				B9180AF01D166DE800DEAFD4 /* CameraStyleKitClass.m in Sources */,
 				B91FBC6C1CCA8A48004ABBCC /* GroupVC.m in Sources */,
 				B98B81961CCB8D020030912D /* emailResponseVC.swift in Sources */,
+				B24E46B91D18D943008820A9 /* RKSwipeBetweenViewControllers.m in Sources */,
 				B98B81901CCB2EC50030912D /* SignUpVC.swift in Sources */,
 				B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */,
 				B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */,

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -200,34 +200,24 @@
             </objects>
             <point key="canvasLocation" x="-779" y="1013"/>
         </scene>
-        <!--LeaderBoard-->
-        <scene sceneID="8x5-DJ-lUF">
+        <!--LeaderboardVC-->
+        <scene sceneID="1D4-xM-pem">
             <objects>
-                <tableViewController id="Gyu-Kl-jv4" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="4gt-vf-5tC">
+                <viewController id="ock-XT-oNS" customClass="LeaderboardVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rPN-GV-xOr"/>
+                        <viewControllerLayoutGuide type="bottom" id="1as-Qr-AbM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8kf-VM-enz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="RMl-Qg-97m">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="RMl-Qg-97m" id="Qh4-gd-Vnp">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="Gyu-Kl-jv4" id="eTC-tQ-DU1"/>
-                            <outlet property="delegate" destination="Gyu-Kl-jv4" id="W0Y-KE-2AO"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="LeaderBoard" id="vxC-L1-sx4"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kQ0-RW-PgG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="oCN-1g-2yS"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rd2-E8-OpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="984" y="2456"/>
+            <point key="canvasLocation" x="649" y="2368"/>
         </scene>
         <!--Camera-->
         <scene sceneID="LU6-sJ-KIb">
@@ -310,7 +300,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Gyu-Kl-jv4" kind="relationship" relationship="rootViewController" id="PYG-OA-jur"/>
+                        <segue destination="ock-XT-oNS" kind="relationship" relationship="rootViewController" id="VbR-kR-dBh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YA5-z8-tpb" userLabel="First Responder" sceneMemberID="firstResponder"/>

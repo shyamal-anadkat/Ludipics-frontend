@@ -10,6 +10,8 @@
 #import <Parse/Parse.h>
 #import <Bolts/BFTask.h>
 #import "CameraSessionView.h"
+#import "RKSwipeBetweenViewControllers.h"
+
 
 #ifndef LudipicsUpdated_Bridging_Header_h
 #define LudipicsUpdated_Bridging_Header_h
