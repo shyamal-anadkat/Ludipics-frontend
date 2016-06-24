@@ -200,7 +200,7 @@
             </objects>
             <point key="canvasLocation" x="-779" y="1013"/>
         </scene>
-        <!--LeaderboardVC-->
+        <!--Leaderboard-->
         <scene sceneID="1D4-xM-pem">
             <objects>
                 <viewController id="ock-XT-oNS" customClass="LeaderboardVC" sceneMemberID="viewController">
@@ -213,7 +213,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oCN-1g-2yS"/>
+                    <navigationItem key="navigationItem" title="Leaderboard" id="aNR-DK-T8d"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rd2-E8-OpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

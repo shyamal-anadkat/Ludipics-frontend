@@ -12,7 +12,9 @@
 		B20114B71D0CA00B0066F26D /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B41D0CA00B0066F26D /* FBSDKLoginKit.framework */; };
 		B20114B81D0CA00B0066F26D /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B20114B51D0CA00B0066F26D /* FBSDKShareKit.framework */; };
 		B20C53D61D1A2AC60077C8AC /* LeaderboardVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B20C53D51D1A2AC60077C8AC /* LeaderboardVC.m */; };
-		B24E46B91D18D943008820A9 /* RKSwipeBetweenViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = B24E46B81D18D943008820A9 /* RKSwipeBetweenViewControllers.m */; };
+		B257673E1D1CCD6000C6575B /* RKSwipeBetweenViewControllers.m in Sources */ = {isa = PBXBuildFile; fileRef = B257673D1D1CCD6000C6575B /* RKSwipeBetweenViewControllers.m */; };
+		B25767401D1CDA2300C6575B /* localLBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B257673F1D1CDA2300C6575B /* localLBVC.swift */; };
+		B25767421D1CDA4E00C6575B /* globalLBVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B25767411D1CDA4E00C6575B /* globalLBVC.swift */; };
 		B9180AE71D166DE800DEAFD4 /* CameraSessionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180ACE1D166DE800DEAFD4 /* CameraSessionView.m */; };
 		B9180AE81D166DE800DEAFD4 /* CameraDismissButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AD21D166DE800DEAFD4 /* CameraDismissButton.m */; };
 		B9180AE91D166DE800DEAFD4 /* CameraFlashButton.m in Sources */ = {isa = PBXBuildFile; fileRef = B9180AD41D166DE800DEAFD4 /* CameraFlashButton.m */; };
@@ -86,8 +88,10 @@
 		B20114B51D0CA00B0066F26D /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		B20C53D41D1A2AC60077C8AC /* LeaderboardVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeaderboardVC.h; sourceTree = "<group>"; };
 		B20C53D51D1A2AC60077C8AC /* LeaderboardVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeaderboardVC.m; sourceTree = "<group>"; };
-		B24E46B71D18D92F008820A9 /* RKSwipeBetweenViewControllers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RKSwipeBetweenViewControllers.h; sourceTree = "<group>"; };
-		B24E46B81D18D943008820A9 /* RKSwipeBetweenViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RKSwipeBetweenViewControllers.m; sourceTree = "<group>"; };
+		B257673C1D1CCD6000C6575B /* RKSwipeBetweenViewControllers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RKSwipeBetweenViewControllers.h; path = LudipicsUpdated/RKSwipeBetweenViewControllers.h; sourceTree = "<group>"; };
+		B257673D1D1CCD6000C6575B /* RKSwipeBetweenViewControllers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RKSwipeBetweenViewControllers.m; path = LudipicsUpdated/RKSwipeBetweenViewControllers.m; sourceTree = "<group>"; };
+		B257673F1D1CDA2300C6575B /* localLBVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = localLBVC.swift; sourceTree = "<group>"; };
+		B25767411D1CDA4E00C6575B /* globalLBVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = globalLBVC.swift; sourceTree = "<group>"; };
 		B9180ACD1D166DE800DEAFD4 /* CameraSessionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraSessionView.h; sourceTree = "<group>"; };
 		B9180ACE1D166DE800DEAFD4 /* CameraSessionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CameraSessionView.m; sourceTree = "<group>"; };
 		B9180AD11D166DE800DEAFD4 /* CameraDismissButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraDismissButton.h; sourceTree = "<group>"; };
@@ -214,8 +218,8 @@
 		B20114A41D0BACCC0066F26D /* LeaderboardVC */ = {
 			isa = PBXGroup;
 			children = (
-				B24E46B71D18D92F008820A9 /* RKSwipeBetweenViewControllers.h */,
-				B24E46B81D18D943008820A9 /* RKSwipeBetweenViewControllers.m */,
+				B257673C1D1CCD6000C6575B /* RKSwipeBetweenViewControllers.h */,
+				B257673D1D1CCD6000C6575B /* RKSwipeBetweenViewControllers.m */,
 				B20114A51D0BB1A00066F26D /* LBViewController.swift */,
 			);
 			name = LeaderboardVC;
@@ -387,6 +391,8 @@
 				B94C8EE41CD012B700324C89 /* TestViewController.swift */,
 				B91FBC6A1CCA8A48004ABBCC /* GroupVC.m */,
 				B9180AF31D16700100DEAFD4 /* cameraView.swift */,
+				B25767411D1CDA4E00C6575B /* globalLBVC.swift */,
+				B257673F1D1CDA2300C6575B /* localLBVC.swift */,
 				B9180AF71D17F92500DEAFD4 /* postCell.swift */,
 				B20C53D51D1A2AC60077C8AC /* LeaderboardVC.m */,
 				B9180AF51D17BB8A00DEAFD4 /* postTOVC.swift */,
@@ -591,6 +597,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25767401D1CDA2300C6575B /* localLBVC.swift in Sources */,
 				B9180AF61D17BB8B00DEAFD4 /* postTOVC.swift in Sources */,
 				B20114A61D0BB1A00066F26D /* LBViewController.swift in Sources */,
 				B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */,
@@ -601,13 +608,13 @@
 				B9180AF11D166DE800DEAFD4 /* CaptureSessionManager.m in Sources */,
 				B91FBC4B1CCA650A004ABBCC /* CameraFoundationVC.m in Sources */,
 				B9180AE81D166DE800DEAFD4 /* CameraDismissButton.m in Sources */,
+				B25767421D1CDA4E00C6575B /* globalLBVC.swift in Sources */,
 				B9180AEA1D166DE800DEAFD4 /* CameraFocalReticule.m in Sources */,
 				B9180AE71D166DE800DEAFD4 /* CameraSessionView.m in Sources */,
 				B20C53D61D1A2AC60077C8AC /* LeaderboardVC.m in Sources */,
 				B9180AF01D166DE800DEAFD4 /* CameraStyleKitClass.m in Sources */,
 				B91FBC6C1CCA8A48004ABBCC /* GroupVC.m in Sources */,
 				B98B81961CCB8D020030912D /* emailResponseVC.swift in Sources */,
-				B24E46B91D18D943008820A9 /* RKSwipeBetweenViewControllers.m in Sources */,
 				B98B81901CCB2EC50030912D /* SignUpVC.swift in Sources */,
 				B92E847B1D0C4DC800591188 /* customTextField.swift in Sources */,
 				B94C90AA1D09EB2E00745463 /* Discover.swift in Sources */,
@@ -619,6 +626,7 @@
 				B9180AEC1D166DE800DEAFD4 /* CameraToggleButton.m in Sources */,
 				B9A35B541CCC590800A03D39 /* AppDelegate.swift in Sources */,
 				B91FBC711CCA8AC9004ABBCC /* GroupTableCellVC.m in Sources */,
+				B257673E1D1CCD6000C6575B /* RKSwipeBetweenViewControllers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

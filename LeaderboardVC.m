@@ -16,7 +16,8 @@
 
 {
 [super viewDidLoad];
-UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
+     self.hidesBottomBarWhenPushed = FALSE;
+     UIPageViewController *pageController = [[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal options:nil];
 
 RKSwipeBetweenViewControllers *navigationController = [[RKSwipeBetweenViewControllers alloc]initWithRootViewController:pageController];
 
@@ -24,6 +25,13 @@ RKSwipeBetweenViewControllers *navigationController = [[RKSwipeBetweenViewContro
 UIViewController *global = [[UIViewController alloc]init];
 UIViewController *local = [[UIViewController alloc]init];
 
+
+    
+    
+
+    
+    
+    
 global.view.backgroundColor = [UIColor redColor];
 local.view.backgroundColor = [UIColor whiteColor];
 
@@ -35,6 +43,16 @@ self.window.rootViewController = navigationController;
 
 }
 
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.tabBarController.tabBar.hidden = false;
+    self.navigationController.navigationBarHidden = false;
+    //UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"image Name"]] ;
+    //[self addSubview:imageView ];
+    self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"customBackground.png"]];
+    
+}
 
 
 
