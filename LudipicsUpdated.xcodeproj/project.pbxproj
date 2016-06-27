@@ -56,6 +56,8 @@
 		B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B98B81991CCBC58E0030912D /* DateGenderVC.swift */; };
 		B994DCF81D19B284008F4269 /* GroupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B994DCF71D19B284008F4269 /* GroupVC.swift */; };
 		B9A35B541CCC590800A03D39 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9A35B531CCC590800A03D39 /* AppDelegate.swift */; };
+		FF7744511D20EFF100A66D6F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7744501D20EFF100A66D6F /* ProfileVC.swift */; };
+		FF7744531D20F03800A66D6F /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7744521D20F03800A66D6F /* SettingsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +145,8 @@
 		B98B81991CCBC58E0030912D /* DateGenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateGenderVC.swift; sourceTree = "<group>"; };
 		B994DCF71D19B284008F4269 /* GroupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GroupVC.swift; sourceTree = "<group>"; };
 		B9A35B531CCC590800A03D39 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FF7744501D20EFF100A66D6F /* ProfileVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		FF7744521D20F03800A66D6F /* SettingsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -361,6 +365,8 @@
 				B9180ACB1D166DE800DEAFD4 /* CameraLudipicsModule */,
 				B9180AF31D16700100DEAFD4 /* cameraView.swift */,
 				B94C90A91D09EB2E00745463 /* Discover.swift */,
+				FF7744501D20EFF100A66D6F /* ProfileVC.swift */,
+				FF7744521D20F03800A66D6F /* SettingsVC.swift */,
 				B9180AF51D17BB8A00DEAFD4 /* postTOVC.swift */,
 				B9180AF71D17F92500DEAFD4 /* postCell.swift */,
 				B994DCF71D19B284008F4269 /* GroupVC.swift */,
@@ -568,6 +574,7 @@
 				B98B819A1CCBC58E0030912D /* DateGenderVC.swift in Sources */,
 				B9180AF81D17F92600DEAFD4 /* postCell.swift in Sources */,
 				B9180AE91D166DE800DEAFD4 /* CameraFlashButton.m in Sources */,
+				FF7744511D20EFF100A66D6F /* ProfileVC.swift in Sources */,
 				B9180AF21D166DE800DEAFD4 /* Constants.m in Sources */,
 				B994DCF81D19B284008F4269 /* GroupVC.swift in Sources */,
 				B9180AF11D166DE800DEAFD4 /* CaptureSessionManager.m in Sources */,
@@ -575,6 +582,7 @@
 				B9180AE81D166DE800DEAFD4 /* CameraDismissButton.m in Sources */,
 				B9180AEA1D166DE800DEAFD4 /* CameraFocalReticule.m in Sources */,
 				B9180AE71D166DE800DEAFD4 /* CameraSessionView.m in Sources */,
+				FF7744531D20F03800A66D6F /* SettingsVC.swift in Sources */,
 				B9180AF01D166DE800DEAFD4 /* CameraStyleKitClass.m in Sources */,
 				B98B81961CCB8D020030912D /* emailResponseVC.swift in Sources */,
 				B98B81901CCB2EC50030912D /* SignUpVC.swift in Sources */,
